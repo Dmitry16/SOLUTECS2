@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { flex } from './styled/flexes'
+import { media } from './styled/medias'
 
 class Modal extends React.Component {
   constructor() {
@@ -8,7 +9,7 @@ class Modal extends React.Component {
   }
   render() {
 
-    const Modal = styled.div`
+    const ModalWrapper = styled.div`
       ${ flex.column }
       visibility: ${ this.props.modalVisibility };
       background-color: rgba(0,0,0,0.8);
@@ -16,12 +17,13 @@ class Modal extends React.Component {
       top: 0; left: 0;
       width: 100%;
       height: auto;
-      padding: 5% 0 10%;
+      padding: 2% 0;
     `
     const ModalImgWrapper = styled.div`
       width: 80%;
       height: auto;
       position: relative;
+      padding: 2% 0;
     `
     const ModalImg = styled.img`
       width: 100%;
@@ -29,42 +31,76 @@ class Modal extends React.Component {
     `
     const templ = `
       ${ flex.column }
-      background: rgba(0,0,200,0.5);
+      background: rgba(100,100,100,0.5);
       width: 0.5em;
       height: 0.5em;
       border-radius: 50%;
-      color: red;
+      color: #aaa;
       padding: 1.5em;
       cursor: pointer;
+      &:hover { background: rgba(0,0,200,0.5); color: red; }
     `
     const Close = styled.div`
       ${ templ }
-      margin: 0.3em;
+      margin: 0.3em 0 1.2em;
+      ${ media.tablet`
+        padding: 1em;
+        > span { font-size: 1em}`}
+      ${ media.handheld`
+        padding: 0.8em;
+        > span { font-size: 0.8em}`}
     `
     const PrevImg = styled.div`
       ${ templ }
       position: absolute;
-      top: 48%;
+      top: 45%;
       left: -8%;
+      ${ media.tablet`
+        left: -10%;
+        padding: 1em;
+        > span { font-size: 1em}`}
+      ${ media.handheld`
+        left: -12%;
+        padding: 0.8em;
+        > span { font-size: 0.8em}`}
     `
     const NextImg = styled.div`
       ${ templ }
       position: absolute;
-      top: 48%;
+      top: 45%;
       right: -8%;
+      ${ media.tablet`
+        right: -10%;
+        padding: 1em;
+        > span { font-size: 1em}`}
+      ${ media.handheld`
+        right: -12%;
+        padding: 0.8em;
+        > span { font-size: 0.8em}`}
     `
-
+    const Icon = styled.span`
+      font-size: 1em;
+    `
     const { nextImg, prevImg, modalPic } = this.props
 
     return(
-      <Modal id='modal'>
-        <Close onClick={this.props.closeModal}>X</Close>
+      <ModalWrapper id='modal'>
+        <Close onClick={this.props.closeModal}>
+          <Icon className='icon'>x</Icon>
+        </Close>
         <ModalImgWrapper>
-          <PrevImg onClick={() => this.props.showPrevImg(prevImg, modalPic)}>PRV</PrevImg>
-          <ModalImg id='modalImg' src={this.props.modalPic} alt='vv'/>
-          <NextImg onClick={() => this.props.showNextImg(nextImg, modalPic)}>NXT</NextImg>
+          <PrevImg onClick={() => this.props.showPrevImg(prevImg, modalPic)}>
+            <Icon className='icon-angle-left'></Icon>
+          </PrevImg>
+          <ModalImg id='modalImg' src={this.props.modalPic} alt='receptum in natura'/>
+          <NextImg onClick={() => this.props.showNextImg(nextImg, modalPic)}>
+            <Icon className='icon-angle-right'></Icon>
+          </NextImg>
         </ModalImgWrapper>
-      </Modal>
+        <Close onClick={this.props.closeModal}>
+          <Icon className='icon'>x</Icon>
+        </Close>
+      </ModalWrapper>
     )
   }
 }

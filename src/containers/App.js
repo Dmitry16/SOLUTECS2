@@ -41,6 +41,7 @@ import { greenTheme } from '../components/styled/themes'
 class App extends Component {
 
   static propTypes = {
+    dispatch: PropTypes.func.isRequired,
     initialPics: PropTypes.array.isRequired,
     pics: PropTypes.array.isRequired,
     modalVisibility: PropTypes.string.isRequired,
@@ -50,9 +51,8 @@ class App extends Component {
   }
 
   showAllPics = () => {
-    console.log(this.props.pics)
     if (this.props.pics)
-    this.renderAllPics(this.props.pics)
+    renderAllPics(this.props.pics)
   }
 
   renderMainNav = () => {
@@ -75,39 +75,20 @@ class App extends Component {
     const showModal = bindActionCreators(modalActionCreators.showModal, dispatch)
     const showNextImg = bindActionCreators(modalActionCreators.showNextImg, dispatch)
     const showPrevImg = bindActionCreators(modalActionCreators.showPrevImg, dispatch)
+    const showPics = this.showAllPics.bind(this)
+
+    const props = { showPics, showModal, closeModal, showNextImg, showPrevImg, pics,
+                    initialPics, dispatch, nextImg, prevImg, modalPic, modalVisibility }
 
     const renderSlider = () => {
       return (
-        <Slider
-          showPics={this.showAllPics.bind(this)}
-          pics={ initialPics }
-          showModal={ showModal }
-          closeModal={ closeModal }
-          showNextImg={ showNextImg }
-          showPrevImg={ showPrevImg }
-          dispatch={ dispatch }
-          modalVisibility={ modalVisibility }
-          modalPic={ modalPic }
-          nextImg={ nextImg }
-          prevImg={ prevImg }
-        />
+        <Slider { ...props } />
       )
     }
 
     const renderAllPics = () => {
       return (
-        <AllPics
-          dispatch={ dispatch }
-          pics={ pics }
-          showModal={ showModal }
-          modalPic = { modalPic }
-          modalVisibility = { modalVisibility }
-          nextImg = { nextImg }
-          prevImg = { prevImg }
-          showNextImg = { showNextImg }
-          showPrevImg = { showPrevImg }
-          closeModal = { closeModal }
-         />
+        <AllPics { ...props } />
       )
     }
 
