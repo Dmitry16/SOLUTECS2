@@ -9,7 +9,7 @@ class Modal extends React.Component {
   }
   render() {
 
-    const Modal = styled.div`
+    const ModalWrapper = styled.div`
       ${ flex.column }
       visibility: ${ this.props.modalVisibility };
       background-color: rgba(0,0,0,0.8);
@@ -84,7 +84,7 @@ class Modal extends React.Component {
     const { nextImg, prevImg, modalPic } = this.props
 
     return(
-      <Modal id='modal'>
+      <ModalWrapper id='modal'>
         <Close onClick={this.props.closeModal}>
           <Icon className='icon'>x</Icon>
         </Close>
@@ -100,7 +100,7 @@ class Modal extends React.Component {
         <Close onClick={this.props.closeModal}>
           <Icon className='icon'>x</Icon>
         </Close>
-      </Modal>
+      </ModalWrapper>
     )
   }
 }
