@@ -9,20 +9,22 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin()
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     NODE_ENV: JSON.stringify('production')
+    //   }
+    // }),
+    // new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
       {
+        enforce: 'pre',        
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
-          'babel-loader'
+          'babel-loader',
+          'eslint-loader'
         ],
       },
       {
