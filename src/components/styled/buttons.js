@@ -4,22 +4,27 @@ import { css } from 'styled-components'
 
 export const Button = styled.button`
   padding: ${props => props.small ? '0 0.5em' : '1.5em 8em'};
-  border: 2px solid #fff;
-  background: mediumseagreen;
+  border: 2px solid coral;
+  color: coral;
+  font-size: 1.2em;
+  background: lightblue;
   margin-top: 0;
   cursor: pointer;
   &:hover {
     background: lightgreen;
     color: red;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px #777;
   }
   ${ media.desktop`
     padding: ${props => props.small ? '0 0.5em' : '1.5em 7em'};
+    font-size: 1em;
   `}
   ${ media.tablet`
     padding: ${props => props.small ? '0 0.5em' : '1.5em 6em'};
+    font-size: 0.9em;
   `}
   ${ media.handheld`
     padding: ${props => props.small ? '0 0.5em' : '1em 4.5em'};
+    font-size: 0.8em;
   `}
   `

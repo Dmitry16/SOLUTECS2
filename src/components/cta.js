@@ -22,14 +22,31 @@ export default class CTA extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      background: mediumseagreen;
+      background: lightblue;
       text-align: center;
       border: none;
       ${ flex.column }
     `
+    const TitleCTA = styled.h3`
+      font-weight: 300;
+      font-size: 1.8em;
+      color: coral;
+      ${ media.desktop`
+      font-size: 1.8em;
+      text-align: center;
+      `};
+      ${ media.tablet`
+      font-size: 1.6em;
+      text-align: center;
+      `};
+      ${ media.handheld`
+      font-size: 1.5em;
+      text-align: center;
+      `};
+    `
     const BoxCTA = styled.div`
 
-      background: mediumseagreen;
+      background: lightblue;
       text-align: center;
       margin: 0;
       padding: 0;
@@ -55,42 +72,45 @@ export default class CTA extends React.Component {
         `};
     `
     const ButtonCTA = styled.button`
-
-      width: 80%;
-      height: 4em;
+      width: ${props => props.primary ? '80%' : '70%'};
+      height: ${props => props.primary ? '4.5em' : '4em'};
+      color: coral;
+      font-size: ${props => props.primary ? '1.2em' : '1em'};
+      border: 2px solid rgba(226, 93, 15, 0.6);
       margin: 0;
-      padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
-      border: 2px solid #fff;
-      background: mediumseagreen;
+      padding: 0;
+      background: lightblue;
       cursor: pointer;
       &:hover {
-        background: lightgreen;
+        background: #aee8a7;
+        border: 2px solid rgba(226, 93, 15, 1);
+        box-shadow: 5px 5px 10px #777;
         color: red;
       }
       ${ media.desktop`
-        padding: ${props => props.small ? '0 0.5em' : '1em 4em'};
+        font-size: ${props => props.primary ? '1.2em' : '1em'};
       `}
       ${ media.tablet`
+        font-size: ${props => props.primary ? '1em' : '0.9em'};
         width: 90%;
-        padding: ${props => props.small ? '0 0.5em' : '0.7em 2em'};
       `}
       ${ media.handheld`
+        font-size: ${props => props.primary ? '0.9em' : '0.8em'};        
         width: 100%;
+        margin-top: 1%;
         height: 3em;
-        padding: ${props => props.small ? '0 0.5em' : '0.5em 1em'};
       `}
       `
     return (
-      <Section>
+      <Section style={{borderColor:'coral'}}>
         <Wrapper className="cta">
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA className="cta-buttons-wrapper">
-            <Link to="/fotos"><ButtonCTA className="cta-button">
+            <Link to="/fotos"><ButtonCTA >
             Conocer quien somos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button">
+            <Link to="/fotos"><ButtonCTA primary >
             Saber que ofrecemos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button"
-                                onClick={this.showPics.bind(this)}>
+            <Link to="/fotos"><ButtonCTA onClick={this.showPics.bind(this)}>
               Ver las fotos</ButtonCTA>
             </Link>
           </BoxCTA>
