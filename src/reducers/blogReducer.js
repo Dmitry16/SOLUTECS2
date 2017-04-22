@@ -16,7 +16,7 @@ export default function blogReducer(state={
           ...state,
           fetching: false,
           fetched: true,
-          pics: action.payload,
+          posts: action.payload,
         }
       }
     }

@@ -9,9 +9,9 @@ export default class Blog extends React.Component {
     dispatch: PropTypes.func.isRequired
   }
 
-  // componentWillMount() {
-  //   this.props.dispatch(fetchPosts())
-  // }
+  componentWillMount() {
+    this.props.dispatch(fetchPosts())
+  }
 
   render() {
 

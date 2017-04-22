@@ -1,9 +1,9 @@
 import axios from 'axios'
 import * as blogActionTypes from '../actionTypes/blogActionTypes'
 
-export function fetchPosts() {
+export default function fetchPosts() {
   return function(dispatch) {
-  axios.get('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/posts&repeat=w3tc')
+  axios.get('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/posts')
     .then((response) => {
       dispatch({type: blogActionTypes.FETCH_POSTS_FULFILLED,
                 payload: response.data});
