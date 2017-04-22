@@ -19,7 +19,7 @@ export default class Icon extends React.Component {
       &:hover { background: lightblue;
                 box-shadow: 5px 5px 10px #777;
                 transform: scale(1.1);
-                > a > p { color: coral; }
+                > a > p { color: darkviolet; }
               }
       > a { border: none; }
       ${ media.tablet`

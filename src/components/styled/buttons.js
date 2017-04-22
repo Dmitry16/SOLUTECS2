@@ -4,15 +4,16 @@ import { css } from 'styled-components'
 
 export const Button = styled.button`
   padding: ${props => props.small ? '0 0.5em' : '1.5em 8em'};
-  border: 2px solid coral;
-  color: coral;
+  border: 2px solid #fff;
+  color: #fff;
   font-size: 1.2em;
-  background: lightblue;
+  background: steelblue;
   margin-top: 0;
   cursor: pointer;
   &:hover {
-    background: lightgreen;
-    color: red;
+    background: lightblue;
+    border: 2px solid darkviolet;
+    color: darkviolet;
     box-shadow: 5px 5px 10px #777;
   }
   ${ media.desktop`

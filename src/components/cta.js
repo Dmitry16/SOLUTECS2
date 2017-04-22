@@ -22,7 +22,7 @@ export default class CTA extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      background: lightblue;
+      background: steelblue;
       text-align: center;
       border: none;
       ${ flex.column }
@@ -30,7 +30,7 @@ export default class CTA extends React.Component {
     const TitleCTA = styled.h3`
       font-weight: 300;
       font-size: 1.8em;
-      color: coral;
+      color: #fff;
       ${ media.desktop`
       font-size: 1.8em;
       text-align: center;
@@ -46,7 +46,7 @@ export default class CTA extends React.Component {
     `
     const BoxCTA = styled.div`
 
-      background: lightblue;
+      background: steelblue;
       text-align: center;
       margin: 0;
       padding: 0;
@@ -74,18 +74,18 @@ export default class CTA extends React.Component {
     const ButtonCTA = styled.button`
       width: ${props => props.primary ? '80%' : '70%'};
       height: ${props => props.primary ? '4.5em' : '4em'};
-      color: coral;
+      color: #fff;
       font-size: ${props => props.primary ? '1.2em' : '1em'};
-      border: 2px solid rgba(226, 93, 15, 0.6);
+      border: 2px solid #fff;
       margin: 0;
       padding: 0;
-      background: lightblue;
+      background: steelblue;
       cursor: pointer;
       &:hover {
-        background: #aee8a7;
-        border: 2px solid rgba(226, 93, 15, 1);
-        box-shadow: 5px 5px 10px #777;
-        color: red;
+        background: lightblue;
+        border: 2px solid darkviolet;
+        box-shadow: 5px 5px 10px #333;
+        color: darkviolet;
       }
       ${ media.desktop`
         font-size: ${props => props.primary ? '1.2em' : '1em'};
@@ -95,14 +95,14 @@ export default class CTA extends React.Component {
         width: 90%;
       `}
       ${ media.handheld`
-        font-size: ${props => props.primary ? '0.9em' : '0.8em'};        
+        font-size: ${props => props.primary ? '0.9em' : '0.8em'};
         width: 100%;
         margin-top: 1%;
         height: 3em;
       `}
       `
     return (
-      <Section style={{borderColor:'coral'}}>
+      <Section >
         <Wrapper className="cta">
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA className="cta-buttons-wrapper">
