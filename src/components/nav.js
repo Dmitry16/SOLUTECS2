@@ -34,7 +34,7 @@ export default class MainNav extends React.Component {
           > li { width: 15%; padding: 0.2em 0;
               > a { color: khaki; }
             &:hover { background: coral;
-              > a { color: lightblue; }
+              > a { color: blue; }
             }
           }
         }

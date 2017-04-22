@@ -5,7 +5,7 @@ export const greenTheme = {
   headerTextColor: 'steelblue',
   headerFont: 'steelblue',
   bodyBG: 'khaki',
-  hoverColor: '#aee8a7',
+  hoverColor: 'lightblue',
   primaryTextColor: 'steelblue',
 
   h1FontSize: '38px',
