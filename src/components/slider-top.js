@@ -30,10 +30,9 @@ class SliderTop extends React.Component {
 		return (
 			<Section style={{marginTop: '5%'}}>
 				<Wrapper>
-					<Img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img in" />
-					<Img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
-					<Img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img out" />
-					<Img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
+					<Img src='http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider1.jpeg' alt='xxx' className="slider-img in" />
+					<Img src='http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider2.jpeg' alt='xxx' className="slider-img out" />
+					<Img src='http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/04/mnt5-1.jpg' alt='xxx' className="slider-img out" />
 				</Wrapper>
 			</Section>
 		)

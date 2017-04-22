@@ -24,6 +24,7 @@ export default class Slider extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     showModal: PropTypes.func.isRequired,
+    initialPics: PropTypes.array.isRequired,
     pics: PropTypes.array.isRequired,
     modalVisibility: PropTypes.string.isRequired,
     modalPic: PropTypes.string.isRequired,
@@ -55,10 +56,10 @@ export default class Slider extends Component {
         transform: scale(1.1);
       }
     `
-    const { nextImg, prevImg, modalPic, showNextImg, showPrevImg,
+    const { initialPics, nextImg, prevImg, modalPic, showNextImg, showPrevImg,
             modalVisibility, showModal, closeModal } = this.props
 
-    let pics = this.props.pics
+    let pics = initialPics
     let pics_arr = pics.map((pic, id) => {
         return (
           <PicWrapper key={pic.id}>
