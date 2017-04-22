@@ -59,13 +59,14 @@ input, textarea, button[type="submit"] {
   border-radius: 0.2em;
 }
 button[type="submit"] {
-  background: mediumseagreen;
+  background: steelblue;
   cursor: pointer;
 }
 button[type="submit"]:hover {
-  background: lightgreen;
-  color: red;
-  box-shadow: 5px 5px 10px #000;
+  background: lightblue;
+  color: darkviolet;
+  border: 2px solid darkviolet;
+  box-shadow: 5px 5px 10px #777;
 }
 input, button[type="submit"] {
   height: 2.5em;

@@ -42,7 +42,7 @@ export default class ContactForm extends React.Component {
                       placeholder="Tu Email"
             />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit">Enviar</button>
         </form>
     )
   }

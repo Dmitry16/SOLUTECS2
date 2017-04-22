@@ -92,6 +92,12 @@ class App extends Component {
       )
     }
 
+    const renderBlog = () => {
+      return (
+        <Blog dispatch={ dispatch } />
+      )
+    }
+
     return (
       <Router>
         <ThemeProvider theme={ greenTheme }>
@@ -104,7 +110,7 @@ class App extends Component {
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
-              <Route exact={true} path='/' component={Blog}/>
+              <Route exact={true} path='/' render={renderBlog}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' component={Blog}/>
               <Route path='/contact' component={ContactPage}/>
