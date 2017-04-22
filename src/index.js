@@ -12,4 +12,4 @@ render ((
     <App />
   </Provider>
 
-), document.getElementById('app_root'))
+), document.getElementById('zz'))
