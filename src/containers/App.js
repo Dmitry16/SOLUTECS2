@@ -69,7 +69,7 @@ class App extends Component {
   render() {
 
     const { pics, initialPics, dispatch, nextImg, prevImg, modalPic,
-            modalVisibility } = this.props
+            modalVisibility, posts } = this.props
 
     const closeModal = bindActionCreators(modalActionCreators.closeModal, dispatch)
     const showModal = bindActionCreators(modalActionCreators.showModal, dispatch)
@@ -94,7 +94,7 @@ class App extends Component {
 
     const renderBlog = () => {
       return (
-        <Blog dispatch={ dispatch } />
+        <Blog dispatch={ dispatch } posts= { posts }/>
       )
     }
 
@@ -132,6 +132,7 @@ const mapStateToProps = store => (
     modalPic: store.modal.modalPic,
     nextImg: store.modal.nextImg,
     prevImg: store.modal.prevImg,
+    posts: store.blog.posts
   }
 )
 

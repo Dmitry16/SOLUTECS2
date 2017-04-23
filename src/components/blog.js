@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import Article from './article'
 import styled from 'styled-components'
 import { Box } from './styled/boxes'
+import { Section } from './styled/wrappers'
 import fetchPosts from '../actions/blogActions'
 
 export default class Blog extends React.Component {
@@ -14,11 +15,22 @@ export default class Blog extends React.Component {
   }
 
   render() {
+    let blog = this.props.posts.map((post,ind) => {
+      return (
+        <Box key={ post.id } className="blog">
+          <Article
+            postTitle={ post.title.rendered }
+            postExcerpt={ post.excerpt.rendered } 
+          />
+        </Box>
+      )
+      // console.log(post.content.rendered);
+    });
 
     return (
-      <Box className="blog">
-        <Article />
-      </Box>
+      <Section>
+        { blog }
+      </Section>
     )
   }
 }
