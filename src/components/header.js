@@ -42,7 +42,7 @@ class HeaderLarge extends React.Component {
     return (
       <Wrapper>
         <p className="icon-apple"></p>
-        <h1 className="site-title">Receptum in Natura</h1>
+        <h1 className="site-title">Llop Art</h1>
       </Wrapper>
     )
   }

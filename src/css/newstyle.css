@@ -1,3 +1,13 @@
+a,body,h1,h2,h3,h4,h5,h6,p {
+  font-family:Inconsolata,monospace;
+  color:#3f75a2;
+}
+* {
+  box-sizing:border-box
+}
+p {
+  font-weight:300
+}
 html {
   background: mediumseagreen;
   padding: 0;
@@ -18,6 +28,22 @@ h1.site-title {
   padding: 0;
   margin: 0;
 }
+.footer{background:#3d66a1;padding:3em 1.618em;width:100%}
+.footer .footer-logo{margin-bottom:2em;text-align:center}
+.footer .footer-logo img{height:3em}
+.footer .footer-links{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:1.5em}*/
+.footer ul{flex-basis:13em;flex-shrink:0;margin-bottom:3em;padding:0}
+.footer li a{color:rgba(255,255,255,.4);text-decoration:none}
+.footer li a:focus,.footer li a:hover{color:#fff}
+.footer li h3{color:#fff;font-size:1em;margin-bottom:.4em}
+.footer hr{border:1px solid rgba(255,255,255,.1);margin:0 auto 1.5em;width:12em}
+.footer p{color:rgba(255,255,255,.4);font-size:.9em;margin:auto;max-width:35em}
+
+.icons-wrapper {
+  display:flex;flex-wrap:wrap;justify-content:center;justify-content-margin:7% 0 0 0;padding:7% 0 5%
+}
+[class^=icon-]{font-size:4em}
+
 .icon, .header-logo-title,
 .all_pics_section {
   display: flex;
@@ -45,8 +71,16 @@ h1.site-title {
 .cta {
   width: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
+img.slider-img {
+  position:absolute;
+  top:0;
+  right:0;
+}
 .img.sm img {
   width: 100%;
 }
@@ -73,6 +107,9 @@ input, button[type="submit"] {
 }
 textarea {
   height: 4em;
+}
+.out {
+  opacity: 0;
 }
 @media only screen and (max-width: 500px) {
   input, textarea, button[type="submit"] {

@@ -10,7 +10,7 @@ export default class Manifesto extends React.Component {
   render() {
 
     return (
-      <Section>
+      <Section style={{padding:'5%'}}>
         <a href="#manifesto">
           <div className="icon">
           <H1>Nuestro Manifesto</H1>

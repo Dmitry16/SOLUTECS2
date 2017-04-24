@@ -21,7 +21,7 @@ export default class CTA extends React.Component {
   }
 
   render() {
-    const Wrapper = styled.div`
+    const WrapperCTA = styled.div`
       background: steelblue;
       text-align: center;
       border: none;
@@ -45,25 +45,24 @@ export default class CTA extends React.Component {
       `};
     `
     const BoxCTA = styled.div`
-
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       background: steelblue;
       text-align: center;
       margin: 0;
-      padding: 0;
+      padding: 2% 0;
       width: 100%;
-      > a { width: 33.3%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      > a { width: 33.3%;}
       ${ media.handheld`
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        > a { width: 80%;
-
-        `};
+        justify-content: center;
+        > a { width: 80%; }
+      `};
       ${ media.tablet`
         width: 100%;
         `};
@@ -103,9 +102,9 @@ export default class CTA extends React.Component {
       `
     return (
       <Section >
-        <Wrapper className="cta">
+        <WrapperCTA>
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
-          <BoxCTA className="cta-buttons-wrapper">
+          <BoxCTA>
             <Link to="/fotos"><ButtonCTA >
             Conocer quien somos</ButtonCTA></Link>
             <Link to="/fotos"><ButtonCTA primary >
@@ -114,7 +113,7 @@ export default class CTA extends React.Component {
               Ver las fotos</ButtonCTA>
             </Link>
           </BoxCTA>
-        </Wrapper>
+        </WrapperCTA>
       </Section>
     )
   }

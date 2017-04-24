@@ -21,7 +21,8 @@ import Article from '../components/article'
 import ContactPage from '../components/contactPage'
 import Icons from '../components/icons'
 // css
-import styles from '../css/newstyle.css'
+// import style1 from '../css/main.min.css'
+import style2 from '../css/newstyle.css'
 //Styled components
 import { Container_main, WrapperMax1100 } from '../components/styled/wrappers'
 import { ThemeProvider } from 'styled-components'
