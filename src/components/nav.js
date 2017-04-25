@@ -33,8 +33,8 @@ export default class MainNav extends React.Component {
         > div { ${ flex.row }
           > li { width: 15%; padding: 0.2em 0;
               > a { color: khaki; }
-            &:hover { background: coral;
-              > a { color: blue; }
+            &:hover { background: ${ props => props.theme.navHoverBG };
+              > a { color: ${ props => props.theme.navHoverTextColor }; }
             }
           }
         }

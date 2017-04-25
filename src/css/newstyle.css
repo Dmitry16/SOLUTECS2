@@ -42,7 +42,6 @@ h1.site-title {
 .icons-wrapper {
   display:flex;flex-wrap:wrap;justify-content:center;justify-content-margin:7% 0 0 0;padding:7% 0 5%
 }
-[class^=icon-]{font-size:4em}
 
 .icon, .header-logo-title,
 .all_pics_section {

@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { media } from './styled/medias'
+import { LT } from  './styled/titles'
 
-class HeaderLarge extends React.Component {
+export default class HeaderLarge extends React.Component {
   constructor() {
-    super();
+    super()
   }
 
   render() {
@@ -18,9 +19,11 @@ class HeaderLarge extends React.Component {
       background: ${ props => props.theme.headerBG || 'mediumseagreen' }
       height: 14em;
       > p, h1 {
+        cursor: pointer;
         font-size: 4em; padding: 0; margin: 0;
         color: ${ props => props.theme.headerTextColor || 'coral' }
         }
+      > p:hover { color: ${ props => props.theme.headerHoverTextColor || 'coral' }; }
       ${ media.desktop`height: 12em;
         > p, h1 {
           font-size: 4em; padding: 0; margin: 0;
@@ -38,14 +41,15 @@ class HeaderLarge extends React.Component {
           font-size: 1.3em; line-height: 1.2em; padding-top: 0; margin: 0;
         }`};
     `
-
+    const IconHeader = styled.p`
+      color: 'blue';
+      &:hover { color: 'red'; }
+    `
     return (
       <Wrapper>
-        <p className="icon-apple"></p>
-        <h1 className="site-title">Llop Art</h1>
+        <IconHeader className="icon-apple"></IconHeader>
+        <LT className="site-title">Llop Art</LT>
       </Wrapper>
     )
   }
 }
-
-export default HeaderLarge;

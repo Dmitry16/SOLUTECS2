@@ -3,6 +3,7 @@ import { media } from './medias'
 export const greenTheme = {
   headerBG: 'rgb(40, 26, 58)',
   headerTextColor: 'rgb(226, 206, 174)',
+  headerHoverTextColor: 'rgb(110, 100, 72)',
   headerFont: 'steelblue',
   bodyBG: 'rgb(40, 26, 58)',
   hoverColor: 'lightblue',
@@ -15,6 +16,8 @@ export const greenTheme = {
   buttonCTAhoverBorder: '1px solid red',
   buttonCTAhoverColor: 'darkviolet',
   navBG: 'rgb(92, 29, 104)',
+  navHoverBG: 'lightblue',
+  navHoverTextColor: 'rgb(92, 29, 104)',
   buttonTextColor: 'rgb(168, 150, 122)',
   buttonBorder: '1px solid #aaa',
   buttonBG: 'rgb(92, 29, 104)',

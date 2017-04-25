@@ -31,11 +31,14 @@ export default class Icon extends React.Component {
           > a > p.icon_title  { font-size: 1em }
       `}
     `
+    const Icon = styled.p`
+      font-size: 4em;
+    `
     const { href, className, icon_title } = this.props
     return (
       <Wrapper>
         <Link to={href}>
-              <p className={className}></p>
+              <Icon className={className}></Icon>
               <p className="icon_title">{icon_title}</p>
         </Link>
       </Wrapper>
