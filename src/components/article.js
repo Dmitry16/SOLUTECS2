@@ -1,9 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import { Box } from './styled/boxes'
 import { Section } from './styled/wrappers'
 import { MT } from  './styled/titles'
-import styled from 'styled-components'
+import { P } from  './styled/typographies'
+
 
 export default class Article extends React.Component {
   constructor() {
@@ -26,7 +28,7 @@ export default class Article extends React.Component {
     return (
         <Box>
           <MT> { this.props.postTitle } </MT>
-          { this.props.postExcerpt }
+          <P> { this.props.postExcerpt } </P>
         </Box>
     )
   }

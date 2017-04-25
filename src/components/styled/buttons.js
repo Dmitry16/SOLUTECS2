@@ -3,17 +3,17 @@ import { media } from './medias'
 import { css } from 'styled-components'
 
 export const Button = styled.button`
-  padding: ${props => props.small ? '0 0.5em' : '1.5em 8em'};
-  border: 2px solid #fff;
-  color: #fff;
+  padding: ${props => props.small ? '1em 2em' : '1.5em 8em'};
+  border: ${ props => props.theme.buttonBorder };
+  color: ${ props => props.theme.buttonTextColor };
   font-size: 1.2em;
-  background: steelblue;
+  background: ${ props => props.theme.buttonBG };
   margin-top: 0;
   cursor: pointer;
   &:hover {
-    background: lightblue;
-    border: 2px solid darkviolet;
-    color: darkviolet;
+    background: ${ props => props.theme.buttonHoverBG };
+    border: ${ props => props.theme.buttonHoverBorder };
+    color: ${ props => props.theme.buttonHoverColor };
     box-shadow: 5px 5px 10px #777;
   }
   ${ media.desktop`

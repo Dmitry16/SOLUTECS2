@@ -34,6 +34,9 @@ export const P = styled.p`
   font-size:  ${ props => props.theme.normalFontSize };
   font-weight: ${ props => props.theme.normalFontWeight };
   color:  ${ props => props.theme.primaryTextColor || 'mediumseagreen' };
+  &:hover {
+    color: ${ props => props.theme.primaryHoverTextColor || 'mediumseagreen' };
+  }
   ${ media.desktop`
     font-size:${ props => props.theme.bigFontSize }`};
   ${ media.tablet`
