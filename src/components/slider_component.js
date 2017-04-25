@@ -8,6 +8,7 @@ import { fetchAllPics } from '../actions/picsActions'
 import { closeModal } from '../actions/modalActions'
 //Components
 import Modal from './modal'
+import { VerTodoButton } from './verTodoButton'
 //Styled componentsimport styled from "styled-components";
 import styled from 'styled-components'
 import { media } from './styled/medias'
@@ -42,10 +43,6 @@ export default class Slider extends Component {
       position: relative;
       > #wrprBtn { margin: 5%;
         }
-    `
-    const wrprBtn = styled.div`
-      z-index: 9;
-      &:hover { box-shadow: 5px 5px 10px black; }
     `
     const Img = styled.img`
       max-width: 100%;
@@ -85,14 +82,8 @@ export default class Slider extends Component {
               closeModal = { closeModal }
             />
 
-            <wrprBtn id='wrprBtn'>
-              <Link to="/fotos">
-                <Button
-                  onClick={this.showAllPics.bind(this)}>
-                  Ver todas fotos
-                </Button>
-              </Link>
-            </wrprBtn>
+            <VerTodoButton showAllPics={this.showAllPics.bind(this)}/>
+
         </Wrapper>
       </Section>
     )

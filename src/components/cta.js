@@ -22,7 +22,7 @@ export default class CTA extends React.Component {
 
   render() {
     const WrapperCTA = styled.div`
-      background: steelblue;
+      background: ${ props => props.theme.colorCTA };
       text-align: center;
       border: none;
       ${ flex.column }
@@ -49,7 +49,7 @@ export default class CTA extends React.Component {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background: steelblue;
+      background: ${ props => props.theme.colorCTA };
       text-align: center;
       margin: 0;
       padding: 2% 0;
@@ -75,16 +75,16 @@ export default class CTA extends React.Component {
       height: ${props => props.primary ? '4.5em' : '4em'};
       color: #fff;
       font-size: ${props => props.primary ? '1.2em' : '1em'};
-      border: 2px solid #fff;
+      border: ${ props => props.theme.buttonCTABorder };
       margin: 0;
       padding: 0;
-      background: steelblue;
+      background: ${ props => props.theme.colorCTA };
       cursor: pointer;
       &:hover {
-        background: lightblue;
-        border: 2px solid darkviolet;
+        background: ${ props => props.theme.buttonCTAhoverBG };
+        border: ${ props => props.theme.buttonCTAhoverBorder };
         box-shadow: 5px 5px 10px #333;
-        color: darkviolet;
+        color: ${ props => props.theme.buttonCTAhoverColor };
       }
       ${ media.desktop`
         font-size: ${props => props.primary ? '1.2em' : '1em'};

@@ -51,7 +51,7 @@ class Icons extends React.Component {
   render() {
     return (
       <Section>
-        <H1>Nuestros Intereses y Hobbies</H1>
+        <H1>Servicios Profesionales</H1>
         <div className="icons-wrapper">
           {icons.map((icon,id) =>
             <Icon

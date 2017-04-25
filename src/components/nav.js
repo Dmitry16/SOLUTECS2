@@ -21,7 +21,7 @@ export default class MainNav extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      background: steelblue;
+      background: ${ props => props.theme.navBG };
       margin: 0;
       > ul {
         font-size: 1em;

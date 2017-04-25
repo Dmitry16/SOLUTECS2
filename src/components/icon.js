@@ -12,7 +12,7 @@ export default class Icon extends React.Component {
     const Wrapper = styled.div`
       width: 23%;
       margin: 1%;
-      border: 2px solid #fff;
+      border: 1px solid #aaa;
       background: rgba(255, 255, 255, 0.3);
       overflow: hidden;
       transition: all 0.5s;

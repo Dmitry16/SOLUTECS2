@@ -13,7 +13,6 @@ import Footer from '../components/footer'
 import Slider from '../components/slider_component'
 import CTA from '../components/cta'
 import Modal from '../components/modal'
-import SliderTop from '../components/slider-top'
 import MainNav from '../components/nav'
 import AllPics from '../components/allpics'
 import Blog from '../components/blog'
@@ -106,7 +105,6 @@ class App extends Component {
             <Route path='/' component={HeaderLarge}/>
             <WrapperMax1100>
               <Route path='/' render={this.renderMainNav.bind(this)}/>
-              <Route exact={true} path='/' component={SliderTop}/>
               <Route exact={true} path='/' component={Manifesto}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Icons}/>

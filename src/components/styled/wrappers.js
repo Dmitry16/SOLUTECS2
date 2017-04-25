@@ -3,6 +3,11 @@ import { media } from './medias'
 import { css } from 'styled-components'
 import { mediaQ } from './medias'
 
+// background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.07)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.13)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0.17))), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0.19)));
+// background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.07) 50%, transparent 50%), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, transparent 50%), -webkit-linear-gradient(left, transparent 50%, rgba(255, 255, 255, 0.17) 50%), -webkit-linear-gradient(left, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
+// background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
+// background-size: 1px, 2px, 3px, 6px;
+
 export const Container_main = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,7 +24,7 @@ export const WrapperMax1100 = styled.div`
   max-width: 1100px;
 `
 export const Section = styled.section`
-  border: 2px solid #fff;
+  border: ${ props => props.theme.borderSection };
   margin: 0 0 5%;
   background: rgba(#fff, 0.3);
   text-align: center;
