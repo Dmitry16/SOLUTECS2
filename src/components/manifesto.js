@@ -13,9 +13,8 @@ export default class Manifesto extends React.Component {
       <Section style={{padding:'5%'}}>
         <a href="#manifesto">
           <div className="icon">
-          <H1>Nuestro Manifesto</H1>
-              <Icon className="icon-eye"></Icon>
-              <H3 className="icon_title">Luminatium perdurantium!</H3>
+          <H1 style={{margin:'0 0 5% 0'}}>El Manifesto</H1>
+              <H3 className="icon_title">Viva La Escultura!</H3>
               <P className="quien-somos">Lorem ipsum dolor sit amet Luminatium! consectetur
                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

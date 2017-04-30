@@ -16,6 +16,7 @@ import { Title } from './styled/titles'
 import { Button } from './styled/buttons'
 import { Box } from './styled/boxes'
 import { Section, PicWrapper } from './styled/wrappers'
+import { H1, H3, Icon, P } from './styled/typographies'
 
 export default class Slider extends Component {
   constructor(props) {
@@ -68,6 +69,7 @@ export default class Slider extends Component {
 
     return (
       <Section>
+        <H1 style={{margin:'5% 0'}}>Mis Trabajos</H1>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
 
             { pics_arr }

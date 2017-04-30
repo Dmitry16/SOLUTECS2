@@ -47,9 +47,6 @@
 .icon-angle-double-up:before {
   content: "\63";
 }
-.icon-angle-down:before {
-  content: "\64";
-}
 .icon-angle-left:before {
   content: "\65";
 }
@@ -100,9 +97,6 @@
 }
 .icon-pagelines:before {
   content: "\75";
-}
-.icon-paw:before {
-  content: "\76";
 }
 .icon-phone-square:before {
   content: "\77";
@@ -169,4 +163,22 @@
 }
 .icon-official:before {
   content: "\52";
+}
+.icon-balance-scale:before {
+  content: "\64";
+}
+.icon-bicycle:before {
+  content: "\53";
+}
+.icon-body-cut:before {
+  content: "\54";
+}
+.icon-paw:before {
+  content: "\76";
+}
+.icon-avatar:before {
+  content: "\55";
+}
+.icon-invert:before {
+  content: "\56";
 }
