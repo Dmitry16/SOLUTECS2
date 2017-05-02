@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //Actions
-import { fetchAllPics } from '../actions/picsActions'
+import { fetchPics, fetchAllPics } from '../actions/picsActions'
 import { closeModal } from '../actions/modalActions'
 //Components
 import Modal from './modal'
@@ -45,6 +45,9 @@ export default class Slider extends Component {
       > #wrprBtn { margin: 5%;
         }
     `
+    const Pieza = styled.div`
+
+    `
     const Img = styled.img`
       max-width: 100%;
       max-height: 100%;
@@ -58,21 +61,43 @@ export default class Slider extends Component {
             modalVisibility, showModal, closeModal } = this.props
 
     let pics = initialPics
-    let pics_arr = pics.map((pic, id) => {
+
+    let piezas_arr = pics.map((pieza, id) => {
+
         return (
-          <PicWrapper key={pic.id}>
-            <Img src={pic.source_url} alt={pic.alt_text} className='albumPics'
-              onClick = {(e) => showModal(e)}/>
-          </PicWrapper>
+          <div className="pieza" key={ pieza.id }>
+
+            <p className="pieza-name">
+              { pieza.id }
+            </p>
+
+            <div className="rotate">
+
+                <div className="front">
+                    <a href="#pieza-single" className="pieza-image">
+                      <Img src={pieza.source_url}
+                          alt={pieza.alt_text} className='albumPics'/>
+                    </a>
+                </div>
+
+                <div className="pieza-col2">
+                  <p className="pieza-descr">
+                    blabla
+                  </p>
+                  <button className="boton-pieza">Más Información</button>
+                </div>
+
+            </div>
+          </div>
         )
-    })
+      })
 
     return (
       <Section>
         <H1 style={{margin:'5% 0'}}>Mis Trabajos</H1>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
 
-            { pics_arr }
+            { piezas_arr }
 
             <Modal
               modalPic = { modalPic }

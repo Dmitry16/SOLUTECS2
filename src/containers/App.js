@@ -19,6 +19,8 @@ import Blog from '../components/blog'
 import Article from '../components/article'
 import ContactPage from '../components/contactPage'
 import Icons from '../components/icons'
+//Actions
+// import { fetchPics } from '../actions/picsActions'
 // css
 // import style1 from '../css/main.min.css'
 import style2 from '../css/newstyle.css'
@@ -49,6 +51,10 @@ class App extends Component {
     nextImg: PropTypes.string,
     prevImg: PropTypes.string
   }
+
+  // componentWillMount() {
+  //   this.props.dispatch(fetchPics())
+  // }
 
   showAllPics = () => {
     if (this.props.pics)

@@ -15,6 +15,7 @@ class Footer extends React.Component {
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
+      > ul { list-style-type: none }
     `
     const Footer = styled.footer`
       display: flex;
@@ -22,12 +23,14 @@ class Footer extends React.Component {
       align-items: center;
       margin: 0;
       border: 2px solid #fff;
+      background: darkviolet;
+      > div > p { font-size: 2em }
     `
     return (
       <Footer className="footer" role="contentinfo">
 
           <div className='icon-wrapper'>
-            <Icon className="icon-apple"></Icon>
+            <Icon className="icon-invert"></Icon>
           </div>
 
           <WrapperLinks>
@@ -51,7 +54,7 @@ class Footer extends React.Component {
           </WrapperLinks>
 
           <hr />
-          <p>Todos los derechos muy reservados!</p>
+          <p>@2017 Todos los derechos reservados</p>
     </Footer>
   );
   }

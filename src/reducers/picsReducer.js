@@ -1,32 +1,22 @@
 const initialPics = [
   {
     id: 1,
-    source_url:'http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider3.jpeg',
+    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/esc2.gif',
     alt_text:'anunnaki'
   },
   {
     id: 2,
-    source_url:'http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider2.jpeg',
+    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/nero-1.jpg',
     alt_text:'anunnaki'
   },
   {
     id: 3,
-    source_url:'http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider1.jpeg',
+    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/caracalla.jpg',
     alt_text:'anunnaki'
   },
   {
     id: 4,
-    source_url:'http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/15.jpeg',
-    alt_text:'anunnaki'
-  },
-  {
-    id: 5,
-    source_url:'http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/16.jpeg',
-    alt_text:'anunnaki'
-  },
-  {
-    id: 6,
-    source_url:'http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/17.jpeg',
+    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/220px-Matronalivia2.jpg',
     alt_text:'anunnaki'
   }
 ]
