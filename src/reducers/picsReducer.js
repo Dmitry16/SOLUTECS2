@@ -1,36 +1,38 @@
-const initialPics = [
-  {
-    id: 1,
-    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/esc2.gif',
-    alt_text:'anunnaki'
-  },
-  {
-    id: 2,
-    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/nero-1.jpg',
-    alt_text:'anunnaki'
-  },
-  {
-    id: 3,
-    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/caracalla.jpg',
-    alt_text:'anunnaki'
-  },
-  {
-    id: 4,
-    source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/220px-Matronalivia2.jpg',
-    alt_text:'anunnaki'
-  }
-]
-const initialState = {
-    initialPics: initialPics,
-    pics: [...initialPics],
-    fetching: false,
-    fetched: false,
-    error: null,
-  }
+// const initialPics = [
+//   {
+//     id: 1,
+//     source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/esc2.gif',
+//     alt_text:'anunnaki'
+//   },
+//   {
+//     id: 2,
+//     source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/nero-1.jpg',
+//     alt_text:'anunnaki'
+//   },
+//   {
+//     id: 3,
+//     source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/caracalla.jpg',
+//     alt_text:'anunnaki'
+//   },
+//   {
+//     id: 4,
+//     source_url:'http://llop-art.solutecs.biz/wp-content/uploads/sites/21/2017/01/220px-Matronalivia2.jpg',
+//     alt_text:'anunnaki'
+//   }
+// ]
+// const initialState = {
+//     initialPics: initialPics,
+//     pics: [...initialPics],
+//     fetching: false,
+//     fetched: false,
+//     error: null,
+//   }
 
 import * as picsActionTypes from '../actionTypes/picsActionTypes'
 
-export default function picsReducer(state=initialState, action) {
+export default function picsReducer(state={
+  pics: []
+}, action) {
 
     switch (action.type) {
       case picsActionTypes.FETCH_PICS: {

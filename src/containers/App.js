@@ -44,12 +44,6 @@ class App extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    initialPics: PropTypes.array.isRequired,
-    pics: PropTypes.array.isRequired,
-    modalVisibility: PropTypes.string.isRequired,
-    modalPic: PropTypes.string.isRequired,
-    nextImg: PropTypes.string,
-    prevImg: PropTypes.string
   }
 
   // componentWillMount() {
@@ -88,7 +82,7 @@ class App extends Component {
 
     const renderSlider = () => {
       return (
-        <Slider { ...props } />
+        <Slider dispatch={ dispatch } pics= { pics } />
       )
     }
 

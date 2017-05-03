@@ -19,12 +19,12 @@ import { Section, PicWrapper } from './styled/wrappers'
 import { H1, H3, Icon, P } from './styled/typographies'
 
 export default class Slider extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   static propTypes = {
     dispatch: PropTypes.func.isRequired
+  }
+
+  componentWillMount() {
+    this.props.dispatch(fetchPics())
   }
 
   showAllPics() {
@@ -48,14 +48,10 @@ export default class Slider extends Component {
         cursor: pointer;
       }
     `
-    const A = styled.a`
-      width: 100% !important;
-    `
+    // const { initialPics, nextImg, prevImg, modalPic, showNextImg, showPrevImg,
+    //         modalVisibility, showModal, closeModal } = this.props
 
-    const { initialPics, nextImg, prevImg, modalPic, showNextImg, showPrevImg,
-            modalVisibility, showModal, closeModal } = this.props
-
-    let piezas_arr = initialPics.map((pieza, id) => {
+    let piezas_arr = this.props.pics.map((pieza, id) => {
 
         return (
           <div className="pieza" key={ pieza.id }>
@@ -67,15 +63,15 @@ export default class Slider extends Component {
             <div className="rotate">
 
                 <div className="front">
-                    <A href="#pieza-single" className="pieza-image">
-                      <Img src={pieza.source_url}
-                          alt={pieza.alt_text} className='albumPics'/>
-                    </A>
+                    <a href="#pieza-single" className="pieza-image">
+                      <Img src={pieza.better_featured_image.source_url}
+                          alt={pieza.better_featured_image.alt_text} className='albumPics'/>
+                    </a>
                 </div>
 
                 <div className="pieza-col2">
                   <p className="pieza-descr">
-                    blabla
+                    { pieza.excerpt.rendered }
                   </p>
                   <button className="boton-pieza">Más Información</button>
                 </div>
@@ -91,16 +87,6 @@ export default class Slider extends Component {
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
 
             { piezas_arr }
-
-            <Modal
-              modalPic = { modalPic }
-              modalVisibility = { modalVisibility }
-              nextImg = { nextImg }
-              prevImg = { prevImg }
-              showNextImg = { showNextImg }
-              showPrevImg = { showPrevImg }
-              closeModal = { closeModal }
-            />
 
             <VerTodoButton showAllPics={this.showAllPics.bind(this)}/>
 
