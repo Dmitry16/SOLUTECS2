@@ -24,26 +24,6 @@ const icons = [
     title: 'Fitoterapia',
     link: '#'
   },
-  {
-    icon: 'icon-leaf',
-    title: 'Detox',
-    link: '#'
-  },
-  {
-    icon: 'icon-heartbeat',
-    title: 'Holistica',
-    link: '#'
-  },
-  {
-    icon: 'icon-moon-o',
-    title: 'Contemplación de astros',
-    link: '#'
-  },
-  {
-    icon: 'icon-official',
-    title: 'Cine y musica',
-    link: '#'
-  },
 ]
 
 class Icons extends React.Component {

@@ -23,10 +23,10 @@ export default class Icon extends React.Component {
               }
       > a { border: none; }
       ${ media.tablet`
-        width: 31%;
+        width: 45%;
         `}
       ${ media.handheld`
-          width: 47%;
+          width: 90%;
           > a > p { font-size: 2.5em }
           > a > p.icon_title  { font-size: 1em }
       `}
