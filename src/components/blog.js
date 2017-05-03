@@ -20,11 +20,10 @@ export default class Blog extends React.Component {
         <Box key={ post.id } className="blog">
           <Article
             postTitle={ post.title.rendered }
-            postExcerpt={ post.excerpt.rendered } 
+            postExcerpt={ post.excerpt.rendered }
           />
         </Box>
       )
-      // console.log(post.content.rendered);
     });
 
     return (

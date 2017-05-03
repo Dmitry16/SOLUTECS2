@@ -24,14 +24,7 @@ export default class Slider extends Component {
   }
 
   static propTypes = {
-    dispatch: PropTypes.func.isRequired,
-    showModal: PropTypes.func.isRequired,
-    initialPics: PropTypes.array.isRequired,
-    pics: PropTypes.array.isRequired,
-    modalVisibility: PropTypes.string.isRequired,
-    modalPic: PropTypes.string.isRequired,
-    nextImg: PropTypes.string,
-    prevImg: PropTypes.string
+    dispatch: PropTypes.func.isRequired
   }
 
   showAllPics() {
@@ -51,18 +44,18 @@ export default class Slider extends Component {
     const Img = styled.img`
       max-width: 100%;
       max-height: 100%;
-      transition: transform 0.5s;
       &:hover {
         cursor: pointer;
-        transform: scale(1.1);
       }
     `
+    const A = styled.a`
+      width: 100% !important;
+    `
+
     const { initialPics, nextImg, prevImg, modalPic, showNextImg, showPrevImg,
             modalVisibility, showModal, closeModal } = this.props
 
-    let pics = initialPics
-
-    let piezas_arr = pics.map((pieza, id) => {
+    let piezas_arr = initialPics.map((pieza, id) => {
 
         return (
           <div className="pieza" key={ pieza.id }>
@@ -74,10 +67,10 @@ export default class Slider extends Component {
             <div className="rotate">
 
                 <div className="front">
-                    <a href="#pieza-single" className="pieza-image">
+                    <A href="#pieza-single" className="pieza-image">
                       <Img src={pieza.source_url}
                           alt={pieza.alt_text} className='albumPics'/>
-                    </a>
+                    </A>
                 </div>
 
                 <div className="pieza-col2">

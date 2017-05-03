@@ -110,16 +110,6 @@ textarea {
 .out {
   opacity: 0;
 }
-@media only screen and (max-width: 500px) {
-  input, textarea, button[type="submit"] {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  input, textarea, button[type="submit"] {
-    width: 30%;
-  }
-}
 .pieza {
 	display: flex;
 	flex-direction: column;
@@ -127,7 +117,7 @@ textarea {
 	text-align: center;
 	box-shadow: 0 0 20px 10px rgba(0,0,0,.7);
 	width: 40%;
-	height: 40em;
+	height: 35em;
 	border: 1px solid #aaa;
 	margin: 5% 2% 2% 2%;
 	padding: 0;
@@ -188,4 +178,22 @@ textarea {
 
 .pieza-image, .pieza-image img {
 	height: inherit !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  input, textarea, button[type="submit"] {
+    width: 30%;
+  }
+  .pieza {
+    width: 45%;
+    height: 30em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  input, textarea, button[type="submit"] {
+    width: 100%;
+  }
+  .pieza {
+    width: 100%;
+  }
 }
