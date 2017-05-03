@@ -48,8 +48,7 @@ export default class Slider extends Component {
         cursor: pointer;
       }
     `
-    // const { initialPics, nextImg, prevImg, modalPic, showNextImg, showPrevImg,
-    //         modalVisibility, showModal, closeModal } = this.props
+    const { pics } = this.props
 
     let piezas_arr = this.props.pics.map((pieza, id) => {
 
@@ -71,7 +70,8 @@ export default class Slider extends Component {
 
                 <div className="pieza-col2">
                   <p className="pieza-descr">
-                    { pieza.excerpt.rendered }
+                    { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
+                              .replace('[&hellip;]','...') }
                   </p>
                   <button className="boton-pieza">Más Información</button>
                 </div>
@@ -80,6 +80,8 @@ export default class Slider extends Component {
           </div>
         )
       })
+
+      piezas_arr = piezas_arr.slice(piezas_arr.length-4,piezas_arr.length)
 
     return (
       <Section>
