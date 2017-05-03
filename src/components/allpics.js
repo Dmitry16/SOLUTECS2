@@ -6,6 +6,7 @@ import Modal from './modal'
 import styled from 'styled-components'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1, H3, Icon, P } from './styled/typographies'
+import { Button } from './styled/buttons'
 
 export default class AllPics extends Component {
   constructor(props) {
@@ -14,10 +15,6 @@ export default class AllPics extends Component {
 
   static propTypes = {
     pics: PropTypes.array.isRequired,
-    modalVisibility: PropTypes.string.isRequired,
-    modalPic: PropTypes.string.isRequired,
-    nextImg: PropTypes.string,
-    prevImg: PropTypes.string
   }
 
   render() {
@@ -25,56 +22,64 @@ export default class AllPics extends Component {
     const Img = styled.img`
       max-width: 100%;
       max-height: 100%;
-      transition: transform 0.5s;
       &:hover {
         cursor: pointer;
-        transform: scale(1.1);
       }
     `
     const Wrapper = styled.div`
       display: flex;
       justifyContent: center;
     `
-    const ModalWrapper = styled.div`
-      position: relative;
+    const PiezasWrapper = styled.div`
+      border: 1px solid #eee;
       width: 100%;
-      max-height: 15em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
     `
-    const { nextImg, prevImg, modalPic, showNextImg,
-            showPrevImg, modalVisibility, closeModal } = this.props
 
-    let pics = this.props.pics
-    let pics_arr = pics.map((pic, id) => {
+    const { pics } = this.props
+
+    let piezas_arr = this.props.pics.map((pieza, id) => {
+
         return (
-            <PicWrapper key={pic.id}>
-              <a href='#top'>
-                <Img src={pic.source_url} alt={pic.alt_text} className='albumPics'
-                  onClick = {(e) => this.props.showModal(e)}/>
-              </a>
-            </PicWrapper>
+          <div className="pieza" key={ pieza.id }>
+
+            <p className="pieza-name">
+              { pieza.title.rendered }
+            </p>
+
+            <div className="rotate">
+
+                <div className="front">
+                    <a href="#pieza-single" className="pieza-image">
+                      <Img src={pieza.better_featured_image.source_url}
+                          alt={pieza.better_featured_image.alt_text} className='albumPics'/>
+                    </a>
+                </div>
+
+                <div className="pieza-col2">
+                  <p className="pieza-descr">
+                    { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
+                              .replace('[&hellip;]','...') }
+                  </p>
+                  <Button small style={{background:'none',padding:'1em'}}>Más Información</Button>
+                </div>
+
+            </div>
+          </div>
         )
-    })
+      })
 
     return (
       <Section style={{border: 'none'}}>
         <Wrapper className="all_pics_section">
 
-          <ModalWrapper>
-            <Modal
-              modalPic = { modalPic }
-              modalVisibility = { modalVisibility }
-              nextImg = { nextImg }
-              prevImg = { prevImg }
-              showNextImg = { showNextImg }
-              showPrevImg = { showPrevImg }
-              closeModal = { closeModal }
-            />
-          </ModalWrapper>
-
-          <H3 className="title-front">Album de Fotos</H3>
-          <div className="all_pics">
-            { pics_arr }
-          </div>
+          <H3 className="title-front">Todos mis trabajos</H3>
+          <PiezasWrapper>
+            { piezas_arr }
+          </PiezasWrapper>
         </Wrapper>
       </Section>
     )

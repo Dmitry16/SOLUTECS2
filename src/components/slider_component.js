@@ -56,7 +56,7 @@ export default class Slider extends Component {
           <div className="pieza" key={ pieza.id }>
 
             <p className="pieza-name">
-              { pieza.id }
+              { pieza.title.rendered }
             </p>
 
             <div className="rotate">
@@ -73,7 +73,7 @@ export default class Slider extends Component {
                     { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
                               .replace('[&hellip;]','...') }
                   </p>
-                  <button className="boton-pieza">Más Información</button>
+                  <Button small style={{background:'none',padding:'1em'}}>Más Información</Button>
                 </div>
 
             </div>
