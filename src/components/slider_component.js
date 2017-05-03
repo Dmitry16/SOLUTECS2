@@ -73,10 +73,14 @@ export default class Slider extends Component {
                     { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
                               .replace('[&hellip;]','...') }
                   </p>
-                  <Button small style={{background:'none',padding:'1em'}}>Más Información</Button>
                 </div>
 
             </div>
+
+            <Link to='/piezaPage'>
+              <Button small style={{background:'none',padding:'0.5em',margin:'0 0 1em'}}>Ver detalles</Button>
+            </Link>
+
           </div>
         )
       })

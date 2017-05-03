@@ -14,7 +14,7 @@ export const Button = styled.button`
     background: ${ props => props.theme.buttonHoverBG };
     border: ${ props => props.theme.buttonHoverBorder };
     color: ${ props => props.theme.buttonHoverColor };
-    box-shadow: 5px 5px 10px #777;
+    box-shadow: 0 0 20px 3px #777;
   }
   ${ media.desktop`
     padding: ${props => props.small ? '0 0.5em' : '1.5em 7em'};

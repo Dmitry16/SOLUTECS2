@@ -8,11 +8,11 @@ import { H1, H3, Icon, P } from './styled/typographies'
 import { Button } from './styled/buttons'
 
 
-export default class piezaPage extends React.Component {
+export default class PiezaPage extends React.Component {
 
   render() {
     return (
-
+      <H1>KUku!</H1>
     )
   }
 }

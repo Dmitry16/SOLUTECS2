@@ -19,6 +19,7 @@ import Blog from '../components/blog'
 import Article from '../components/article'
 import ContactPage from '../components/contactPage'
 import Icons from '../components/icons'
+import PiezaPage from '../components/piezaPage'
 //Actions
 // import { fetchPics } from '../actions/picsActions'
 // css
@@ -110,6 +111,7 @@ class App extends Component {
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
               <Route exact={true} path='/' render={renderBlog}/>
+              <Route path='/piezaPage' component={PiezaPage}/>              
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' component={Blog}/>
               <Route path='/contact' component={ContactPage}/>
