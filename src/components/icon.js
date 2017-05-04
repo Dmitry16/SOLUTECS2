@@ -13,13 +13,14 @@ export default class Icon extends React.Component {
       width: 23%;
       margin: 1%;
       border: 1px solid #aaa;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.2);
       overflow: hidden;
       transition: all 0.5s;
-      &:hover { background: lightblue;
+      > a > p { color: ${ props => props.theme.bodyBG }; }
+      &:hover { background: ${ props => props.theme.hoverColor };
                 box-shadow: 5px 5px 10px #777;
                 transform: scale(1.1);
-                > a > p { color: darkviolet; }
+                > a > p { color:  ${ props => props.theme.primaryHoverTextColor }; }
               }
       > a { border: none; }
       ${ media.tablet`

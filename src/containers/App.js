@@ -23,8 +23,7 @@ import PiezaPage from '../components/piezaPage'
 //Actions
 // import { fetchPics } from '../actions/picsActions'
 // css
-// import style1 from '../css/main.min.css'
-import style2 from '../css/newstyle.css'
+import style from '../css/newstyle.css'
 //Styled components
 import { Container_main, WrapperMax1100 } from '../components/styled/wrappers'
 import { ThemeProvider } from 'styled-components'
@@ -46,10 +45,6 @@ class App extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
   }
-
-  // componentWillMount() {
-  //   this.props.dispatch(fetchPics())
-  // }
 
   showAllPics = () => {
     if (this.props.pics)
