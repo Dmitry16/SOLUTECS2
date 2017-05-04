@@ -3,7 +3,7 @@ import Article from './article'
 import styled from 'styled-components'
 import { Box } from './styled/boxes'
 import { Section } from './styled/wrappers'
-import fetchPosts from '../actions/blogActions'
+import { fetchFrontPosts, fetchPosts } from '../actions/blogActions'
 
 export default class Blog extends React.Component {
   static propTypes = {
@@ -11,7 +11,12 @@ export default class Blog extends React.Component {
   }
 
   componentWillMount() {
-    this.props.dispatch(fetchPosts())
+
+    if (this.props.frontPage===true) {
+      this.props.dispatch(fetchFrontPosts())
+    } else {
+      this.props.dispatch(fetchPosts())
+    }
   }
 
   render() {
@@ -20,7 +25,8 @@ export default class Blog extends React.Component {
         <Box key={ post.id } className="blog">
           <Article
             postTitle={ post.title.rendered }
-            postExcerpt={ post.excerpt.rendered }
+            postExcerpt={ post.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
+                    .replace('[&hellip;]','...') }
           />
         </Box>
       )

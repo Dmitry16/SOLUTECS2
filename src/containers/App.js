@@ -91,9 +91,23 @@ class App extends Component {
       )
     }
 
+    const renderFrontPosts = () => {
+      return (
+        <Blog
+          dispatch={ dispatch }
+          posts={ posts }
+          frontPage={ true }
+        />
+      )
+    }
+
     const renderBlog = () => {
       return (
-        <Blog dispatch={ dispatch } posts= { posts }/>
+        <Blog
+          dispatch={ dispatch }
+          posts={ posts }
+          frontPage={ false }
+        />
       )
     }
 
@@ -118,10 +132,10 @@ class App extends Component {
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
-              <Route exact={true} path='/' render={renderBlog}/>
+              <Route exact={true} path='/' render={renderFrontPosts}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>
-              <Route path='/blog' component={Blog}/>
+              <Route path='/blog' render={renderBlog}/>
               <Route path='/contact' component={ContactPage}/>
               <Route path='/trabajos' render={renderAllPics}/>
             </WrapperMax1100>

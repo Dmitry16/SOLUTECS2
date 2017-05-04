@@ -6,7 +6,7 @@ export const greenTheme = {
   headerHoverTextColor: 'rgb(110, 100, 72)',
   headerFont: 'steelblue',
   bodyBG: 'rgb(40, 26, 58)',
-  hoverColor: 'lightblue',
+  hoverColor: 'rgb(92, 29, 104)',
   primaryTextColor: 'rgb(168, 150, 122)',
   primaryHoverTextColor:'rgb(198, 150, 122)',
   borderSection: '1px solid #777',
