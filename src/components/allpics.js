@@ -2,12 +2,15 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
+//Actions
+import { showPiezaPage } from '../actions/piezaActions'
 //Components
 import Modal from './modal'
 import styled from 'styled-components'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1, H3, Icon, P } from './styled/typographies'
 import { Button } from './styled/buttons'
+import { Img } from './styled/img'
 
 export default class AllPics extends Component {
   constructor(props) {
@@ -16,17 +19,11 @@ export default class AllPics extends Component {
 
   static propTypes = {
     pics: PropTypes.array.isRequired,
+    showPiezaPage: PropTypes.func.isRequired
   }
 
   render() {
 
-    const Img = styled.img`
-      max-width: 100%;
-      max-height: 100%;
-      &:hover {
-        cursor: pointer;
-      }
-    `
     const Wrapper = styled.div`
       display: flex;
       justifyContent: center;
@@ -40,9 +37,14 @@ export default class AllPics extends Component {
       padding: 0;
     `
 
-    const { pics } = this.props
+    const { pics, showPiezaPage } = this.props
 
     let piezas_arr = this.props.pics.map((pieza, id) => {
+
+      const title = pieza.title.rendered,
+            description = pieza.content.rendered,
+            img = pieza.better_featured_image.source_url,
+            alt = pieza.better_featured_image.alt_text      
 
         return (
           <div className="pieza" key={ pieza.id }>
@@ -65,12 +67,17 @@ export default class AllPics extends Component {
                     { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
                               .replace('[&hellip;]','...') }
                   </p>
-                  <Link to='/piezaPage'>
-                    <Button small style={{background:'none',padding:'1em'}}>Más Información</Button>
-                  </Link>
                 </div>
 
             </div>
+
+            <Link to='/piezaPage'>
+              <Button small onClick={ () => showPiezaPage(title, description, img) }
+                      style={{background:'none',padding:'0.5em',margin:'0 0 1em'}}>
+                Ver detalles
+              </Button>
+            </Link>
+
           </div>
         )
       })

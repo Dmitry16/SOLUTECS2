@@ -109,7 +109,7 @@ export default class CTA extends React.Component {
             Conocer quien soy</ButtonCTA></Link>
             <Link to="/fotos"><ButtonCTA primary >
             Saber que ofrezco</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA onClick={this.showPics.bind(this)}>
+            <Link to="/trabajos"><ButtonCTA onClick={this.showPics.bind(this)}>
               Ver todos trabajos</ButtonCTA>
             </Link>
           </BoxCTA>

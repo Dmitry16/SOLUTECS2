@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 
 //Components
-import Modal from './modal'
 import styled from 'styled-components'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1, H3, Icon, P } from './styled/typographies'
 import { Button } from './styled/buttons'
 import { flex } from './styled/flexes'
+import { Img } from './styled/img'
 
 
 export default class PiezaPage extends Component {
@@ -23,14 +23,23 @@ export default class PiezaPage extends Component {
 
     const ColumnWrapper = styled.div`
       ${ flex.column }
+      border: 1px solid #ddd;
+      padding: 3%;
     `
 
     return (
       <Section>
+
         <ColumnWrapper>
           <H1>{ piezaTitle }</H1>
-          <P>{ piezaDescription }</P>
+          <Img src= { piezaImg } alt='zz'/>
         </ColumnWrapper>
+
+        <ColumnWrapper>
+          <P>{ piezaDescription.replace(/(<([^>]+)>)/ig,'')
+                  .replace('[&hellip;]','...') }</P>
+        </ColumnWrapper>
+
       </Section>
     )
   }

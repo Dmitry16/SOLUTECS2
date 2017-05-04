@@ -80,9 +80,9 @@ export default class MainNav extends React.Component {
                 <Link to='/about'>Manifesto</Link>
               </li>
               <li>
-                <Link to='/fotos'>
+                <Link to='/trabajos'>
                   <div onClick={this.showPics.bind(this)}>
-                    Fotos
+                    Mis trabajos
                   </div>
                 </Link>
               </li>

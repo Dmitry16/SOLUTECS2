@@ -10,7 +10,7 @@ const wrprBtn = styled.div`
 export const VerTodoButton = (props) => {
   return (
     <wrprBtn id='wrprBtn'>
-      <Link to="/fotos">
+      <Link to="/trabajos">
         <Button
           onClick={props.showAllPics}>
           Ver todos trabajos

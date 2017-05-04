@@ -123,7 +123,7 @@ class App extends Component {
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' component={Blog}/>
               <Route path='/contact' component={ContactPage}/>
-              <Route path='/fotos' render={renderAllPics}/>
+              <Route path='/trabajos' render={renderAllPics}/>
             </WrapperMax1100>
             <Route path='/' component={Footer}/>
           </Container_main>

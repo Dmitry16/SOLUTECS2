@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //Actions
 import { fetchPics, fetchAllPics } from '../actions/picsActions'
-import { showPiezaPage } from '../actions/piezaActions'
 //Components
 import Modal from './modal'
 import { VerTodoButton } from './verTodoButton'
@@ -33,10 +32,6 @@ export default class Slider extends Component {
 
   showAllPics() {
     this.props.dispatch(fetchAllPics())
-  }
-
-  showPiezaPage(title, description, img) {
-    this.props.dispatch(showPiezaPage(title, description, img))
   }
 
   render() {
