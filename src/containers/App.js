@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 //Actions
-import * as modalActionCreators from '../actions/modalActions'
+import * as piezaActionCreators from '../actions/piezaActions'
 // Components
 import HeaderLarge from '../components/header'
 import Manifesto from '../components/manifesto'
@@ -69,21 +69,19 @@ class App extends Component {
 
   render() {
 
-    const { pics, initialPics, dispatch, nextImg, prevImg, modalPic,
-            modalVisibility, posts } = this.props
+    const { pics, dispatch, posts } = this.props
 
-    const closeModal = bindActionCreators(modalActionCreators.closeModal, dispatch)
-    const showModal = bindActionCreators(modalActionCreators.showModal, dispatch)
-    const showNextImg = bindActionCreators(modalActionCreators.showNextImg, dispatch)
-    const showPrevImg = bindActionCreators(modalActionCreators.showPrevImg, dispatch)
-    const showPics = this.showAllPics.bind(this)
+    const showPiezaPage = bindActionCreators(piezaActionCreators.showPiezaPage, dispatch)
 
-    const props = { showPics, showModal, closeModal, showNextImg, showPrevImg, pics,
-                    initialPics, dispatch, nextImg, prevImg, modalPic, modalVisibility }
+    const props = { pics, showPiezaPage, dispatch, posts }
 
     const renderSlider = () => {
       return (
-        <Slider dispatch={ dispatch } pics= { pics } />
+        <Slider
+          dispatch={ dispatch }
+          pics= { pics }
+          showPiezaPage= { showPiezaPage }
+        />
       )
     }
 
@@ -99,6 +97,16 @@ class App extends Component {
       )
     }
 
+    const renderPiezaPage = () => {
+      return (
+        <PiezaPage
+         piezaTitle= { this.props.piezaTitle }
+         piezaDescription= { this.props.piezaDescription }
+         piezaImg= { this.props.piezaImg }
+        />
+      )
+    }
+
     return (
       <Router>
         <ThemeProvider theme={ greenTheme }>
@@ -111,7 +119,7 @@ class App extends Component {
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
               <Route exact={true} path='/' render={renderBlog}/>
-              <Route path='/piezaPage' component={PiezaPage}/>              
+              <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' component={Blog}/>
               <Route path='/contact' component={ContactPage}/>
@@ -129,10 +137,9 @@ const mapStateToProps = store => (
   {
     initialPics: store.pics.initialPics,
     pics: store.pics.pics,
-    modalVisibility: store.modal.modalVisibility,
-    modalPic: store.modal.modalPic,
-    nextImg: store.modal.nextImg,
-    prevImg: store.modal.prevImg,
+    piezaTitle: store.pieza.piezaTitle,
+    piezaDescription: store.pieza.piezaDescription,
+    piezaImg: store.pieza.piezaImg,
     posts: store.blog.posts
   }
 )

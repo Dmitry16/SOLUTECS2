@@ -8,7 +8,7 @@ export const greenTheme = {
   bodyBG: 'rgb(40, 26, 58)',
   hoverColor: 'lightblue',
   primaryTextColor: 'rgb(168, 150, 122)',
-  primaryHoverTextColor:'rgb(110, 100, 72)',
+  primaryHoverTextColor:'rgb(198, 150, 122)',
   borderSection: '1px solid #777',
   colorCTA: 'rgb(92, 29, 104)',
   buttonCTABorder: '1px solid #aaa',

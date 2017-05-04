@@ -11,7 +11,7 @@ import { Button } from './styled/buttons'
 
 export default class AllPics extends Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   static propTypes = {

@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //Actions
 import { fetchPics, fetchAllPics } from '../actions/picsActions'
-import { closeModal } from '../actions/modalActions'
+import { showPiezaPage } from '../actions/piezaActions'
 //Components
 import Modal from './modal'
 import { VerTodoButton } from './verTodoButton'
@@ -19,6 +19,10 @@ import { Section, PicWrapper } from './styled/wrappers'
 import { H1, H3, Icon, P } from './styled/typographies'
 
 export default class Slider extends Component {
+  constructor() {
+    super()
+  }
+
   static propTypes = {
     dispatch: PropTypes.func.isRequired
   }
@@ -29,6 +33,10 @@ export default class Slider extends Component {
 
   showAllPics() {
     this.props.dispatch(fetchAllPics())
+  }
+
+  showPiezaPage(title, description, img) {
+    this.props.dispatch(showPiezaPage(title, description, img))
   }
 
   render() {
@@ -48,23 +56,28 @@ export default class Slider extends Component {
         cursor: pointer;
       }
     `
-    const { pics } = this.props
+    const { pics, showPiezaPage } = this.props
 
     let piezas_arr = this.props.pics.map((pieza, id) => {
+
+      const title = pieza.title.rendered,
+            description = pieza.content.rendered,
+            img = pieza.better_featured_image.source_url,
+            alt = pieza.better_featured_image.alt_text
 
         return (
           <div className="pieza" key={ pieza.id }>
 
             <p className="pieza-name">
-              { pieza.title.rendered }
+              { title }
             </p>
 
             <div className="rotate">
 
                 <div className="front">
                     <a href="#pieza-single" className="pieza-image">
-                      <Img src={pieza.better_featured_image.source_url}
-                          alt={pieza.better_featured_image.alt_text} className='albumPics'/>
+                      <Img src={ img }
+                          alt={ alt } className='albumPics'/>
                     </a>
                 </div>
 
@@ -78,7 +91,10 @@ export default class Slider extends Component {
             </div>
 
             <Link to='/piezaPage'>
-              <Button small style={{background:'none',padding:'0.5em',margin:'0 0 1em'}}>Ver detalles</Button>
+              <Button small onClick={ () => showPiezaPage(title, description, img) }
+                      style={{background:'none',padding:'0.5em',margin:'0 0 1em'}}>
+                Ver detalles
+              </Button>
             </Link>
 
           </div>

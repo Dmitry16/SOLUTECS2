@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { media } from './medias'
 
 export const H1 = styled.h1`
-  margin: 5% 0 0;
+  margin: 5% 0;
   font-size:  ${ props => props.theme.h1FontSize };
   font-weight: ${ props => props.theme.h1FontWeight };
   color:  ${ props => props.theme.primaryTextColor || 'mediumseagreen' };
@@ -29,7 +29,7 @@ export const H3 = styled.h3`
   ${ media.handheld`font-size: 20px;`};
 `
 export const P = styled.p`
-  margin: 0;
+  margin: 0 3% 5%;
   padding: 0;
   font-size:  ${ props => props.theme.normalFontSize };
   font-weight: ${ props => props.theme.normalFontWeight };
@@ -42,6 +42,7 @@ export const P = styled.p`
   ${ media.tablet`
     font-size:${ props => props.theme.normalFontSize }`};
   ${ media.handheld`
+    margin: 0 1% 2%;
     font-size:${ props => props.theme.smallFontSize }`};
 `
 export const Icon = styled.p`
