@@ -20,8 +20,6 @@ import Article from '../components/article'
 import ContactPage from '../components/contactPage'
 import Icons from '../components/icons'
 import PiezaPage from '../components/piezaPage'
-//Actions
-// import { fetchPics } from '../actions/picsActions'
 // css
 import style from '../css/newstyle.css'
 //Styled components
@@ -116,6 +114,8 @@ class App extends Component {
       )
     }
 
+// <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
+
     return (
       <Router>
         <ThemeProvider theme={ greenTheme }>
@@ -124,9 +124,8 @@ class App extends Component {
             <WrapperMax1100>
               <Route path='/' render={this.renderMainNav.bind(this)}/>
               <Route exact={true} path='/' component={Manifesto}/>
-              <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
-              <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
+              <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderFrontPosts}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>
