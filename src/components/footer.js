@@ -21,9 +21,10 @@ class Footer extends React.Component {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0;
+      background: ${ props => props.theme.footerBG };
+      padding:3em 1.618em;
+      width:100%
       border: 2px solid #fff;
-      background: darkviolet;
       > div > p { font-size: 2em }
     `
     return (

@@ -2,7 +2,7 @@ import { media } from './medias'
 
 export const greenTheme = {
   headerBG: 'rgb(255, 255, 255)',
-  headerTextColor: 'rgb(126, 106, 174)',
+  headerTextColor: 'rgba(110, 100, 72, .9)',
   headerHoverTextColor: 'rgb(110, 100, 72)',
   headerFont: 'steelblue',
   bodyBG: 'rgb(255, 255, 255)',
@@ -15,7 +15,7 @@ export const greenTheme = {
   buttonCTAhoverBG: 'rgb(237, 247, 255)',
   buttonCTAhoverBorder: '1px solid coral',
   buttonCTAhoverColor: 'darkviolet',
-  navBG: 'rgb(92, 29, 104)',
+  navBG: 'rgb(110, 100, 72)',
   navHoverBG: 'lightblue',
   navHoverTextColor: 'rgb(92, 29, 104)',
   buttonTextColor: 'rgb(168, 150, 122)',
@@ -24,8 +24,9 @@ export const greenTheme = {
   buttonHoverBG: 'rgb(237, 247, 255)',
   buttonHoverBorder: '1px solid coral',
   buttonHoverColor: 'coral',
-  iconColor: 'rgb(110, 100, 72)',
-  iconHoverColor: 'coral',
+  iconColor: 'rgb(168, 150, 122)',
+  iconHoverColor: 'rgb(110, 100, 72)',
+  footerBG: 'rgb(110, 100, 72)',
 
   h1FontSize: '38px',
   h1FontWeight: '300',
