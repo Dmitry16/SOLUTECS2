@@ -32,22 +32,21 @@ export default class HeaderLarge extends React.Component {
         > p, h1 {
           font-size: 3em; padding: 0; margin: 0;
         }`};
-      ${ media.handheld`height: 5em;
+      ${ media.handheld`height: 6em;
         > p, h1 {
           font-size: 1.7em; padding: 0; margin: 0;
         }`};
-      ${ media.tiny`height: 5em;
+      ${ media.tiny`height: 6em;
         > h1 {
-          font-size: 1.3em; line-height: 1.2em; padding-top: 0; margin: 0;
+          font-size: 1.5em; line-height: 1.2em; padding-top: 0; margin: 0;
         }`};
     `
-    const IconHeader = styled.p`
-      color: 'blue';
-      &:hover { color: 'red'; }
+    const ImgHeader = styled.img`
+
     `
     return (
       <Wrapper>
-        <IconHeader className="icon-invert"></IconHeader>
+        <ImgHeader src='./assets/img/logo2.png'></ImgHeader>
         <LT className="site-title">Impexa</LT>
       </Wrapper>
     )

@@ -1,9 +1,9 @@
 import { media } from './medias'
 
 export const greenTheme = {
-  headerBG: 'rgb(255, 255, 255)',
-  headerTextColor: 'rgba(110, 100, 72, .9)',
-  headerHoverTextColor: 'rgb(110, 100, 72)',
+  headerBG: 'rgb(194, 248, 252)',
+  headerTextColor: 'rgb(110, 100, 72)',
+  headerHoverTextColor: 'rgb(68, 50, 22)',
   headerFont: 'steelblue',
   bodyBG: 'rgb(255, 255, 255)',
   hoverColor: 'rgb(237, 247, 255)',
@@ -16,16 +16,16 @@ export const greenTheme = {
   buttonCTAhoverBorder: '1px solid coral',
   buttonCTAhoverColor: 'darkviolet',
   navBG: 'rgb(110, 100, 72)',
-  navHoverBG: 'lightblue',
-  navHoverTextColor: 'rgb(92, 29, 104)',
+  navHoverBG: 'orange',
+  navHoverTextColor: 'rgb(68, 50, 22)',
   buttonTextColor: 'rgb(168, 150, 122)',
   buttonBorder: '1px solid rgba(110, 100, 72, 0.7)',
   buttonBG: 'rgb(255, 255, 255)',
   buttonHoverBG: 'rgb(237, 247, 255)',
   buttonHoverBorder: '1px solid coral',
   buttonHoverColor: 'coral',
-  iconColor: 'rgb(168, 150, 122)',
-  iconHoverColor: 'rgb(110, 100, 72)',
+  iconColor: 'rgb(120, 110, 82)',
+  iconHoverColor: 'rgb(120, 90, 62)',
   footerBG: 'rgb(110, 100, 72)',
 
   h1FontSize: '38px',
