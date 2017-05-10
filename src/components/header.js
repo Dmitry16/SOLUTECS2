@@ -48,7 +48,7 @@ export default class HeaderLarge extends React.Component {
     return (
       <Wrapper>
         <IconHeader className="icon-invert"></IconHeader>
-        <LT className="site-title">Llop Art</LT>
+        <LT className="site-title">Impexa</LT>
       </Wrapper>
     )
   }

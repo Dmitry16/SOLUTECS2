@@ -123,9 +123,9 @@ class App extends Component {
             <Route path='/' component={HeaderLarge}/>
             <WrapperMax1100>
               <Route path='/' render={this.renderMainNav.bind(this)}/>
-              <Route exact={true} path='/' component={Manifesto}/>
               <Route exact={true} path='/' render={renderSlider}/>
               <Route exact={true} path='/' component={Icons}/>
+              <Route exact={true} path='/' component={Manifesto}/>
               <Route exact={true} path='/' render={renderFrontPosts}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>

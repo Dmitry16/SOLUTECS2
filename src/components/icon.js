@@ -16,11 +16,11 @@ export default class Icon extends React.Component {
       background: rgba(255, 255, 255, 0.2);
       overflow: hidden;
       transition: all 0.5s;
-      > a > p { color: ${ props => props.theme.bodyBG }; }
+      > a > p { color: ${ props => props.theme.iconColor }; }
       &:hover { background: ${ props => props.theme.hoverColor };
                 box-shadow: 5px 5px 10px #777;
                 transform: scale(1.1);
-                > a > p { color:  ${ props => props.theme.primaryHoverTextColor }; }
+                > a > p { color:  ${ props => props.theme.iconHoverColor }; }
               }
       > a { border: none; }
       ${ media.tablet`

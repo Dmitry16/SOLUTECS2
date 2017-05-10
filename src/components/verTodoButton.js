@@ -13,7 +13,7 @@ export const VerTodoButton = (props) => {
       <Link to="/trabajos">
         <Button
           onClick={props.showAllPics}>
-          Ver todos trabajos
+          Ver todos productos
         </Button>
       </Link>
     </wrprBtn>

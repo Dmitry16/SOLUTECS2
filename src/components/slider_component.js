@@ -42,7 +42,25 @@ export default class Slider extends Component {
         }
     `
     const Pieza = styled.div`
-
+      width: 20%;
+      height: 20em;
+      display: flex;
+    	flex-direction: column;
+      align-items: center;
+    	justify-content: center;
+    	text-align: center;
+    	box-shadow: 0px 0px 30px 5px rgba(0,0,0,.7);
+    	border: 1px solid #aaa;
+    	margin: 5% 2% 2% 2%;
+    	padding: 0;
+    	border: 1px solid rgba(255, 255, 255, 0.9);
+    	border-radius: 3px;
+      color: coral;
+    `
+    const PiezaTitle = styled.h3`
+      color: ${ props => props.theme.buttonTextColor };
+      margin: 4%;
+      font-weight: 100;
     `
     const Img = styled.img`
       max-width: 100%;
@@ -61,11 +79,11 @@ export default class Slider extends Component {
             alt = pieza.better_featured_image.alt_text
 
         return (
-          <div className="pieza" key={ pieza.id }>
+          <Pieza className="pieza" key={ pieza.id }>
 
-            <p className="pieza-name">
+            <PiezaTitle className="pieza-name">
               { title }
-            </p>
+            </PiezaTitle>
 
             <div className="rotate">
 
@@ -92,7 +110,7 @@ export default class Slider extends Component {
               </Button>
             </Link>
 
-          </div>
+          </Pieza>
         )
       })
 
@@ -100,7 +118,7 @@ export default class Slider extends Component {
 
     return (
       <Section>
-        <H1 style={{margin:'5% 0'}}>Mis Trabajos</H1>
+        <H1 style={{margin:'5% 0'}}>Productos</H1>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
 
             { piezas_arr }

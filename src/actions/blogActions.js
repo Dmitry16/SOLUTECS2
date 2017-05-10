@@ -3,7 +3,7 @@ import * as blogActionTypes from '../actionTypes/blogActionTypes'
 
 export function fetchPosts() {
   return function(dispatch) {
-  axios.get('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/posts')
+  axios.get('http://www.impexa.biz/wp-json/wp/v2/posts')
     .then((response) => {
       dispatch({type: blogActionTypes.FETCH_POSTS_FULFILLED,
                 payload: response.data});
@@ -16,7 +16,7 @@ export function fetchPosts() {
 }
 export function fetchFrontPosts() {
   return function(dispatch) {
-  axios.get('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/posts?per_page=3')
+  axios.get('http://www.impexa.biz/wp-json/wp/v2/posts?per_page=3')
     .then((response) => {
       dispatch({type: blogActionTypes.FETCH_POSTS_FULFILLED,
                 payload: response.data});

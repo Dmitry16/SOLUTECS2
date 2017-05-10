@@ -13,16 +13,13 @@ export default class Manifesto extends React.Component {
       <Section style={{padding:'5%'}}>
         <a href="#manifesto">
           <div className="icon">
-          <H1 style={{margin:'0 0 5% 0'}}>El Manifesto</H1>
-              <H3 className="icon_title">Viva La Escultura!</H3>
-              <P className="quien-somos">Lorem ipsum dolor sit amet Luminatium! consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.
+          <H1 style={{margin:'0 0 5% 0'}}>Sobre Companía</H1>
+              <P className="quien-somos">Impexa es una companía que se dedica al comercio internacional. La companía fue fundada en el año 2010,
+              originalmente se llamaba Europartner y se enfocaba a las operaciones de exportación de azulejos ceramicos y
+              aceite de oliva de España a Ucrania.
+              Sin embargo en los ultimos 2 años el ambito de las operaciones de la companía en el comercio internacional
+              se hizo bastante mas amplio. Ahora exportamos de Ucrania a muchos paises por todo el mundo una gama muy amplia de
+              diferentes productos.
               </P>
           </div>
         </a>
