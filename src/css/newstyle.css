@@ -112,7 +112,7 @@ textarea {
 .pieza:hover .pieza-col2 {
   visibility: visible;
 }
-.rotate {
+/*.rotate {
 	margin-bottom: 5%;
 	padding: 0;
 	display: flex;
@@ -122,9 +122,8 @@ textarea {
 	width: 90%;
 	height: 90%;
 	position: relative;
-	/*transform-style: preserve-3d !important;*/
 	transition: all 1s !important;
-}
+}*/
 .front, .pieza-col2 {
 	margin: 0;
 	padding: 0;
@@ -135,18 +134,16 @@ textarea {
 	position: absolute;
 }
 .pieza-col2 {
-	padding: 10%;
+	padding: 5%;
 	background: rgba(0,0,0, .8);
-	/*transform: rotateY(180deg);*/
-	/*backface-visibility: hidden;*/
 	overflow: hidden;
   visibility: hidden;
 }
 .pieza-col2 p {
-font-size: 18px;
-}
-.front {
-	/*transform: rotateY(0deg);*/
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
 }
 .front a img {
 	width: 100%;

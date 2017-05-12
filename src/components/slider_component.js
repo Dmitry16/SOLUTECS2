@@ -43,7 +43,7 @@ export default class Slider extends Component {
     `
     const Pieza = styled.div`
       width: 20%;
-      height: 20em;
+      height: 15em;
       display: flex;
     	flex-direction: column;
       align-items: center;
@@ -55,7 +55,12 @@ export default class Slider extends Component {
     	padding: 0;
     	border: 1px solid rgba(255, 255, 255, 0.9);
     	border-radius: 3px;
-      color: coral;
+      ${ media.tablet`
+        width: 45%;
+      `}
+      ${ media.handheld`
+        width: 100%;
+      `}
     `
     const PiezaTitle = styled.h3`
       color: ${ props => props.theme.buttonTextColor };
@@ -68,6 +73,19 @@ export default class Slider extends Component {
       &:hover {
         cursor: pointer;
       }
+    `
+    const InnerWrapper = styled.div`
+      margin-bottom: 5%;
+    	padding: 0;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+      align-items: center;
+    	width: 90%;
+    	height: 90%;
+    	position: relative;
+    	transition: all 1s !important;
+      > div > a > p { color: khaki; }
     `
     const { pics, showPiezaPage } = this.props
 
@@ -85,7 +103,7 @@ export default class Slider extends Component {
               { title }
             </PiezaTitle>
 
-            <div className="rotate">
+            <InnerWrapper>
 
                 <div className="front">
                     <a href="#pieza-single" className="pieza-image">
@@ -95,13 +113,16 @@ export default class Slider extends Component {
                 </div>
 
                 <div className="pieza-col2">
-                  <p className="pieza-descr">
-                    { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
-                              .replace('[&hellip;]','...') }
-                  </p>
+                  <Link to='/piezaPage'>
+                    <p className="pieza-descr" onClick={ () => showPiezaPage(title, description, img) }>
+                      { pieza.excerpt.rendered.replace(/(<([^>]+)>)/ig,'')
+                                .replace('[&hellip;]','...') }
+                    </p>
+                  </Link>
                 </div>
 
-            </div>
+
+            </InnerWrapper>
 
             <Link to='/piezaPage'>
               <Button small onClick={ () => showPiezaPage(title, description, img) }
