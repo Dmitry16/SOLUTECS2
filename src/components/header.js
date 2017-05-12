@@ -10,13 +10,14 @@ export default class HeaderLarge extends React.Component {
 
   render() {
     const Wrapper = styled.div`
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       padding: 2%;
       max-width: 100%;
-      background: ${ props => props.theme.headerBG || 'mediumseagreen' }
+      background: url('http://impexa.biz/wp-content/uploads/2017/05/corn-698195_1920-830x555-150x150.jpg');
       height: 14em;
       > p, h1 {
         cursor: pointer;
@@ -41,13 +42,22 @@ export default class HeaderLarge extends React.Component {
           font-size: 1.5em; line-height: 1.2em; padding-top: 0; margin: 0;
         }`};
     `
+    const Layer = styled.div`
+      margin: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 150, 0.8);
+    `
     const ImgHeader = styled.img`
-
+      z-index: 3;
     `
     return (
       <Wrapper>
+      <Layer />
         <ImgHeader src='./assets/img/logo2.png'></ImgHeader>
-        <LT className="site-title">Impexa</LT>
+        <LT className="site-title" style={{zIndex:'3'}}>Impexa</LT>
       </Wrapper>
     )
   }

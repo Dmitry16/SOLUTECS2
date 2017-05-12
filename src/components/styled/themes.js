@@ -2,8 +2,8 @@ import { media } from './medias'
 
 export const greenTheme = {
   headerBG: 'rgb(194, 248, 252)',
-  headerTextColor: 'rgb(110, 100, 72)',
-  headerHoverTextColor: 'rgb(68, 50, 22)',
+  headerTextColor: 'rgb(244, 143, 66)',
+  headerHoverTextColor: 'coral',
   headerFont: 'steelblue',
   bodyBG: 'rgb(255, 255, 255)',
   hoverColor: 'rgb(237, 247, 255)',

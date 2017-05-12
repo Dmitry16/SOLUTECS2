@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { media } from './medias'
 
 export const H1 = styled.h1`
-  margin: 5% 0;
+  margin: 0;
   font-size:  ${ props => props.theme.h1FontSize };
   font-weight: ${ props => props.theme.h1FontWeight };
   color:  ${ props => props.theme.primaryTextColor || 'mediumseagreen' };
