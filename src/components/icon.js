@@ -18,8 +18,7 @@ export default class Icon extends React.Component {
       transition: all 0.5s;
       > a > p { color: ${ props => props.theme.iconColor }; }
       &:hover { background: ${ props => props.theme.hoverColor };
-                box-shadow: 5px 5px 10px #777;
-                transform: scale(1.1);
+                box-shadow: 0px 0px 20px 5px #777;
                 > a > p { color:  ${ props => props.theme.iconHoverColor }; }
               }
       > a { border: none; }

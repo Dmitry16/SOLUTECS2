@@ -58,3 +58,11 @@ export const Icon = styled.p`
   ${ media.handheld`
     font-size:${ props => props.theme.smallIcon }`};
 `
+export const HR = styled.hr`
+  width: ${ props => props.theme.hrWidth };
+  color: ${ props => props.theme.hrColor };
+  border: 0;
+  border-width: ${ props => props.theme.hrSize };
+  border-style: ${ props => props.theme.hrStyle };
+  margin: 1% auto 0;
+`

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Box } from './styled/boxes'
 import { Section } from './styled/wrappers'
 import { fetchFrontPosts, fetchPosts } from '../actions/blogActions'
-import { LT } from './styled/titles'
+import { H1, HR } from './styled/typographies'
 
 export default class Blog extends React.Component {
   static propTypes = {
@@ -36,7 +36,8 @@ export default class Blog extends React.Component {
     return (
       <Section>
 
-        <LT>Blog</LT>
+        <H1>Blog</H1>
+        <HR />
 
         { blog }
       </Section>

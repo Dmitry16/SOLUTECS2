@@ -101,16 +101,16 @@ export default class CTA extends React.Component {
       `}
       `
     return (
-      <Section >
+      <Section style={{margin: '7% 0'}}>
         <WrapperCTA>
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA>
             <Link to="/fotos"><ButtonCTA >
-            Conocer quien soy</ButtonCTA></Link>
+            Recibir mas informacion</ButtonCTA></Link>
             <Link to="/fotos"><ButtonCTA primary >
-            Saber que ofrezco</ButtonCTA></Link>
+            Contactar con nosotros</ButtonCTA></Link>
             <Link to="/trabajos"><ButtonCTA onClick={this.showPics.bind(this)}>
-              Ver todos trabajos</ButtonCTA>
+              Ver nuestros precios</ButtonCTA>
             </Link>
           </BoxCTA>
         </WrapperCTA>

@@ -24,7 +24,7 @@ export const WrapperMax1100 = styled.div`
   max-width: 1100px;
 `
 export const Section = styled.section`
-  margin: 0 0 5%;
+  margin: 5% 0;
   background: rgba(#fff, 0.3);
   text-align: center;
 `

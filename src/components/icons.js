@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Icon from './icon'
-import { H1 } from './styled/typographies'
+import { H1, HR } from './styled/typographies'
 import { WrapperMax1100 } from './styled/wrappers'
 
 const icons = [
@@ -60,7 +60,8 @@ class Icons extends React.Component {
       <Section>
       <Layer />
         <WrapperMax1100 style={{zIndex:'3'}}>
-          <H1>Servicios Profesionales</H1>
+          <H1 style={{color:'rgb(224, 123, 46)'}}>Nuestros Servicios</H1>
+          <HR style={{color:'rgb(224, 123, 46)'}} />
           <div className="icons-wrapper">
             {icons.map((icon,id) =>
               <Icon

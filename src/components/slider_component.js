@@ -15,7 +15,7 @@ import { Title } from './styled/titles'
 import { Button } from './styled/buttons'
 import { Box } from './styled/boxes'
 import { Section, PicWrapper } from './styled/wrappers'
-import { H1, H3, Icon, P } from './styled/typographies'
+import { H1, H3, Icon, P, HR } from './styled/typographies'
 
 export default class Slider extends Component {
   constructor() {
@@ -38,7 +38,8 @@ export default class Slider extends Component {
 
     const Wrapper = styled.div`
       position: relative;
-      > #wrprBtn { margin: 5%;
+      margin: 5% 0;
+      > #wrprBtn { margin: 5% 0 0;
         }
     `
     const Pieza = styled.div`
@@ -139,7 +140,8 @@ export default class Slider extends Component {
 
     return (
       <Section>
-        <H1 style={{margin:'5% 0'}}>Productos</H1>
+        <H1 style={{margin:'5% 0 0'}}>Productos</H1>
+        <HR />
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
 
             { piezas_arr }
