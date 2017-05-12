@@ -17,7 +17,7 @@ export default class HeaderLarge extends React.Component {
       width: 100%;
       padding: 2%;
       max-width: 100%;
-      background: url('http://impexa.biz/wp-content/uploads/2017/05/corn-698195_1920-830x555-150x150.jpg');
+      background: url('http://impexa.biz/wp-content/uploads/2017/05/corn-698195_1920-830x555-150x150.jpg') fixed;
       height: 14em;
       > p, h1 {
         cursor: pointer;
@@ -48,7 +48,7 @@ export default class HeaderLarge extends React.Component {
       width: 100%;
       height: 100%;
       position: absolute;
-      background: rgba(0, 0, 150, 0.8);
+      background: ${ props => props.theme.layer };
     `
     const ImgHeader = styled.img`
       z-index: 3;
