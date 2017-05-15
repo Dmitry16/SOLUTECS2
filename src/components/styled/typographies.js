@@ -61,8 +61,10 @@ export const Icon = styled.p`
 export const HR = styled.hr`
   width: ${ props => props.theme.hrWidth };
   color: ${ props => props.theme.hrColor };
-  border: 0;
   border-width: ${ props => props.theme.hrSize };
   border-style: ${ props => props.theme.hrStyle };
   margin: 1% auto 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;  
 `

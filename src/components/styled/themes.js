@@ -28,10 +28,10 @@ export const greenTheme = {
   iconHoverColor: 'coral',
   footerBG: 'rgb(110, 100, 72)',
   layer: 'rgba(20, 20, 20, 0.8)',
-  hrWidth: '30%',
+  hrWidth: '20%',
   hrColor: 'rgba(108, 100, 102, 0.7)',
   hrSize: '1px',
-  hrStyle: 'inset',
+  hrStyle: 'solid',
 
   h1FontSize: '38px',
   h1FontWeight: '300',
