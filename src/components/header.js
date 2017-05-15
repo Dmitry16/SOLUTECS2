@@ -17,7 +17,7 @@ export default class HeaderLarge extends React.Component {
       width: 100%;
       padding: 2%;
       max-width: 100%;
-      background: url('http://impexa.biz/wp-content/uploads/2017/05/corn-698195_1920-830x555-150x150.jpg') fixed;
+      background: black url('../assets/img/head1.jpg') no-repeat center;
       height: 14em;
       > p, h1 {
         cursor: pointer;
