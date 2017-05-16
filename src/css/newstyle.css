@@ -93,11 +93,13 @@ input, textarea, button[type="submit"] {
 button[type="submit"] {
   background: steelblue;
   cursor: pointer;
+  color: rgb(255,255,255);
 }
 button[type="submit"]:hover {
   background: lightblue;
-  color: darkviolet;
-  border: 2px solid darkviolet;
+  color: coral;
+  font-weight: bold;
+  border: 1px solid coral;
   box-shadow: 5px 5px 10px #777;
 }
 input, button[type="submit"] {

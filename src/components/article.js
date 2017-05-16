@@ -2,15 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Box } from './styled/boxes'
-import { Section } from './styled/wrappers'
 import { MT } from  './styled/titles'
 import { P } from  './styled/typographies'
 import { WrapperMax1100 } from './styled/wrappers'
 
 export default class Article extends React.Component {
-  constructor() {
-    super()
-  }
 
   render() {
 

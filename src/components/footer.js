@@ -58,7 +58,7 @@ class Footer extends React.Component {
           </WrapperLinks>
 
           <hr />
-          <p>Copywrite 2017</p>
+          <p>Copyrite 2017</p>
     </Footer>
   );
   }

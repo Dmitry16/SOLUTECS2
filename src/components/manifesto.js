@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { H1, H3, Icon, P, HR } from './styled/typographies'
+import { H1, P, HR } from './styled/typographies'
 import { WrapperMax1100 } from './styled/wrappers'
 
 export default class Manifesto extends React.Component {
