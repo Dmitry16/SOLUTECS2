@@ -3,6 +3,7 @@ import { media } from './medias'
 
 export const H1 = styled.h1`
   margin: 0;
+  text-align: center;
   font-size:  ${ props => props.theme.h1FontSize };
   font-weight: ${ props => props.theme.h1FontWeight };
   color:  ${ props => props.theme.primaryTextColor || 'mediumseagreen' };
@@ -66,5 +67,5 @@ export const HR = styled.hr`
   margin: 1% auto 0;
   border-top: 0;
   border-left: 0;
-  border-right: 0;  
+  border-right: 0;
 `
