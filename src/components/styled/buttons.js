@@ -3,7 +3,7 @@ import { media } from './medias'
 import { css } from 'styled-components'
 
 export const Button = styled.button`
-  padding: ${props => props.small ? '1em 2em' : '1.5em 8em'};
+  padding: ${props => props.small ? '1em 2em' : '1.5em 7em'};
   border: ${ props => props.theme.buttonBorder };
   color: ${ props => props.theme.buttonTextColor };
   font-size: 1.2em;
@@ -17,15 +17,15 @@ export const Button = styled.button`
     box-shadow: 0 0 20px 3px #777;
   }
   ${ media.desktop`
-    padding: ${props => props.small ? '0 0.5em' : '1.5em 7em'};
+    padding: ${props => props.small ? '0 0.5em' : '1.5em 6em'};
     font-size: 1em;
   `}
   ${ media.tablet`
-    padding: ${props => props.small ? '0 0.5em' : '1.5em 6em'};
+    padding: ${props => props.small ? '0 0.5em' : '1.5em 5em'};
     font-size: 0.9em;
   `}
   ${ media.handheld`
-    padding: ${props => props.small ? '0 0.5em' : '1em 4.5em'};
+    padding: ${props => props.small ? '0 0.5em' : '1em 4.5m'};
     font-size: 0.8em;
   `}
   `

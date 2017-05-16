@@ -7,7 +7,7 @@ import { H1, H3, Icon, P } from './styled/typographies'
 import { Button } from './styled/buttons'
 import { flex } from './styled/flexes'
 import { Img } from './styled/img'
-
+import { WrapperMax1100 } from './styled/wrappers'
 
 export default class PiezaPage extends Component {
 
@@ -23,7 +23,6 @@ export default class PiezaPage extends Component {
 
     const ColumnWrapper = styled.div`
       ${ flex.column }
-      border: 1px solid #ddd;
       padding: 3%;
     `
 
@@ -31,14 +30,14 @@ export default class PiezaPage extends Component {
       <Section>
 
         <ColumnWrapper>
-          <H1>{ piezaTitle }</H1>
+          <H1 style={{margin:'0 0 2%'}}>{ piezaTitle }</H1>
           <Img src= { piezaImg } alt='zz'/>
         </ColumnWrapper>
 
-        <ColumnWrapper>
+        <WrapperMax1100>
           <P>{ piezaDescription.replace(/(<([^>]+)>)/ig,'')
                   .replace('[&hellip;]','...') }</P>
-        </ColumnWrapper>
+        </WrapperMax1100>
 
       </Section>
     )
