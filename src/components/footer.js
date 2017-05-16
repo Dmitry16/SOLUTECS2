@@ -27,11 +27,14 @@ class Footer extends React.Component {
       border: 2px solid #fff;
       > div > p { font-size: 2em }
     `
+    const ImgFooter = styled.img`
+      width: 50px;
+    `
     return (
       <Footer className="footer" role="contentinfo">
 
           <div className='icon-wrapper'>
-            <Icon className="icon-invert"></Icon>
+            <ImgFooter src='./assets/img/logo2.png'></ImgFooter>
           </div>
 
           <WrapperLinks>
@@ -55,7 +58,7 @@ class Footer extends React.Component {
           </WrapperLinks>
 
           <hr />
-          <p>@2017 Todos los derechos reservados</p>
+          <p>Copywrite 2017</p>
     </Footer>
   );
   }

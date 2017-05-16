@@ -22,6 +22,7 @@ export default class MainNav extends React.Component {
   render() {
     const Wrapper = styled.div`
       background: ${ props => props.theme.navBG };
+      z-index: 3;
       margin: 0;
       > ul {
         font-size: 1em;
@@ -77,12 +78,12 @@ export default class MainNav extends React.Component {
                 <Link to='/'>Inicio</Link>
               </li>
               <li>
-                <Link to='/about'>Manifesto</Link>
+                <Link to='/about'>Quien Somos</Link>
               </li>
               <li>
                 <Link to='/trabajos'>
                   <div onClick={this.showPics.bind(this)}>
-                    Mis trabajos
+                    Productos
                   </div>
                 </Link>
               </li>

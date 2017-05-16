@@ -13,7 +13,7 @@ import Footer from '../components/footer'
 import Slider from '../components/slider_component'
 import CTA from '../components/cta'
 import Modal from '../components/modal'
-import MainNav from '../components/nav'
+// import MainNav from '../components/nav'
 import AllPics from '../components/allpics'
 import Blog from '../components/blog'
 import Article from '../components/article'
@@ -49,11 +49,11 @@ class App extends Component {
     renderAllPics(this.props.pics)
   }
 
-  renderMainNav = () => {
-    return (
-      <MainNav dispatch={ this.props.dispatch } />
-    )
-  }
+  // renderMainNav = () => {
+  //   return (
+  //     <MainNav dispatch={ this.props.dispatch } />
+  //   )
+  // }
   renderCTA = () => {
     return (
       <CTA dispatch={ this.props.dispatch } />
@@ -114,7 +114,7 @@ class App extends Component {
       )
     }
 
-// <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
+  // <Route path='/' render={this.renderMainNav.bind(this)}/>
 
     return (
       <Router>
@@ -122,7 +122,6 @@ class App extends Component {
           <Container_main>
             <Route path='/' component={HeaderLarge}/>
 
-              <Route path='/' render={this.renderMainNav.bind(this)}/>
               <Route exact={true} path='/' render={renderSlider}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>

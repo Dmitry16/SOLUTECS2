@@ -7,17 +7,18 @@ export default class Manifesto extends React.Component {
 
   render() {
 
+    // background: url('http://impexa.biz/wp-content/uploads/2017/05/corn-698195_1920-830x555-150x150.jpg') fixed;
+
     const Section = styled.div`
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      position: relative;
+      background: black url('../assets/img/impexa4.jpg') fixed no-repeat center;
+      background-size: cover;
       margin: 0;
       padding: 5% 0;
-      background: url('http://impexa.biz/wp-content/uploads/2017/05/corn-698195_1920-830x555-150x150.jpg') fixed;
-
       text-align: center;
     `
     const Layer = styled.div`

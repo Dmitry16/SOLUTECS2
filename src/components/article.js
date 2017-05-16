@@ -18,10 +18,10 @@ export default class Article extends React.Component {
        border: 1px solid #fff;
        margin: 3% 3%;
        padding: 3%;
-       background: rgba(255, 255, 255, .2);
+       background: ${ props => props.theme.articleBG };
        &:hover {
          background: ${ props => props.theme.hoverColor };
-         box-shadow: 5px 5px 10px #aaa;
+         box-shadow: 0 0 20px 10px #aaa;
          cursor: pointer;
        }
     `
