@@ -26,6 +26,7 @@ export default class MainNav extends React.Component {
       margin: 0;
       > ul {
         font-size: 1em;
+        font-weight: 100;
         text-align: center;
         list-style: none;
         margin: 0;

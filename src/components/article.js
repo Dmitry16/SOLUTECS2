@@ -5,7 +5,7 @@ import { Box } from './styled/boxes'
 import { Section } from './styled/wrappers'
 import { MT } from  './styled/titles'
 import { P } from  './styled/typographies'
-
+import { WrapperMax1100 } from './styled/wrappers'
 
 export default class Article extends React.Component {
   constructor() {
@@ -26,10 +26,12 @@ export default class Article extends React.Component {
        }
     `
     return (
+      <WrapperMax1100>
         <Box>
           <MT> { this.props.postTitle } </MT>
           <P> { this.props.postExcerpt } </P>
         </Box>
+      </WrapperMax1100>
     )
   }
 }

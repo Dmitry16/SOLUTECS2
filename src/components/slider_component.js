@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //Actions
 import { fetchPics, fetchAllPics } from '../actions/picsActions'
 //Components
-import Modal from './modal'
 import { VerTodoButton } from './verTodoButton'
 //Styled componentsimport styled from "styled-components";
 import styled from 'styled-components'
@@ -37,6 +36,7 @@ export default class Slider extends Component {
   render() {
 
     const Wrapper = styled.div`
+      width: 100%;
       position: relative;
       margin: 5% 0;
       > #wrprBtn { margin: 5% 0 0;
