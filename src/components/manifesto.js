@@ -15,8 +15,12 @@ export default class Manifesto extends React.Component {
       flex-direction: column;
       align-items: center;
       width: 100%;
-      background: black url('../assets/img/impexa4.jpg') fixed no-repeat center;
-      background-size: cover;
+      background:
+      linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+      linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+      linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+      background-color:#e1ebbd;
+      background-size: 128px 128px;
       margin: 0;
       padding: 5% 0;
       text-align: center;
@@ -32,7 +36,7 @@ export default class Manifesto extends React.Component {
 
     return (
       <Section style={{padding:'5%'}}>
-      <Layer />
+      <Layer style={{background:'rgba(0,0,20,.9)'}}/>
         <WrapperMax1100 style={{zIndex:'3'}}>
           <a href="#manifesto">
             <div className="icon">

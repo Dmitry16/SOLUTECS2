@@ -4,9 +4,6 @@ import { media } from './styled/medias'
 import { H1, H3, Icon, P } from './styled/typographies'
 
 class Footer extends React.Component {
-  constructor() {
-    super();
-  }
 
   render() {
     const WrapperLinks = styled.div`
@@ -15,17 +12,24 @@ class Footer extends React.Component {
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      > ul { list-style-type: none }
+      margin: 0 0 2%; padding: 0;
+      > ul { list-style-type: none;
+              font-size: 0.7rem;
+              width: 15em;
+              text-align: center;
+              margin:1%; padding:0;
+              > li > h3 {color:khaki; font-weight:100}
+            }
     `
     const Footer = styled.footer`
       display: flex;
       flex-direction: column;
       align-items: center;
       background: ${ props => props.theme.footerBG };
-      padding:3em 1.618em;
+      padding:1.5em 1.618em;
       width:100%
       border: 2px solid #fff;
-      > div > p { font-size: 2em }
+      > div > p { font-size: 1em }
     `
     const ImgFooter = styled.img`
       width: 50px;
@@ -33,7 +37,7 @@ class Footer extends React.Component {
     return (
       <Footer className="footer" role="contentinfo">
 
-          <div className='icon-wrapper'>
+          <div>
             <ImgFooter src='./assets/img/logo2.png'></ImgFooter>
           </div>
 
@@ -58,7 +62,7 @@ class Footer extends React.Component {
           </WrapperLinks>
 
           <hr />
-          <p>Copyrite 2017</p>
+          <p style={{fontSize:'0.7rem'}}>Copyrite 2017</p>
     </Footer>
   );
   }
