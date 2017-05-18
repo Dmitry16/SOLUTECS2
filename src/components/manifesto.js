@@ -21,6 +21,7 @@ export default class Manifesto extends React.Component {
       linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
       background-color:#e1ebbd;
       background-size: 128px 128px;
+      background-attachment: fixed;
       margin: 0;
       padding: 5% 0;
       text-align: center;
