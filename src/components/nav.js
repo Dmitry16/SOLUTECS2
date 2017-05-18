@@ -25,7 +25,7 @@ export default class MainNav extends React.Component {
       z-index: 3;
       margin: 0;
       > ul {
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: 100;
         text-align: center;
         list-style: none;
@@ -43,7 +43,7 @@ export default class MainNav extends React.Component {
       }
       ${ media.tablet`
         > ul {
-          font-size: 0.9em;
+          font-size: 0.7em;
         }`};
       ${ media.handheld`
         > ul { position: relative;
