@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 import { media } from './styled/medias'
 
 export default class Icon extends React.Component {
-  constructor() {
-    super();
-  }
 
   render() {
     const Wrapper = styled.div`

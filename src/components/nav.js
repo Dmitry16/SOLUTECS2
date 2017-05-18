@@ -11,9 +11,6 @@ import { flex } from './styled/flexes'
 import { fetchAllPics } from '../actions/picsActions'
 
 export default class MainNav extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   showPics() {
     this.props.dispatch(fetchAllPics())

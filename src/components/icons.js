@@ -7,23 +7,18 @@ import { WrapperMax1100 } from './styled/wrappers'
 
 const icons = [
   {
-    icon: 'icon-map-signs',
-    title: 'Senderismo',
+    icon: 'icon-globe',
+    title: 'Comercio Internacional',
     link: '#'
   },
   {
-    icon: 'icon-lemon-o',
-    title: 'Recogida de frutos silvestres',
+    icon: 'icon-ship',
+    title: 'Administracion Logistica',
     link: '#'
   },
   {
-    icon: 'icon-cutlery',
-    title: 'Cocina ecologica creativa',
-    link: '#'
-  },
-  {
-    icon: 'icon-pagelines',
-    title: 'Fitoterapia',
+    icon: 'icon-line-chart',
+    title: 'Marketing',
     link: '#'
   },
 ]

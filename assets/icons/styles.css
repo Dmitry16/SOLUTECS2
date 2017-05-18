@@ -182,3 +182,33 @@
 .icon-invert:before {
   content: "\56";
 }
+.icon-line-chart:before {
+  content: "\57";
+}
+.icon-ship:before {
+  content: "\58";
+}
+.icon-jpy:before {
+  content: "\59";
+}
+.icon-signal:before {
+  content: "\5a";
+}
+.icon-inr:before {
+  content: "\30";
+}
+.icon-gbp:before {
+  content: "\31";
+}
+.icon-exclamation-triangle:before {
+  content: "\32";
+}
+.icon-eur:before {
+  content: "\33";
+}
+.icon-flag-o:before {
+  content: "\34";
+}
+.icon-globe:before {
+  content: "\35";
+}
