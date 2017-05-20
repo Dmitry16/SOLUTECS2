@@ -105,9 +105,9 @@ export default class CTA extends React.Component {
         <WrapperCTA>
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA>
-            <Link to="/fotos"><ButtonCTA >
+            <Link to="/contact"><ButtonCTA >
             Recibir mas informacion</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA primary >
+            <Link to="/contact"><ButtonCTA primary >
             Contactar con nosotros</ButtonCTA></Link>
             <Link to="/trabajos"><ButtonCTA onClick={this.showPics.bind(this)}>
               Ver nuestros precios</ButtonCTA>
