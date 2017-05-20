@@ -1,31 +1,40 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Box } from './styled/boxes'
 import { MT } from  './styled/titles'
-import { P } from  './styled/typographies'
-import { WrapperMax1100 } from './styled/wrappers'
+import { WrapperMax1100 } from  './styled/wrappers'
+import styled from 'styled-components'
+import { showPost } from '../actions/postActions'
 
 export default class Article extends React.Component {
+  constructor() {
+    super()
+  }
 
   render() {
+
+    const { postTitle, postExcerpt, postContent } = this.props
 
     const Box = styled.div`
        border: 1px solid #fff;
        margin: 3% 3%;
        padding: 3%;
-       background: ${ props => props.theme.articleBG };
+       background: rgba(255, 255, 255, .2);
        &:hover {
          background: ${ props => props.theme.hoverColor };
-         box-shadow: 0 0 20px 10px #aaa;
+         box-shadow: 5px 5px 10px #aaa;
          cursor: pointer;
        }
     `
+    const showThePost = (postTitle, postContent) => {
+      this.props.dispatch(showPost(postTitle, postContent))
+    }
+
     return (
       <WrapperMax1100>
-        <Box>
-          <MT> { this.props.postTitle } </MT>
-          <P> { this.props.postExcerpt } </P>
+        <Box onClick={ () => showThePost(postTitle, postContent) }>
+          <MT> { postTitle } </MT>
+          { postExcerpt || postContent }
         </Box>
       </WrapperMax1100>
     )

@@ -16,6 +16,7 @@ import Modal from '../components/modal'
 // import MainNav from '../components/nav'
 import AllPics from '../components/allpics'
 import Blog from '../components/blog'
+import { PostPage } from '../components/postPage'
 import Article from '../components/article'
 import ContactPage from '../components/contactPage'
 import Icons from '../components/icons'
@@ -77,13 +78,11 @@ class App extends Component {
         />
       )
     }
-
     const renderAllPics = () => {
       return (
         <AllPics { ...props } />
       )
     }
-
     const renderFrontPosts = () => {
       return (
         <Blog
@@ -93,7 +92,6 @@ class App extends Component {
         />
       )
     }
-
     const renderBlog = () => {
       return (
         <Blog
@@ -103,13 +101,21 @@ class App extends Component {
         />
       )
     }
-
     const renderPiezaPage = () => {
       return (
         <PiezaPage
          piezaTitle= { this.props.piezaTitle }
          piezaDescription= { this.props.piezaDescription }
          piezaImg= { this.props.piezaImg }
+        />
+      )
+    }
+    const renderPostPage = () => {
+      return (
+        <PostPage
+          postTitle={ this.props.postTitle }
+          postContent={ this.props.postContent }
+          frontPage={ false }
         />
       )
     }
@@ -130,6 +136,7 @@ class App extends Component {
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' render={renderBlog}/>
+              <Route path='/post' render={renderPostPage}/>
               <Route path='/contact' component={ContactPage}/>
               <Route path='/trabajos' render={renderAllPics}/>
 
@@ -148,7 +155,9 @@ const mapStateToProps = store => (
     piezaTitle: store.pieza.piezaTitle,
     piezaDescription: store.pieza.piezaDescription,
     piezaImg: store.pieza.piezaImg,
-    posts: store.blog.posts
+    posts: store.blog.posts,
+    postTitle: store.post.postTitle,
+    postContent: store.post.postContent
   }
 )
 
