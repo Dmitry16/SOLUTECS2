@@ -1,10 +1,9 @@
 //LIBS
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 //STYLED COMPONENTS
 import styled from 'styled-components'
-import { WrapperMax1100 } from './styled/wrappers'
 import { media } from './styled/medias'
 import { flex } from './styled/flexes'
 //Actions
@@ -26,8 +25,7 @@ export default class MainNav extends React.Component {
         font-weight: 100;
         text-align: center;
         list-style: none;
-        margin: 0;
-        padding: 0;
+        margin: 0; padding: 0;
         > span { display: none }
         > div { ${ flex.row }
           > li { width: 15%; padding: 0.2em 0;
@@ -45,24 +43,24 @@ export default class MainNav extends React.Component {
       ${ media.handheld`
         > ul { position: relative;
           > div { ${ flex.column }
-              height: 0; opacity: 0; }
+              height: 0; opacity: 0;
+              }
           > span { ${ flex.row }
               font-size: 1em;
               color: khaki;
               padding: 3px 0;
               cursor: pointer;
             }
-          &:hover > div { position: absolute;
+          &:hover > div { position: absolute; width: 100%;
                       align-content: space-between;
-                      top: 1.1em; left: 34%; z-index: 3;
-                      height: 8em; opacity: 0.9;
-                      background: steelblue;
-                      padding: 1em;
+                      top: 1.2em; left: 0; z-index: 3;
+                      height: 11em; opacity: 0.9;
+                      background: ${ props => props.theme.headerBG };
                       transition: all 0.5s;
                     > li { display: block; width: 100%;
-                      &:hover > a { background: coral; color: steelblue; }
+                      &:hover > a { color: ${ props => props.theme.headerBG } }
                     }
-                   }
+                  }
           }
       `};
     `

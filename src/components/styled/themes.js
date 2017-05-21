@@ -1,12 +1,12 @@
 import { media } from './medias'
 
 export const greenTheme = {
-  headerBG: 'rgb(194, 248, 252)',
+  headerBG: 'rgb(30, 30, 100)',
   headerTextColor: 'orange',
   headerHoverTextColor: 'khaki',
   headerFont: 'steelblue',
   bodyBG: 'rgb(255, 255, 255)',
-  hoverColor: 'rgba(237, 247, 255, 0.3)',
+  hoverColor: 'rgba(108, 100, 152, .3)',
   primaryTextColor: 'rgb(108, 100, 102)',
   primaryHoverTextColor:'rgb(68, 50, 22)',
   borderSection: '1px solid #777',
@@ -26,13 +26,15 @@ export const greenTheme = {
   buttonHoverColor: 'coral',
   iconColor: 'rgb(244, 143, 66)',
   iconHoverColor: 'coral',
-  footerBG: 'rgb(0, 0, 50)',
-  layer: 'rgba(20, 20, 20, 0.8)',
+  iconBGHoverColor: 'rgba(230, 230, 230, .2)',
+  footerBG: 'rgb(0, 0, 70)',
+  layer: 'rgba(0, 0, 20, 0.7)',
   hrWidth: '20%',
   hrColor: 'rgba(108, 100, 102, 0.7)',
   hrSize: '1px',
   hrStyle: 'solid',
-  articleBG: 'rgba(110, 100, 72, .3)',
+  blogArticleBG: 'rgba(200,200,200, .3)',
+  blogArticleHoverBG: 'rgba(150, 150, 200, .3)',
 
   h1FontSize: '38px',
   h1FontWeight: '300',
@@ -40,11 +42,11 @@ export const greenTheme = {
   h3FontWeight: '300',
 
   tinyFontSize: '12px',
-  smallFontSize: '16px',
-  normalFontSize: '20px',
-  bigFontSize: '22px',
+  smallFontSize: '14px',
+  normalFontSize: '18px',
+  bigFontSize: '20px',
 
-  normalFontWeight: '200',
+  normalFontWeight: '100',
 
   tinyIcon: '1em',
   smallIcon: '3em',

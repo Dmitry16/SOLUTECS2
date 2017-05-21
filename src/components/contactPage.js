@@ -2,24 +2,32 @@ import React from 'react'
 import ContactForm from './contactForm'
 import styled from 'styled-components'
 import { WrapperMax1100 } from './styled/wrappers'
+import { media } from './styled/medias'
 
 export default class ContactPage extends React.Component {
 
   render() {
-    //Style for the form section
-        const FormSection = styled.div`
-          border: 1px solid steelblue;
-          margin: 5% 0;
-          padding: 5%;
-          background: rgba(255, 255, 255, 0.3);
-          text-align: center;
-        `
+
+    const FormSection = styled.div`
+      border: 1px solid steelblue;
+      width: 30%;
+      margin: 5% 5%;
+      padding: 3em 2em;
+      background: rgba(200, 200, 255, .3);
+      text-align: center;
+      border-radius: 0.2em;
+      ${ media.tablet`
+        width: 50%;
+        `}
+      ${ media.handheld`
+          width: 100%;
+          padding: 1em 0.1em;
+      `}
+    `
     return (
-      <WrapperMax1100>
         <FormSection>
           <ContactForm />
         </FormSection>
-      </WrapperMax1100>
     )
   }
 }

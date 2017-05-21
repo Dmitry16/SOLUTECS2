@@ -25,6 +25,7 @@ export default class CTA extends React.Component {
       background: ${ props => props.theme.colorCTA };
       text-align: center;
       border: none;
+      padding: 0 0.5em;
       ${ flex.column }
     `
     const TitleCTA = styled.h3`
@@ -52,7 +53,7 @@ export default class CTA extends React.Component {
       background: ${ props => props.theme.colorCTA };
       text-align: center;
       margin: 0;
-      padding: 2% 0;
+      padding: 0 0 5%;
       width: 100%;
       > a { width: 33.3%;}
       ${ media.handheld`

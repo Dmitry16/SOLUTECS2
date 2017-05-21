@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { H1, P, HR } from './styled/typographies'
-import { WrapperMax1100 } from './styled/wrappers'
 
 export default class Manifesto extends React.Component {
 
@@ -34,16 +33,24 @@ export default class Manifesto extends React.Component {
       position: absolute;
       background: ${ props => props.theme.layer };
     `
+    const WrapperMax1100 = styled.div`
+      width: 100%;
+      max-width: 1100px;
+      z-Index: 3;
+      padding: 5%;
+      border: 1px solid #ddd;
+      background: rgba(0,0,50,.5);
+    `
 
     return (
       <Section style={{padding:'5%'}}>
-      <Layer style={{background:'rgba(0,0,20,.9)'}}/>
-        <WrapperMax1100 style={{zIndex:'3'}}>
+      <Layer/>
+        <WrapperMax1100>
           <a href="#manifesto">
             <div className="icon">
-            <H1 style={{color:'rgb(224, 123, 46)'}}>Quien somos</H1>
-            <HR style={{color:'rgb(224, 123, 46)'}}/>
-                <P style={{color:'rgb(224, 123, 46)',margin:'5% 0 0'}}>Impexa es una companía que se dedica al comercio internacional. La companía fue fundada en el año 2010,
+            <H1 style={{color:'rgb(200, 200, 200)'}}>Quien somos</H1>
+            <HR style={{color:'rgb(200, 200, 200)'}}/>
+                <P style={{color:'rgb(200, 200, 200)',margin:'5% 0 0'}}>Impexa es una companía que se dedica al comercio internacional. La companía fue fundada en el año 2010,
                 originalmente se llamaba Europartner y se enfocaba a las operaciones de exportación de azulejos ceramicos y
                 aceite de oliva de España a Ucrania.
                 Sin embargo en los ultimos 2 años el ambito de las operaciones de la companía en el comercio internacional
