@@ -21,7 +21,7 @@ export default class HeaderLarge extends React.Component {
       width: 100%;
       padding: 2% 0 0;
       max-width: 100%;
-      background: black url('../assets/img/head1.jpg') no-repeat center;
+      background: black url('http://impexa.biz/wp-content/uploads/2017/05/head1.jpg') no-repeat center;
       height: auto;
       > p, h1 {
         cursor: pointer;
@@ -61,7 +61,7 @@ export default class HeaderLarge extends React.Component {
     return (
       <Wrapper>
       <Layer />
-        <ImgHeader src='./assets/img/logo2.png'></ImgHeader>
+        <ImgHeader src='http://impexa.biz/wp-content/uploads/2017/05/logo2.png'></ImgHeader>
         <LT className="site-title" style={{zIndex:'3'}}>Impexa</LT>
         <WrapperMax1100 style={{zIndex:'3',margin:'2% 0 0'}}>
           <MainNav />

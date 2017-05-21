@@ -30,7 +30,7 @@ export default class Slider extends Component {
     const Wrapper = styled.div`
       width: 100%;
       position: relative;
-      margin: 5% 0;
+      margin: 2% 0 5%;
     `
     let piezas_arr = picsRender(this.props)
     piezas_arr = piezas_arr.slice(piezas_arr.length-4,piezas_arr.length)

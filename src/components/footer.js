@@ -38,7 +38,7 @@ class Footer extends React.Component {
       <Footer className="footer" role="contentinfo">
 
           <div>
-            <ImgFooter src='./assets/img/logo2.png'></ImgFooter>
+            <ImgFooter src='http://impexa.biz/wp-content/uploads/2017/05/logo2.png'></ImgFooter>
           </div>
 
           <WrapperLinks>
@@ -62,7 +62,7 @@ class Footer extends React.Component {
           </WrapperLinks>
 
           <hr />
-          <p style={{fontSize:'0.7rem'}}>Copyrite 2017</p>
+          <p style={{fontSize:'0.7rem'}}>Copyright 2017. Designed and developed by SoluTecs</p>
     </Footer>
   );
   }
