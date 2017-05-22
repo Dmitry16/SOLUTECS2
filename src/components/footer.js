@@ -55,13 +55,13 @@ class Footer extends React.Component {
                 <div>
                   <li><a href='/#about'>Quien Somos</a></li>
                   <li><a href='/#blog'>Blog</a></li>
-                  <li><a href='/contact'>Contacto</a></li>
+                  <li><Link to='/contact'>Contacto</Link></li>
                 </div>
               </Wrapper>
             </ul>
             <ul>
               <li><h3>Sigue nos</h3></li>
-              <li><a href="javascript:void(0)">Facebook</a></li>
+              <li><a href="javascript:void(0)"><p className="icon-facebook"></p></a></li>
               <li><a href="javascript:void(0)">Twitter</a></li>
               <li><a href="javascript:void(0)">YouTube</a></li>
             </ul>

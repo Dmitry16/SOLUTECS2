@@ -71,23 +71,19 @@ export default class MainNav extends React.Component {
           <span className='icon-bars'></span>
           <div id='top' className='list'>
               <li>
-                <Link to='/'>Inicio</Link>
+                <a href='/#start'>Inicio</a>
               </li>
               <li>
-                <Link to='/trabajos'>
-                  <div onClick={this.showPics.bind(this)}>
-                  Productos
-                  </div>
-                </Link>
+                <a href='/#productos'>Productos</a>
               </li>
               <li>
                 <a href='/#services'>Servicios</a>
               </li>
               <li>
-                <Link to='/about'>Quien Somos</Link>
+                <a href='/#about'>Quien Somos</a>
               </li>
               <li>
-                <Link to='/blog'>Blog</Link>
+                <a href='/#blog'>Blog</a>
               </li>
               <li>
                 <Link to='/contact'>Contacto</Link>
