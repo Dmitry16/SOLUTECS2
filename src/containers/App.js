@@ -21,6 +21,7 @@ import Article from '../components/article'
 import ContactPage from '../components/contactPage'
 import Icons from '../components/icons'
 import PiezaPage from '../components/piezaPage'
+import { Terms, Privacy } from '../components/terms'
 // css
 import style from '../css/newstyle.css'
 //Styled components
@@ -139,6 +140,8 @@ class App extends Component {
               <Route path='/post' render={renderPostPage}/>
               <Route path='/contact' component={ContactPage}/>
               <Route path='/trabajos' render={renderAllPics}/>
+              <Route path='/terms' component={Terms}/>
+              <Route path='/privacy' component={Privacy}/>              
 
             <Route path='/' component={Footer}/>
           </Container_main>

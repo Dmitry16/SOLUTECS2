@@ -23,7 +23,10 @@ class Footer extends React.Component {
     `
     const Wrapper = styled.div`
       ${ flex.row }
-      > div { margin: 0 2% }
+      > div { margin: 0 4%; text-align: left; }
+      ${ media.handheld`
+        ${ flex.column };
+        > div { margin: 0%; text-align: center; }`}
     `
     const WrapperSR = styled.div`
       ${ flex.row };
@@ -42,6 +45,9 @@ class Footer extends React.Component {
     `
     const ImgFooter = styled.img`
       width: 50px;
+    `
+    const S = styled.span`
+      color: khaki;
     `
     return (
       <Footer className="footer" role="contentinfo">
@@ -76,13 +82,14 @@ class Footer extends React.Component {
             </ul>
             <ul>
               <li><h3>Aviso Legal</h3></li>
-              <li><a href="javascript:void(0)">Terminos y condiciones</a></li>
-              <li><a href="javascript:void(0)">Politica de privacidad</a></li>
+              <li><Link to="/terms">Terminos y condiciones</Link></li>
+              <li><Link to="/privacy">Politica de privacidad</Link></li>
             </ul>
           </WrapperLinks>
 
-          <hr />
-          <p style={{fontSize:'0.7rem'}}>Copyright 2017. Designed and developed by SoluTecs</p>
+          <hr style={{width:'50%'}}/>
+          <p style={{fontSize:'0.7rem',textAlign:'center'}}>Diseño y desarrollo web:
+            <S> SoluTecs</S><br/>Copyright 2017</p>
     </Footer>
   );
   }
