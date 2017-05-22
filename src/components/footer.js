@@ -25,6 +25,13 @@ class Footer extends React.Component {
       ${ flex.row }
       > div { margin: 0 2% }
     `
+    const WrapperSR = styled.div`
+      ${ flex.row };
+      margin: 6% 0 0;
+      > li { margin: 0 2%;
+        > a > p { font-size: 1.5rem;
+              &:hover {color: khaki}}}
+    `
     const Footer = styled.footer`
       ${ flex.column }
       background: ${ props => props.theme.footerBG };
@@ -61,9 +68,11 @@ class Footer extends React.Component {
             </ul>
             <ul>
               <li><h3>Sigue nos</h3></li>
-              <li><a href="javascript:void(0)"><p className="icon-facebook"></p></a></li>
-              <li><a href="javascript:void(0)">Twitter</a></li>
-              <li><a href="javascript:void(0)">YouTube</a></li>
+              <WrapperSR>
+                <li><a href="javascript:void(0)"><p className="icon-facebook-square"></p></a></li>
+                <li><a href="javascript:void(0)"><p className="icon-instagram"></p></a></li>
+                <li><a href="javascript:void(0)"><p className="icon-twitter-square"></p></a></li>
+              </WrapperSR>
             </ul>
             <ul>
               <li><h3>Aviso Legal</h3></li>

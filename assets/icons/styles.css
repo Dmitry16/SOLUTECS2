@@ -212,3 +212,9 @@
 .icon-globe:before {
   content: "\35";
 }
+.icon-instagram:before {
+  content: "\36";
+}
+.icon-twitter-square:before {
+  content: "\37";
+}

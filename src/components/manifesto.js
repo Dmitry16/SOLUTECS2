@@ -47,15 +47,23 @@ export default class Manifesto extends React.Component {
         <WrapperMax1100 id='about'>
           <a href="#manifesto">
             <div className="icon">
-            <H1 style={{color:'rgb(200, 200, 200)'}}>Quien somos</H1>
-            <HR style={{color:'rgb(200, 200, 200)'}}/>
-                <P style={{color:'rgb(200, 200, 200)',margin:'5% 0 0'}}>Impexa es una companía que se dedica al comercio internacional. La companía fue fundada en el año 2010,
+            <H1 style={{color:'khaki'}}>Quien somos</H1>
+            <HR style={{color:'khaki'}}/>
+                <P style={{color:'khaki',margin:'5% 0 0'}}>Impexa es una companía que se dedica al comercio internacional. La companía fue fundada en el año 2010,
                 originalmente se llamaba Europartner y se enfocaba a las operaciones de exportación de azulejos ceramicos y
                 aceite de oliva de España a Ucrania.
                 Sin embargo en los ultimos 2 años el ambito de las operaciones de la companía en el comercio internacional
                 se hizo bastante mas amplio. Ahora exportamos de Ucrania a muchos paises por todo el mundo una gama muy amplia de
                 diferentes productos.
                 </P>
+            <H1 style={{color:'khaki',marginTop:'2%'}}>Nuestros valores</H1>
+            <HR style={{color:'khaki'}}/>
+              <ul style={{color:'khaki',margin:'2% 0 0',textAlign:'left'}}>
+                <li>Transparencia</li>
+                <li>Seriedad</li>
+                <li>Calidad</li>
+                <li>Eficacia</li>
+              </ul>
             </div>
           </a>
         </WrapperMax1100>
