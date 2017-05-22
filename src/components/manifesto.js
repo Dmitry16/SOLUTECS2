@@ -41,11 +41,10 @@ export default class Manifesto extends React.Component {
       border: 1px solid #ddd;
       background: rgba(0,0,50,.5);
     `
-
     return (
       <Section style={{padding:'5%'}}>
       <Layer/>
-        <WrapperMax1100>
+        <WrapperMax1100 id='about'>
           <a href="#manifesto">
             <div className="icon">
             <H1 style={{color:'rgb(200, 200, 200)'}}>Quien somos</H1>

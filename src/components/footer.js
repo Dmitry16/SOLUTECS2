@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 import { media } from './styled/medias'
-import { H1, H3, Icon, P } from './styled/typographies'
+import { flex } from './styled/flexes'
+// import { H1, H3, Icon, P } from './styled/typographies'
 
 class Footer extends React.Component {
 
   render() {
     const WrapperLinks = styled.div`
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+      ${ flex.row }
       width: 100%;
       margin: 0 0 2%; padding: 0;
       > ul { list-style-type: none;
@@ -21,10 +21,12 @@ class Footer extends React.Component {
               > li > h3 {color:khaki; font-weight:100}
             }
     `
+    const Wrapper = styled.div`
+      ${ flex.row }
+      > div { margin: 0 2% }
+    `
     const Footer = styled.footer`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      ${ flex.column }
       background: ${ props => props.theme.footerBG };
       padding:1.5em 1.618em;
       width:100%
@@ -44,9 +46,18 @@ class Footer extends React.Component {
           <WrapperLinks>
             <ul>
               <li><h3>Contenido</h3></li>
-              <li><a href="javascript:void(0)">Inicio</a></li>
-              <li><a href="javascript:void(0)">Contacto</a></li>
-              <li><a href="javascript:void(0)">Fotos</a></li>
+              <Wrapper>
+                <div>
+                  <li><a href='/#start'>Inicio</a></li>
+                  <li><a href='/#productos'>Productos</a></li>
+                  <li><a href='/#services'>Servicios</a></li>
+                </div>
+                <div>
+                  <li><a href='/#about'>Quien Somos</a></li>
+                  <li><a href='/#blog'>Blog</a></li>
+                  <li><a href='/contact'>Contacto</a></li>
+                </div>
+              </Wrapper>
             </ul>
             <ul>
               <li><h3>Sigue nos</h3></li>

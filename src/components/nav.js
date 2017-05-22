@@ -74,14 +74,17 @@ export default class MainNav extends React.Component {
                 <Link to='/'>Inicio</Link>
               </li>
               <li>
-                <Link to='/about'>Quien Somos</Link>
-              </li>
-              <li>
                 <Link to='/trabajos'>
                   <div onClick={this.showPics.bind(this)}>
-                    Productos
+                  Productos
                   </div>
                 </Link>
+              </li>
+              <li>
+                <a href='/#services'>Servicios</a>
+              </li>
+              <li>
+                <Link to='/about'>Quien Somos</Link>
               </li>
               <li>
                 <Link to='/blog'>Blog</Link>

@@ -59,7 +59,7 @@ export default class HeaderLarge extends React.Component {
       width: 65px;
     `
     return (
-      <Wrapper>
+      <Wrapper id='start'>
       <Layer />
         <ImgHeader src='http://impexa.biz/wp-content/uploads/2017/05/logo2.png'></ImgHeader>
         <LT className="site-title" style={{zIndex:'3'}}>Impexa</LT>

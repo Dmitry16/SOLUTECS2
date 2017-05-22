@@ -25,7 +25,7 @@ export default class ContactPage extends React.Component {
       `}
     `
     return (
-        <FormSection>
+        <FormSection id='contact'>
           <ContactForm />
         </FormSection>
     )

@@ -36,7 +36,7 @@ export default class Slider extends Component {
     piezas_arr = piezas_arr.slice(piezas_arr.length-4,piezas_arr.length)
 
     return (
-      <WrapperMax1100>
+      <WrapperMax1100 id='productos'>
         <H1 style={{margin:'5% 0 0'}}>Productos</H1>
         <HR />
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">

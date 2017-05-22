@@ -44,7 +44,7 @@ export default class Blog extends React.Component {
     });
 
     return (
-      <Section>
+      <Section id='blog'>
 
         <H1>Blog</H1>
         <HR />

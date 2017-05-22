@@ -39,7 +39,7 @@ export default class ContactForm extends React.Component {
           <div>
             <textarea name="Message" value={ this.state.valueMessage }
                       onChange={this.handleChange.bind(this)}
-                      placeholder="Tu Email"
+                      placeholder="Tu Mensaje"
             />
           </div>
           <button type="submit">Enviar</button>

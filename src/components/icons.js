@@ -52,7 +52,7 @@ class Icons extends React.Component {
       z-index: 9 !important;
     `
     return (
-      <Section>
+      <Section id='services'>
       <Layer />
         <WrapperMax1100 style={{zIndex:'3'}}>
           <H1 style={{color:'rgb(224, 123, 46)'}}>Nuestros Servicios</H1>
