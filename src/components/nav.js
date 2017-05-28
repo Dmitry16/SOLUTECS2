@@ -19,17 +19,17 @@ export default class MainNav extends React.Component {
     const Wrapper = styled.div`
       background: ${ props => props.theme.navBG };
       z-index: 3;
-      margin: 0;
+      margin: 0 !important;
       > ul {
-        font-size: 0.8em;
+        font-size: 0.9rem;
         font-weight: 100;
         text-align: center;
         list-style: none;
         margin: 0; padding: 0;
         > span { display: none }
         > div { ${ flex.row }
-          > li { width: 15%; padding: 0.2em 0;
-              > a { color: khaki; }
+          > li { width: 13%; padding: 0.2em 0;
+              > a { color: #fff; }
             &:hover { background: ${ props => props.theme.navHoverBG };
               > a { color: ${ props => props.theme.navHoverTextColor }; }
             }
@@ -38,16 +38,18 @@ export default class MainNav extends React.Component {
       }
       ${ media.tablet`
         > ul {
-          font-size: 0.7em;
+          font-size: 0.8rem;
+          > div > li { width: 15%; }
         }`};
       ${ media.handheld`
+        margin: 0;
         > ul { position: relative;
           > div { ${ flex.column }
               height: 0; opacity: 0;
               }
           > span { ${ flex.row }
-              font-size: 1em;
-              color: khaki;
+              font-size: 1.3em;
+              color: #fff;
               padding: 3px 0;
               cursor: pointer;
             }
@@ -83,7 +85,7 @@ export default class MainNav extends React.Component {
                 <a href='/#about'>Quien Somos</a>
               </li>
               <li>
-                <a href='/#blog'>Blog</a>
+                <Link to='/blog'>Blog</Link>
               </li>
               <li>
                 <Link to='/contact'>Contacto</Link>

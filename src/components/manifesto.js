@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { H1, P, HR } from './styled/typographies'
+import { H1, H3, P, HR } from './styled/typographies'
 
 export default class Manifesto extends React.Component {
 
@@ -47,17 +47,20 @@ export default class Manifesto extends React.Component {
         <WrapperMax1100 id='about'>
           <a href="#manifesto">
             <div className="icon">
-            <H1 style={{color:'khaki'}}>Quien somos</H1>
-            <HR style={{color:'khaki'}}/>
-                <P style={{color:'khaki',margin:'5% 0 0'}}>Impexa es una companía que se dedica al comercio internacional. La companía fue fundada en el año 2010,
-                originalmente se llamaba Europartner y se enfocaba a las operaciones de exportación de azulejos ceramicos y
-                aceite de oliva de España a Ucrania.
-                Sin embargo en los ultimos 2 años el ambito de las operaciones de la companía en el comercio internacional
-                se hizo bastante mas amplio. Ahora exportamos de Ucrania a muchos paises por todo el mundo una gama muy amplia de
-                diferentes productos.
-                </P>
-            <H1 style={{color:'khaki',marginTop:'2%'}}>Nuestros valores</H1>
-            <HR style={{color:'khaki'}}/>
+              <H1 style={{color:'orange'}}>Quien somos</H1>
+              <HR style={{color:'orange'}}/>
+              <H3 style={{color:'orange',margin:'5% 0 0'}}>SOLUTECS- ¡TU ALIADO EN LA JUNGLA DIGITAL!</H3>
+                  <P style={{color:'khaki',margin:'5% 0 0'}}>SoluTecs es una agéncia de marketing online. Estamos ubicados en Barcelona, somos proveedores de servicios de marketing online (marketing digital en internet). También realizamos servicios de Tour Virtual 360º, foto y video grabación, diseño grafico para imprenta, tarjetas, logotipos, etc.¡Nuestros precios son mas que razonables! En general, somos muy flexibles a la hora de hacer un presupuesto. ¡Incluso tenemos servicios de marketing online gratis que puedes probar sin compromiso alguno por tu parte!
+                  </P>
+              <H3 style={{color:'orange',margin:'2% 0 0'}}>¿Por qué trabajar con nosotros? ¿Que nos diferencia de las otras agencias del sector?</H3>
+              <HR style={{color:'orange'}}/>
+              <ul style={{color:'khaki',margin:'2% 0 0',textAlign:'left'}}>
+                <li>¡Porque somos muy flexibles y nos adaptamos a tu presupuesto y tus necesidades para darte el mejor servicio!</li>
+                <li>¡Porque para nuestros clientes hacemos muchas cosas gratis!</li>
+                <li>¡Porque pagas despues de haber obtenido los resultados y no antes!</li>
+              </ul>
+              <H3 style={{color:'orange',margin:'2% 0 0'}}>Nuestros valores</H3>
+              <HR style={{color:'orange'}}/>
               <ul style={{color:'khaki',margin:'2% 0 0',textAlign:'left'}}>
                 <li>Transparencia</li>
                 <li>Seriedad</li>

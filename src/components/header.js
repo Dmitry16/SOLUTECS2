@@ -6,45 +6,32 @@ import { WrapperMax1100 } from './styled/wrappers'
 
 import { media } from './styled/medias'
 import { LT } from  './styled/titles'
+import { flex } from './styled/flexes'
 
 export default class HeaderLarge extends React.Component {
-  constructor() {
-    super()
-  }
 
   render() {
     const Wrapper = styled.div`
-      position: relative;
+      position: fixed;
+      top: 0;
+      z-index: 9;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
+      align-items: flex-start;
       width: 100%;
-      padding: 2% 0 0;
-      max-width: 100%;
-      background: black url('http://impexa.biz/wp-content/uploads/2017/05/head1.jpg') no-repeat center;
-      height: auto;
-      > p, h1 {
-        cursor: pointer;
-        font-size: 3.5em; padding: 0; margin: 0;
-        color: ${ props => props.theme.headerTextColor || 'coral' }
-        }
-      > p:hover { color: ${ props => props.theme.headerHoverTextColor || 'coral' }; }
-      ${ media.desktop`height: auto;
-        > p, h1 {
-          font-size: 3em; padding: 0; margin: 0;
-        }`};
+      padding: 0; margin: 0;
+      > img { margin: 0.5em 0 0 2em;}
       ${ media.tablet`height: auto;
-        > p, h1 {
-          font-size: 2em; padding: 0; margin: 0;
-        }`};
+        > img { margin: 0.5em 0 0; }
+        > div > div { margin: 0.5em 0; width: 100%; }
+      `};
       ${ media.handheld`height: auto;
-        > p, h1 {
-          font-size: 1.7em; padding: 0; margin: 0;
-        }`};
+        ${ flex.column }
+        > img { margin: 0.5em 0 0; }
+      `};
       ${ media.tiny`height: auto;
-        > h1 {
-          font-size: 1.5em; line-height: 1.2em; padding-top: 0; margin: 0;
-        }`};
+        ${ flex.column }
+      `};
     `
     const Layer = styled.div`
       margin: 0;
@@ -52,20 +39,32 @@ export default class HeaderLarge extends React.Component {
       width: 100%;
       height: 100%;
       position: absolute;
-      background: ${ props => props.theme.layer };
     `
     const ImgHeader = styled.img`
       z-index: 3;
-      width: 65px;
+      width: 120px;
+    `
+    const WrapperNav = styled.div`
+      width: 70%;
+      height: 100%;
+      padding: 0; margin: 0.5em 0;
+      vertical-align: top;
+      z-index: 3;
+      ${ media.tablet`
+        margin: 0.5em 0; width: 100%;
+      `};
+      ${ media.handheld`
+        ${ flex.column }
+        margin: 0;
+      `};
     `
     return (
       <Wrapper id='start'>
       <Layer />
-        <ImgHeader src='http://impexa.biz/wp-content/uploads/2017/05/logo2.png'></ImgHeader>
-        <LT className="site-title" style={{zIndex:'3'}}>Impexa</LT>
-        <WrapperMax1100 style={{zIndex:'3',margin:'2% 0 0'}}>
+        <ImgHeader src='http://solutecs.biz/wp-content/uploads/2016/10/site-logo-white3.png'></ImgHeader>
+        <WrapperNav>
           <MainNav />
-        </WrapperMax1100>
+        </WrapperNav>
       </Wrapper>
     )
   }

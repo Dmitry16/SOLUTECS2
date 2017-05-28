@@ -44,7 +44,7 @@ class Footer extends React.Component {
       > div > p { font-size: 1em }
     `
     const ImgFooter = styled.img`
-      width: 50px;
+      width: 100px;
     `
     const S = styled.span`
       color: khaki;
@@ -52,18 +52,14 @@ class Footer extends React.Component {
     return (
       <Footer className="footer" role="contentinfo">
 
-          <div>
-            <ImgFooter src='http://impexa.biz/wp-content/uploads/2017/05/logo2.png'></ImgFooter>
-          </div>
-
           <WrapperLinks>
             <ul>
               <li><h3>Contenido</h3></li>
               <Wrapper>
                 <div>
                   <li><a href='/#start'>Inicio</a></li>
-                  <li><a href='/#productos'>Productos</a></li>
                   <li><a href='/#services'>Servicios</a></li>
+                  <li><a href='/#productos'>Productos</a></li>
                 </div>
                 <div>
                   <li><a href='/#about'>Quien Somos</a></li>

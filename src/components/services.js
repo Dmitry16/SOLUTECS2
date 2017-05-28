@@ -36,8 +36,6 @@ class Icons extends React.Component {
       position: relative;
       margin: 0;
       padding: 5% 0;
-      background: black url('http://impexa.biz/wp-content/uploads/2017/05/impexa3.jpg') fixed no-repeat center;
-      background-size: cover;
       text-align: center;
     `
     const Layer = styled.div`

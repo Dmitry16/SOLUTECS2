@@ -10,7 +10,7 @@ import * as piezaActionCreators from '../actions/piezaActions'
 import HeaderLarge from '../components/header'
 import Manifesto from '../components/manifesto'
 import Footer from '../components/footer'
-import Slider from '../components/slider_component'
+// import Slider from '../components/slider_component'
 import CTA from '../components/cta'
 import Modal from '../components/modal'
 // import MainNav from '../components/nav'
@@ -19,7 +19,7 @@ import Blog from '../components/blog'
 import { PostPage } from '../components/postPage'
 import Article from '../components/article'
 import ContactPage from '../components/contactPage'
-import Icons from '../components/icons'
+import Icons from '../components/services'
 import PiezaPage from '../components/piezaPage'
 import { Terms, Privacy } from '../components/terms'
 // css
@@ -122,6 +122,8 @@ class App extends Component {
     }
 
   // <Route path='/' render={this.renderMainNav.bind(this)}/>
+  // <Route exact={true} path='/' render={renderSlider}/>
+  // <Route exact={true} path='/' render={renderFrontPosts}/>
 
     return (
       <Router>
@@ -129,11 +131,9 @@ class App extends Component {
           <Container_main>
             <Route path='/' component={HeaderLarge}/>
 
-              <Route exact={true} path='/' render={renderSlider}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Manifesto}/>
-              <Route exact={true} path='/' render={renderFrontPosts}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' render={renderBlog}/>
@@ -141,7 +141,7 @@ class App extends Component {
               <Route path='/contact' component={ContactPage}/>
               <Route path='/trabajos' render={renderAllPics}/>
               <Route path='/terms' component={Terms}/>
-              <Route path='/privacy' component={Privacy}/>              
+              <Route path='/privacy' component={Privacy}/>
 
             <Route path='/' component={Footer}/>
           </Container_main>
