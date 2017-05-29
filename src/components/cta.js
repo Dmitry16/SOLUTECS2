@@ -23,6 +23,7 @@ export default class CTA extends React.Component {
       text-align: center;
       border: none;
       padding: 0 0.5em;
+      width: 50em;
       ${ flex.column }
     `
     const TitleCTA = styled.h3`
@@ -52,7 +53,7 @@ export default class CTA extends React.Component {
       margin: 0;
       padding: 0 0 5%;
       width: 100%;
-      > a { width: 33.3%;}
+      > a { width: 30%; margin: 1%;}
       ${ media.handheld`
         width: 100%;
         display: flex;
@@ -68,47 +69,25 @@ export default class CTA extends React.Component {
         width: 100%;
         `};
     `
-    const ButtonCTA = styled.button`
-      width: ${props => props.primary ? '80%' : '70%'};
-      height: ${props => props.primary ? '4.5em' : '4em'};
-      color: #fff;
-      font-size: ${props => props.primary ? '1.2em' : '1em'};
-      border: ${ props => props.theme.buttonCTABorder };
-      margin: 0;
-      padding: 0;
-      background: ${ props => props.theme.colorCTA };
-      cursor: pointer;
-      &:hover {
-        background: ${ props => props.theme.buttonCTAhoverBG };
-        border: ${ props => props.theme.buttonCTAhoverBorder };
-        box-shadow: 5px 5px 10px #333;
-        color: ${ props => props.theme.buttonCTAhoverColor };
-      }
-      ${ media.desktop`
-        font-size: ${props => props.primary ? '1.2em' : '1em'};
-      `}
-      ${ media.tablet`
-        font-size: ${props => props.primary ? '1em' : '0.9em'};
-        width: 90%;
-      `}
-      ${ media.handheld`
-        font-size: ${props => props.primary ? '0.9em' : '0.8em'};
-        width: 100%;
-        margin-top: 1%;
-        height: 3em;
-      `}
-      `
     return (
       <Section style={{margin: '7% 0'}}>
         <WrapperCTA>
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA>
-            <Link to="/contact"><ButtonCTA >
-            Recibir mas informacion</ButtonCTA></Link>
-            <Link to="/contact"><ButtonCTA primary >
-            Contactar con nosotros</ButtonCTA></Link>
-            <Link to="/trabajos"><ButtonCTA onClick={this.showPics.bind(this)}>
-              Ver nuestros precios</ButtonCTA>
+            <Link to="/contact">
+              <ButtonCTA style={{border:'1px solid #fff'}}>
+                Recibir mas informacion
+              </ButtonCTA>
+            </Link>
+            <Link to="/contact">
+              <ButtonCTA primary style={{border:'1px solid #fff'}} >
+                Contactar con nosotros
+              </ButtonCTA>
+            </Link>
+            <Link to="/trabajos">
+              <ButtonCTA  style={{border:'1px solid #fff'}} onClick={this.showPics.bind(this)}>
+                Ver nuestros precios
+              </ButtonCTA>
             </Link>
           </BoxCTA>
         </WrapperCTA>

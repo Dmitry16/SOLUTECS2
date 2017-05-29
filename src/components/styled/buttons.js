@@ -29,3 +29,29 @@ export const Button = styled.button`
     font-size: 0.8em;
   `}
   `
+  export const ButtonCTA = styled.button`
+    width: ${props => props.primary ? '100%' : '100%'};
+    height: ${props => props.primary ? '3.2em' : '3.2em'};
+    color: #fff;
+    font-size: ${props => props.primary ? '1em' : '1em'};
+    border: none;
+    border-radius: ${ props => props.theme.buttonCTABorderRadius };
+    margin: 1%; padding: 1em 0.3em;
+    background: ${ props => props.theme.colorCTA };
+    cursor: pointer;
+    &:hover {
+      background: ${ props => props.theme.buttonCTAhoverBG };
+      border: ${ props => props.theme.buttonCTAhoverBorder };
+      box-shadow: 5px 5px 10px #333;
+      color: ${ props => props.theme.buttonCTAhoverColor };
+    }
+    ${ media.tablet`
+      font-size: ${props => props.primary ? '0.9em' : '0.9em'};
+      width: 100%;
+    `}
+    ${ media.handheld`
+      font-size: ${props => props.primary ? '0.8em' : '0.8em'};
+      width: 100%;
+      height: 3em;
+    `}
+  `
