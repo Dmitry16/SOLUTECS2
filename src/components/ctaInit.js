@@ -11,7 +11,7 @@ import { flex } from './styled/flexes'
 //Actions
 import { fetchAllPics } from '../actions/picsActions'
 
-export default class CTA extends React.Component {
+export default class CtaInit extends React.Component {
 
   showPics() {
     this.props.dispatch(fetchAllPics())
@@ -19,63 +19,49 @@ export default class CTA extends React.Component {
 
   render() {
     const WrapperCTA = styled.div`
-      background: ${ props => props.theme.colorCTA };
+      ${ flex.column };
+      border: 1px solid red;
+      position: absolute;
+      top: 60vh;
       text-align: center;
       border: none;
-      padding: 0 0.5em;
-      ${ flex.column }
-    `
-    const TitleCTA = styled.h3`
-      font-weight: 300;
-      font-size: 1.8em;
-      color: #fff;
-      ${ media.desktop`
-      font-size: 1.8em;
-      text-align: center;
-      `};
-      ${ media.tablet`
-      font-size: 1.6em;
-      text-align: center;
-      `};
+      padding: 0;
+      width: 30em;
       ${ media.handheld`
-      font-size: 1.5em;
-      text-align: center;
+        top: 15vh;
       `};
     `
     const BoxCTA = styled.div`
+      border: 1px solid blue;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background: ${ props => props.theme.colorCTA };
       text-align: center;
       margin: 0;
-      padding: 0 0 5%;
-      width: 100%;
-      > a { width: 33.3%;}
+      padding: 0;
+      width: 19em;
+      > a { width: 45%; margin: 2%}
+      ${ media.tablet`
+        width: 15em;
+        `};
       ${ media.handheld`
-        width: 100%;
+        width: 7em;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         > a { width: 80%; }
       `};
-      ${ media.tablet`
-        width: 100%;
-        `};
-      ${ media.desktop`
-        width: 100%;
-        `};
     `
     const ButtonCTA = styled.button`
-      width: ${props => props.primary ? '80%' : '70%'};
-      height: ${props => props.primary ? '4.5em' : '4em'};
+      width: ${props => props.primary ? '100%' : '100%'};
+      height: ${props => props.primary ? '3em' : '3em'};
       color: #fff;
-      font-size: ${props => props.primary ? '1.2em' : '1em'};
+      font-size: ${props => props.primary ? '1em' : '1em'};
       border: ${ props => props.theme.buttonCTABorder };
-      margin: 0;
-      padding: 0;
+      border-radius: ${ props => props.theme.buttonCTABorderRadius };
+      margin: 1%; padding: 0;
       background: ${ props => props.theme.colorCTA };
       cursor: pointer;
       &:hover {
@@ -84,35 +70,31 @@ export default class CTA extends React.Component {
         box-shadow: 5px 5px 10px #333;
         color: ${ props => props.theme.buttonCTAhoverColor };
       }
-      ${ media.desktop`
-        font-size: ${props => props.primary ? '1.2em' : '1em'};
-      `}
       ${ media.tablet`
-        font-size: ${props => props.primary ? '1em' : '0.9em'};
-        width: 90%;
+        font-size: ${props => props.primary ? '0.9em' : '0.9em'};
+        width: 100%;
       `}
       ${ media.handheld`
-        font-size: ${props => props.primary ? '0.9em' : '0.8em'};
+        font-size: ${props => props.primary ? '0.8em' : '0.8em'};
         width: 100%;
-        margin-top: 1%;
         height: 3em;
       `}
       `
     return (
-      <Section style={{margin: '7% 0'}}>
         <WrapperCTA>
-          <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA>
-            <Link to="/contact"><ButtonCTA >
-            Recibir mas informacion</ButtonCTA></Link>
-            <Link to="/contact"><ButtonCTA primary >
-            Contactar con nosotros</ButtonCTA></Link>
-            <Link to="/trabajos"><ButtonCTA onClick={this.showPics.bind(this)}>
-              Ver nuestros precios</ButtonCTA>
+            <Link to="/contact">
+              <ButtonCTA>
+                Ver las ofertas
+              </ButtonCTA>
+            </Link>
+            <Link to="/contact">
+              <ButtonCTA primary>
+                Ver las tarifas
+              </ButtonCTA>
             </Link>
           </BoxCTA>
         </WrapperCTA>
-      </Section>
     )
   }
 }

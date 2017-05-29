@@ -12,6 +12,7 @@ import Manifesto from '../components/manifesto'
 import Footer from '../components/footer'
 // import Slider from '../components/slider_component'
 import CTA from '../components/cta'
+import CtaInit from '../components/ctaInit'
 import Modal from '../components/modal'
 // import MainNav from '../components/nav'
 import AllPics from '../components/allpics'
@@ -59,6 +60,11 @@ class App extends Component {
   renderCTA = () => {
     return (
       <CTA dispatch={ this.props.dispatch } />
+    )
+  }
+  renderCtaInit = () => {
+    return (
+      <CtaInit dispatch={ this.props.dispatch } />
     )
   }
 
@@ -131,6 +137,7 @@ class App extends Component {
           <Container_main>
             <Route path='/' component={HeaderLarge}/>
 
+              <Route exact={true} path='/' render={this.renderCtaInit.bind(this)}/>              
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Manifesto}/>
