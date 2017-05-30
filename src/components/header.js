@@ -27,7 +27,8 @@ export default class HeaderLarge extends React.Component {
       `};
       ${ media.handheld`height: auto;
         ${ flex.column }
-        > img { margin: 0.5em 0 0; }
+        > a { margin: auto; }
+        > a > img { margin: 0 0 0 3.5% }
       `};
       ${ media.tiny`height: auto;
         ${ flex.column }
