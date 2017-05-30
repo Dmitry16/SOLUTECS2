@@ -20,7 +20,7 @@ export default class HeaderLarge extends React.Component {
       align-items: flex-start;
       width: 100%;
       padding: 0; margin: 0;
-      > img { margin: 0.5em 0 0 2em;}
+      > a { margin: 0.5em 0 0 2em;}
       ${ media.tablet`height: auto;
         > img { margin: 0.5em 0 0; }
         > div > div { margin: 0.5em 0; width: 100%; }
@@ -59,9 +59,11 @@ export default class HeaderLarge extends React.Component {
       `};
     `
     return (
-      <Wrapper id='start'>
+      <Wrapper>
       <Layer />
-        <ImgHeader src='http://solutecs.biz/wp-content/uploads/2016/10/site-logo-white3.png'></ImgHeader>
+        <a href='/#home'>
+          <ImgHeader src='http://solutecs.biz/wp-content/uploads/2017/05/site-logo-red2.png'></ImgHeader>
+        </a>
         <WrapperNav>
           <MainNav />
         </WrapperNav>

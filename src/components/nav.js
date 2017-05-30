@@ -73,7 +73,7 @@ export default class MainNav extends React.Component {
           <span className='icon-bars'></span>
           <div id='top' className='list'>
               <li>
-                <a href='/#start'>Inicio</a>
+                <a href='/#home'>Inicio</a>
               </li>
               <li>
                 <a href='/#productos'>Productos</a>

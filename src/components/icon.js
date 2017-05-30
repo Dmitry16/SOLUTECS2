@@ -7,15 +7,15 @@ export default class Icon extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      width: 23%;
+      width: 25%;
       margin: 1%;
-      border: 1px solid #aaa;
+      border: 1px solid #fff;
       background: rgba(255, 255, 255, 0.2);
       overflow: hidden;
       transition: all 0.5s;
       > a > p { color: ${ props => props.theme.iconColor }; }
       &:hover { background: ${ props => props.theme.iconBGHoverColor };
-                box-shadow: 0px 0px 20px 5px #777;
+                box-shadow: 5px 5px 10px 0px #aaa;
                 > a > p { color:  ${ props => props.theme.iconHoverColor }; }
               }
       > a { border: none; }

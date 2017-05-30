@@ -23,6 +23,8 @@ import ContactPage from '../components/contactPage'
 import Icons from '../components/services'
 import PiezaPage from '../components/piezaPage'
 import { Terms, Privacy } from '../components/terms'
+import { Prices } from '../components/prices'
+
 // css
 import style from '../css/newstyle.css'
 //Styled components
@@ -137,9 +139,10 @@ class App extends Component {
           <Container_main>
             <Route path='/' component={HeaderLarge}/>
 
-              <Route exact={true} path='/' render={this.renderCtaInit.bind(this)}/>              
+              <Route exact={true} path='/' render={this.renderCtaInit.bind(this)}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
+              <Route exact={true} path='/' component={Prices}/>
               <Route exact={true} path='/' component={Manifesto}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>

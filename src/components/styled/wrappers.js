@@ -24,8 +24,9 @@ export const WrapperMax1100 = styled.div`
   max-width: 1100px;
 `
 export const Section = styled.section`
+  width: 100%;
   margin: 5% 0;
-  background: rgba(#fff, 0.3);
+  background: ${props => props.dark ? 'rgba(0,0,50,.2)' : 'none'};
   text-align: center;
 `
 export const PicWrapper = styled.div`

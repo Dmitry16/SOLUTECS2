@@ -31,9 +31,9 @@ export const Button = styled.button`
   `
   export const ButtonCTA = styled.button`
     width: ${props => props.primary ? '100%' : '100%'};
-    height: ${props => props.primary ? '3.2em' : '3.2em'};
+    height: ${props => props.primary ? '3.6em' : '3.2em'};
     color: #fff;
-    font-size: ${props => props.primary ? '1em' : '1em'};
+    font-size: ${props => props.primary ? '1.2em' : '1em'};
     border: none;
     border-radius: ${ props => props.theme.buttonCTABorderRadius };
     margin: 1%; padding: 1em 0.3em;
@@ -46,11 +46,13 @@ export const Button = styled.button`
       color: ${ props => props.theme.buttonCTAhoverColor };
     }
     ${ media.tablet`
-      font-size: ${props => props.primary ? '0.9em' : '0.9em'};
+      font-size: ${props => props.primary ? '1.1em' : '0.9em'};
       width: 100%;
+      height: ${props => props.primary ? '3.8em' : '3.7em'};
+      padding: 0.5em 0.1em;
     `}
     ${ media.handheld`
-      font-size: ${props => props.primary ? '0.8em' : '0.8em'};
+      font-size: ${props => props.primary ? '0.9em' : '0.8em'};
       width: 100%;
       height: 3em;
     `}

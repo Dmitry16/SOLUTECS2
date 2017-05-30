@@ -7,18 +7,33 @@ import { WrapperMax1100 } from './styled/wrappers'
 
 const icons = [
   {
-    icon: 'icon-globe',
-    title: 'Comercio Internacional',
+    icon: 'icon-connectdevelop',
+    title: 'Desarrollo Aplicaciones Web/ Moviles',
     link: '#'
   },
   {
-    icon: 'icon-ship',
-    title: 'Administracion Logistica',
+    icon: 'icon-object-group',
+    title: 'Diseño Web',
+    link: '#'
+  },
+  {
+    icon: 'icon-pencil-square-o',
+    title: 'Marketing de Contenidos',
+    link: '#'
+  },
+  {
+    icon: 'icon-google',
+    title: 'Tour Virtual de 360º en Google',
     link: '#'
   },
   {
     icon: 'icon-line-chart',
-    title: 'Marketing',
+    title: 'Optimización SEO',
+    link: '#'
+  },
+  {
+    icon: 'icon-eye',
+    title: 'Publicidad en Internet',
     link: '#'
   },
 ]
@@ -33,28 +48,18 @@ class Icons extends React.Component {
       flex-direction: column;
       align-items: center;
       width: 100%;
-      position: relative;
       margin: 0;
       padding: 5% 0;
       text-align: center;
-    `
-    const Layer = styled.div`
-      margin: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: ${ props => props.theme.layer };
     `
     const Wrapper = styled.div`
       z-index: 9 !important;
     `
     return (
       <Section id='services'>
-      <Layer />
         <WrapperMax1100 style={{zIndex:'3'}}>
-          <H1 style={{color:'rgb(224, 123, 46)'}}>Nuestros Servicios</H1>
-          <HR style={{color:'rgb(224, 123, 46)'}} />
+          <H1 style={{color:'rgb(100,100,150)'}}>Nuestros Servicios</H1>
+          <HR style={{color:'rgb(214,80,80)'}} />
           <div className="icons-wrapper">
             {icons.map((icon,id) =>
               <Icon

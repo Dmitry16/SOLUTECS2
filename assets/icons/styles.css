@@ -218,3 +218,51 @@
 .icon-twitter-square:before {
   content: "\37";
 }
+.icon-cart-arrow-down:before {
+  content: "\38";
+}
+.icon-desktop:before {
+  content: "\39";
+}
+.icon-pencil-square-o:before {
+  content: "\21";
+}
+.icon-star-half-o:before {
+  content: "\22";
+}
+.icon-share-square-o:before {
+  content: "\23";
+}
+.icon-share:before {
+  content: "\24";
+}
+.icon-pie-chart:before {
+  content: "\25";
+}
+.icon-object-group:before {
+  content: "\26";
+}
+.icon-mobile:before {
+  content: "\27";
+}
+.icon-forumbee:before {
+  content: "\28";
+}
+.icon-connectdevelop:before {
+  content: "\29";
+}
+.icon-crop:before {
+  content: "\2a";
+}
+.icon-cogs:before {
+  content: "\2b";
+}
+.icon-at:before {
+  content: "\2c";
+}
+.icon-bar-chart:before {
+  content: "\2d";
+}
+.icon-google:before {
+  content: "\2e";
+}

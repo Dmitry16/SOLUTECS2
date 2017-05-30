@@ -19,12 +19,19 @@ export default class CTA extends React.Component {
 
   render() {
     const WrapperCTA = styled.div`
+      ${ flex.column }
       background: ${ props => props.theme.colorCTA };
       text-align: center;
       border: none;
       padding: 0 0.5em;
-      width: 50em;
-      ${ flex.column }
+      width: 80%;
+      margin: auto;
+      ${ media.handheld`
+        width: 90%;
+        `};
+      ${ media.tablet`
+        width: 90%;
+      `};
     `
     const TitleCTA = styled.h3`
       font-weight: 300;
@@ -44,35 +51,34 @@ export default class CTA extends React.Component {
       `};
     `
     const BoxCTA = styled.div`
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      ${ flex.row }
       background: ${ props => props.theme.colorCTA };
-      text-align: center;
       margin: 0;
       padding: 0 0 5%;
       width: 100%;
       > a { width: 30%; margin: 1%;}
+      ${ media.tablet`
+        `};
       ${ media.handheld`
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         > a { width: 80%; }
       `};
-      ${ media.tablet`
-        width: 100%;
-        `};
-      ${ media.desktop`
-        width: 100%;
-        `};
     `
+    // background:
+    // linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+    // linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+    // linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+    // background-color:#e1ebbd;
+    // background-size: 128px 128px;
+    // background-attachment: fixed;
+
     return (
-      <Section style={{margin: '7% 0'}}>
+      <Section dark style={{margin: '0 0 7%',padding:'5% 0'}}>
         <WrapperCTA>
-          <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
+          <TitleCTA>Que vas a hacer ahora?</TitleCTA>
           <BoxCTA>
             <Link to="/contact">
               <ButtonCTA style={{border:'1px solid #fff'}}>

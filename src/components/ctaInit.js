@@ -32,11 +32,7 @@ export default class CtaInit extends React.Component {
       `};
     `
     const BoxCTA = styled.div`
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      ${ flex.row }
       margin: 0;
       padding: 0;
       width: 19em;
@@ -56,12 +52,12 @@ export default class CtaInit extends React.Component {
     return (
         <WrapperCTA>
           <BoxCTA>
-            <Link to="/contact">
+            <a href='/#services'>
               <ButtonCTA>
                 Empezar
               </ButtonCTA>
-            </Link>
-            <Link to="/contact">
+            </a>
+            <Link to='/about'>
               <ButtonCTA>
                 Ver las tarifas
               </ButtonCTA>
