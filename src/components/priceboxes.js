@@ -25,28 +25,33 @@ const WrapperPriceBox = styled.div`
     height: ${props => props.main ? '27em' : '20em'};
   `}
 `
-
 export const PriceBox1 = () => {
-
     return (
       <WrapperPriceBox>
-        <H3>Holala!</H3>
+        <H3>Sitio Web Sencillo</H3>
+        <HR />
+        <H3>199€</H3>
+        <Button small>Más información</Button>
       </WrapperPriceBox>
     )
 }
 export const PriceBox2 = () => {
-
     return (
       <WrapperPriceBox main>
-        <H3>Holala!</H3>
+        <H3>Sitio Web Completo</H3>
+        <HR />
+        <H3>299€</H3>
+        <Button small>Más información</Button>
       </WrapperPriceBox>
     )
 }
 export const PriceBox3 = () => {
-
     return (
       <WrapperPriceBox>
-        <H3>Holala!</H3>
+        <H3>E-commerce (Tienda Online)</H3>
+        <HR />
+        <H3>399€</H3>
+        <Button small>Más información</Button>
       </WrapperPriceBox>
     )
 }
