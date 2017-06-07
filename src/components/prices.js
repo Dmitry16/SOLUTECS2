@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button, ButtonCTA } from './styled/buttons'
 import { Section } from './styled/wrappers'
-import { WrapperMax1100 } from './styled/wrappers'
+// import { WrapperMax1100 } from './styled/wrappers'
 import { media } from './styled/medias'
 import { flex } from './styled/flexes'
 import { H1, H3, P, HR } from './styled/typographies'
@@ -17,8 +17,8 @@ export const Prices = () => {
     width: 1100px;
     margin: auto;
     z-Index: 3;
+    margin: 3em auto 0;
     padding: 3%;
-    border: 1px solid #ddd;
     ${ media.tablet`
       width: 100%;
       padding: 1%;
@@ -27,9 +27,9 @@ export const Prices = () => {
       ${ flex.column }
     `}
   `
-
   return (
-    <Section>
+    <Section id='prices'>
+      <H1>Nuestras Tarifas</H1>
       <WrapperMax1100>
         <PriceBox1 />
         <PriceBox2 />

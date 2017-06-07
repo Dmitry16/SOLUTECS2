@@ -4,12 +4,13 @@ import modalReducer from './modalReducer'
 import blogReducer from './blogReducer'
 import postReducer from './postReducer'
 import piezaReducer from './piezaReducer'
+import headerReducer from './headerReducer'
 
 
 export default combineReducers({
   pics: picsReducer,
-  modal: modalReducer,
   blog: blogReducer,
   post: postReducer,
-  pieza: piezaReducer
+  pieza: piezaReducer,
+  header: headerReducer,
 })

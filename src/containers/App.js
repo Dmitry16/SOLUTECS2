@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 //Actions
 import * as piezaActionCreators from '../actions/piezaActions'
 // Components
-import HeaderLarge from '../components/header'
+import { HeaderTop, HeaderScrolled } from '../components/header'
 import Manifesto from '../components/manifesto'
 import Footer from '../components/footer'
 // import Slider from '../components/slider_component'
@@ -129,6 +129,22 @@ class App extends Component {
       )
     }
 
+    const renderHeader = () => {
+      if(!this.props.headerScrolled) {
+        return (
+            <HeaderTop
+              dispatch={ dispatch }
+            />
+        )
+      } else {
+        return (
+          <HeaderScrolled
+            dispatch={ dispatch }
+          />
+        )
+      }
+    }
+
   // <Route path='/' render={this.renderMainNav.bind(this)}/>
   // <Route exact={true} path='/' render={renderSlider}/>
   // <Route exact={true} path='/' render={renderFrontPosts}/>
@@ -137,18 +153,18 @@ class App extends Component {
       <Router>
         <ThemeProvider theme={ greenTheme }>
           <Container_main>
-            <Route path='/' component={HeaderLarge}/>
+            <Route path='/' render={renderHeader}/>
 
               <Route exact={true} path='/' render={this.renderCtaInit.bind(this)}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Prices}/>
               <Route exact={true} path='/' component={Manifesto}/>
+              <Route exact={true} path='/' component={ContactPage}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' render={renderBlog}/>
               <Route path='/post' render={renderPostPage}/>
-              <Route path='/contact' component={ContactPage}/>
               <Route path='/trabajos' render={renderAllPics}/>
               <Route path='/terms' component={Terms}/>
               <Route path='/privacy' component={Privacy}/>
@@ -170,7 +186,8 @@ const mapStateToProps = store => (
     piezaImg: store.pieza.piezaImg,
     posts: store.blog.posts,
     postTitle: store.post.postTitle,
-    postContent: store.post.postContent
+    postContent: store.post.postContent,
+    headerScrolled: store.header.headerScrolled
   }
 )
 

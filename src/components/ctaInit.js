@@ -52,16 +52,16 @@ export default class CtaInit extends React.Component {
     return (
         <WrapperCTA>
           <BoxCTA>
-            <a href='/#services'>
+            <a href='#services'>
               <ButtonCTA>
                 Empezar
               </ButtonCTA>
             </a>
-            <Link to='/about'>
+            <a href='#prices'>
               <ButtonCTA>
-                Ver las tarifas
+                Ver precios
               </ButtonCTA>
-            </Link>
+            </a>
           </BoxCTA>
         </WrapperCTA>
     )

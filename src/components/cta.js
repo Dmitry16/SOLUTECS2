@@ -76,7 +76,7 @@ export default class CTA extends React.Component {
     // background-attachment: fixed;
 
     return (
-      <Section dark style={{margin: '0 0 7%',padding:'5% 0'}}>
+      <Section dark style={{margin: '0 0 3em',padding:'5% 0'}}>
         <WrapperCTA>
           <TitleCTA>Que vas a hacer ahora?</TitleCTA>
           <BoxCTA>
