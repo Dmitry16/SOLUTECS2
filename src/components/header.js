@@ -40,17 +40,17 @@ export class HeaderTop extends React.Component {
         margin: 0;
       `};
     `
-
     window.addEventListener('scroll', () => {
         if(window.scrollY>100) {
           this.props.dispatch(renderHeaderScrolled())
         }
-        if(window.scrollY===0) {
+        if(window.scrollY===0 && this.props.frontPage === true) {
           this.props.dispatch(renderHeaderTop())
         }
       })
+
     return (
-      <WrapperHeaderTop>
+      <WrapperHeaderTop id='header'>
       <Layer />
         <a href='/#home'>
           <ImgHeader src='http://solutecs.biz/wp-content/uploads/2017/05/site-logo-red2.png'></ImgHeader>
@@ -66,6 +66,17 @@ export class HeaderTop extends React.Component {
 export class HeaderScrolled extends React.Component {
 
   render() {
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY===0 && this.props.frontPage === false) {
+          this.props.dispatch(renderHeaderScrolled())
+          console.log('ddd ' + this.props.frontPage)
+        }
+      })
+
+    if (this.props.frontPage === false) {
+      document.getElementById('home').style.display='none'
+    }
 
     const Layer = styled.div`
       margin: 0;
@@ -93,9 +104,8 @@ export class HeaderScrolled extends React.Component {
         margin: 0;
       `};
     `
-
     return (
-      <WrapperHeaderScrolled>
+      <WrapperHeaderScrolled id='header'>
         <Layer />
         <a href='/#home' style={{zIndex:'3',marginBottom:'0.5em'}}>
           <ImgHeader src='http://solutecs.biz/wp-content/uploads/2017/05/site-logo-red2.png'></ImgHeader>

@@ -5,6 +5,7 @@ import blogReducer from './blogReducer'
 import postReducer from './postReducer'
 import piezaReducer from './piezaReducer'
 import headerReducer from './headerReducer'
+import frontPageReducer from './frontPageReducer'
 
 
 export default combineReducers({
@@ -13,4 +14,5 @@ export default combineReducers({
   post: postReducer,
   pieza: piezaReducer,
   header: headerReducer,
+  frontPage: frontPageReducer,
 })

@@ -24,6 +24,9 @@ import Icons from '../components/services'
 import PiezaPage from '../components/piezaPage'
 import { Terms, Privacy } from '../components/terms'
 import { Prices } from '../components/prices'
+import { WebNormal } from '../components/webNormal'
+import { WebCompleta } from '../components/webCompleta'
+import { WebEcommerce } from '../components/webEcommerce'
 
 // css
 import style from '../css/newstyle.css'
@@ -128,18 +131,27 @@ class App extends Component {
         />
       )
     }
-
+    const renderWebNormal = () => {
+      return (
+        <WebNormal
+          dispatch={ dispatch }
+          frontPage={ this.props.frontPage }          
+        />
+      )
+    }
     const renderHeader = () => {
       if(!this.props.headerScrolled) {
         return (
             <HeaderTop
               dispatch={ dispatch }
+              frontPage={ this.props.frontPage }
             />
         )
       } else {
         return (
           <HeaderScrolled
             dispatch={ dispatch }
+            frontPage={ this.props.frontPage }
           />
         )
       }
@@ -162,6 +174,9 @@ class App extends Component {
               <Route exact={true} path='/' component={Manifesto}/>
               <Route exact={true} path='/' component={ContactPage}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
+              <Route path='/webNormal' render={renderWebNormal}/>
+              <Route path='/webCompleta' render={WebCompleta}/>
+              <Route path='/webEcommerce' render={WebEcommerce}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' render={renderBlog}/>
               <Route path='/post' render={renderPostPage}/>
@@ -187,7 +202,8 @@ const mapStateToProps = store => (
     posts: store.blog.posts,
     postTitle: store.post.postTitle,
     postContent: store.post.postContent,
-    headerScrolled: store.header.headerScrolled
+    headerScrolled: store.header.headerScrolled,
+    frontPage: store.frontPage.frontPage
   }
 )
 

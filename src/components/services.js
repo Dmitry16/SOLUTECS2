@@ -55,6 +55,8 @@ class Icons extends React.Component {
     const Wrapper = styled.div`
       z-index: 9 !important;
     `
+    // document.getElementById('home').style.display='visible'
+
     return (
       <Section id='services'>
         <WrapperMax1100 style={{zIndex:'3'}}>

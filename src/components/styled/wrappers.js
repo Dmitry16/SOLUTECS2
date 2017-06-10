@@ -86,7 +86,7 @@ export const WrapperHeaderScrolled = styled.div`
   align-items: flex-start;
   width: 100%;
   padding: 0; margin: 0;
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,150,.9);
   > a { margin: 0.5em 0 0 2em;}
   ${ media.tablet`height: auto;
     > img { margin: 0.5em 0 0; }

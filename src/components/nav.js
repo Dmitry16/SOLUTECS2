@@ -76,10 +76,10 @@ export default class MainNav extends React.Component {
                 <a href='/#home'>Inicio</a>
               </li>
               <li>
-                <a href='/#productos'>Productos</a>
+                <a href='/#services'>Servicios</a>
               </li>
               <li>
-                <a href='/#services'>Servicios</a>
+              <a href='/#prices'>Tarifas</a>
               </li>
               <li>
                 <a href='/#about'>Quien Somos</a>

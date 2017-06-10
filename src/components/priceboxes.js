@@ -32,7 +32,7 @@ const WrapperPriceBox = styled.div`
   }
   > h4 {
     color: rgb(170,60,60);
-    font-weight: 100;    
+    font-weight: 100;
   }
   ${ media.tablet`
     width: ${props => props.main ? '33%' : '30%'};
@@ -67,15 +67,15 @@ export const PriceBox1 = () => {
         <HR />
         <h4>Incluye:</h4>
         <ol>
-          <li>Optimización SEO</li>
-          <li>Activación de servicios de Google</li>
           <li>Sistema de gestión/ administración de contenido</li>
           <li>Blog</li>
           <li>Catalogo</li>
+          <li>Optimización SEO</li>
+          <li>Activación de servicios de Google</li>
         </ol>
         <HR />
         <h3 style={{margin:'0.5em'}}>199€</h3>
-        <Button small>Más información</Button>
+        <Link to='/webNormal'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
 }
@@ -86,15 +86,15 @@ export const PriceBox2 = () => {
         <HR />
         <h4>Incluye:</h4>
         <ol>
-          <li>Optimización SEO</li>
-          <li>Activación de servicios de Google</li>
           <li>Sistema de gestión/ administración de contenido</li>
           <li>Blog</li>
           <li>Catalogo</li>
+          <li>Optimización SEO</li>
+          <li>Activación de servicios de Google</li>
         </ol>
         <HR />
         <h3 style={{margin:'0.5em'}}>299€</h3>
-        <Button small>Más información</Button>
+        <Link to='/webCompleta'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
 }
@@ -105,15 +105,15 @@ export const PriceBox3 = () => {
         <HR />
         <h4>Incluye:</h4>
         <ol>
-          <li>Optimización SEO</li>
-          <li>Activación de servicios de Google</li>
           <li>Sistema de gestión/ administración de contenido</li>
           <li>Blog</li>
           <li>Catalogo</li>
+          <li>Optimización SEO</li>
+          <li>Activación de servicios de Google</li>
         </ol>
         <HR />
         <h3 style={{margin:'0.5em'}}>399€</h3>
-        <Button small>Más información</Button>
+        <Link to='/webEcommerce'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
 }

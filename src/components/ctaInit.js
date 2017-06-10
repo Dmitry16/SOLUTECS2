@@ -10,8 +10,13 @@ import { media } from './styled/medias'
 import { flex } from './styled/flexes'
 //Actions
 import { fetchAllPics } from '../actions/picsActions'
+import { frontPage } from '../actions/frontPageActions'
 
 export default class CtaInit extends React.Component {
+
+  componentWillMount() {
+    this.props.dispatch(frontPage())
+  }
 
   showPics() {
     this.props.dispatch(fetchAllPics())
@@ -52,12 +57,12 @@ export default class CtaInit extends React.Component {
     return (
         <WrapperCTA>
           <BoxCTA>
-            <a href='#services'>
+            <a href='/#services'>
               <ButtonCTA>
                 Empezar
               </ButtonCTA>
             </a>
-            <a href='#prices'>
+            <a href='/#prices'>
               <ButtonCTA>
                 Ver precios
               </ButtonCTA>
