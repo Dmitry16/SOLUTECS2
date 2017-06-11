@@ -21,10 +21,6 @@ export class WebNormal extends React.Component {
 
   render() {
 
-    // console.log(this.props.frontPage)
-
-    // document.getElementById('home').style.display='none'
-
     return (
       <WrapperMax1100 style={{margin:'15% auto 5%'}}>
         <H1>Sitio Web Normal</H1>

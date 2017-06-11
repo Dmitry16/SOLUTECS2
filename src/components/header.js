@@ -18,8 +18,6 @@ export class HeaderTop extends React.Component {
     const Layer = styled.div`
       margin: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
       position: absolute;
     `
     const ImgHeader = styled.img`
@@ -37,7 +35,7 @@ export class HeaderTop extends React.Component {
       `};
       ${ media.handheld`
         ${ flex.column }
-        margin: 0;
+        margin: auto;
       `};
     `
     window.addEventListener('scroll', () => {
@@ -81,7 +79,7 @@ export class HeaderScrolled extends React.Component {
     const Layer = styled.div`
       margin: 0;
       top: 0;
-      width: 100%;
+      width: auto;
       height: 100%;
       position: absolute;
       background: rgba(100,100,100,.5);

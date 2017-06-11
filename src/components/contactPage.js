@@ -28,6 +28,7 @@ export default class ContactPage extends React.Component {
     return (
       <WrapperMax1100>
         <H1>Contacta con nosotros</H1>
+        <HR style={{margin:'1% auto 5%'}}/>        
         <FormSection id='contact'>
           <ContactForm />
         </FormSection>

@@ -27,6 +27,8 @@ import { Prices } from '../components/prices'
 import { WebNormal } from '../components/webNormal'
 import { WebCompleta } from '../components/webCompleta'
 import { WebEcommerce } from '../components/webEcommerce'
+import Testimonios from '../components/testimonios'
+import Portfolio from '../components/portfolio'
 
 // css
 import style from '../css/newstyle.css'
@@ -135,7 +137,23 @@ class App extends Component {
       return (
         <WebNormal
           dispatch={ dispatch }
-          frontPage={ this.props.frontPage }          
+          frontPage={ this.props.frontPage }
+        />
+      )
+    }
+    const renderWebCompleta = () => {
+      return (
+        <WebCompleta
+          dispatch={ dispatch }
+          frontPage={ this.props.frontPage }
+        />
+      )
+    }
+    const renderWebEcommerce = () => {
+      return (
+        <WebEcommerce
+          dispatch={ dispatch }
+          frontPage={ this.props.frontPage }
         />
       )
     }
@@ -172,11 +190,13 @@ class App extends Component {
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Prices}/>
               <Route exact={true} path='/' component={Manifesto}/>
+              <Route exact={true} path='/' component={Portfolio}/>
+              <Route exact={true} path='/' component={Testimonios}/>
               <Route exact={true} path='/' component={ContactPage}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/webNormal' render={renderWebNormal}/>
-              <Route path='/webCompleta' render={WebCompleta}/>
-              <Route path='/webEcommerce' render={WebEcommerce}/>
+              <Route path='/webCompleta' render={renderWebCompleta}/>
+              <Route path='/webEcommerce' render={renderWebEcommerce}/>
               <Route path='/about' component={Manifesto}/>
               <Route path='/blog' render={renderBlog}/>
               <Route path='/post' render={renderPostPage}/>

@@ -18,7 +18,7 @@ const icons = [
   },
   {
     icon: 'icon-pencil-square-o',
-    title: 'Marketing de Contenidos',
+    title: 'Marketing Online',
     link: '#'
   },
   {

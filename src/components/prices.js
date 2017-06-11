@@ -30,6 +30,7 @@ export const Prices = () => {
   return (
     <Section id='prices'>
       <H1>Nuestras Tarifas</H1>
+      <HR />
       <WrapperMax1100>
         <PriceBox1 />
         <PriceBox2 />

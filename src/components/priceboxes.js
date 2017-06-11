@@ -12,14 +12,14 @@ import { H1, h3, P, HR } from './styled/typographies'
 const WrapperPriceBox = styled.div`
   ${ flex.column }
   width: ${props => props.main ? '33%' : '30%'};
-  height: ${props => props.main ? '28em' : 'auto'};
+  height: ${props => props.main ? 'auto' : 'auto'};
   margin: 3% 1%;
   padding: 1% 0.2% 3%;
   border: 1px solid #999;
   border-radius: 5px;
   background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgb(235,235,235)'};
   > ol {
-    font-size: 1em;
+    font-size: ${ props => props.main ? '1.2em' : '1em'};
     list-style: circle;
     color: ${ props => props.theme.primaryTextColor };
     text-align: left;
@@ -27,7 +27,7 @@ const WrapperPriceBox = styled.div`
   }
   > h3 {
     color: ${ props => props.main ? props.theme.iconColor : 'rgb(170,60,60)'};
-    font-size: ${ props => props.main ? '1.7em' : '1.4em'};
+    font-size: ${ props => props.main ? '1.5em' : '1.3em'};
     font-weight: 100;
   }
   > h4 {
@@ -36,10 +36,10 @@ const WrapperPriceBox = styled.div`
   }
   ${ media.tablet`
     width: ${props => props.main ? '33%' : '30%'};
-    height: ${props => props.main ? '27em' : '25em'};
-    padding: 1%;
+    height: ${props => props.main ? 'auto' : 'auto'};
+    padding: 2%;
     > ol {
-      font-size: 0.8em;
+      font-size: ${ props => props.main ? '1em' : '0.9em'};
       margin: 1em 0;
     }
     > h3 {
@@ -48,10 +48,10 @@ const WrapperPriceBox = styled.div`
   `}
   ${ media.handheld`
     width: ${props => props.main ? '100%' : '90%'};
-    height: ${props => props.main ? '20em' : '18em'};
-    padding: 1%;
+    height: ${props => props.main ? 'auto' : 'auto'};
+    padding: 2%;
     > ol {
-      font-size: 0.8em;
+      font-size: ${ props => props.main ? '1em' : '0.9em'};
       margin: 1em 0;
     }
     > h3 {
@@ -67,11 +67,13 @@ export const PriceBox1 = () => {
         <HR />
         <h4>Incluye:</h4>
         <ol>
-          <li>Sistema de gestión/ administración de contenido</li>
-          <li>Blog</li>
-          <li>Catalogo</li>
-          <li>Optimización SEO</li>
+          <li>Hosting (alojamiento web)</li>
+          <li>SEO (posicionamiento web) basico</li>
           <li>Activación de servicios de Google</li>
+          <li>Sistema de gestión/ administración de contenido</li>
+          <li>Diseño plantillas</li>
+          <li>Catálogo/ album de fotos</li>
+          <li>Blog</li>
         </ol>
         <HR />
         <h3 style={{margin:'0.5em'}}>199€</h3>
@@ -86,11 +88,13 @@ export const PriceBox2 = () => {
         <HR />
         <h4>Incluye:</h4>
         <ol>
-          <li>Sistema de gestión/ administración de contenido</li>
-          <li>Blog</li>
-          <li>Catalogo</li>
-          <li>Optimización SEO</li>
+          <li>Hosting (alojamiento web)</li>
+          <li>SEO (posicionamiento web) avanzado</li>
           <li>Activación de servicios de Google</li>
+          <li>Sistema de gestión/ administración de contenido</li>
+          <li>Diseño personalizado</li>
+          <li>Catálogo/ album de fotos</li>
+          <li>Blog</li>
         </ol>
         <HR />
         <h3 style={{margin:'0.5em'}}>299€</h3>
@@ -105,11 +109,13 @@ export const PriceBox3 = () => {
         <HR />
         <h4>Incluye:</h4>
         <ol>
-          <li>Sistema de gestión/ administración de contenido</li>
-          <li>Blog</li>
-          <li>Catalogo</li>
-          <li>Optimización SEO</li>
+          <li>Hosting (alojamiento web)</li>
+          <li>SEO (posicionamiento web) avanzado</li>
           <li>Activación de servicios de Google</li>
+          <li>Sistema de gestión/ administración de contenido y tienda</li>
+          <li>Diseño personalizado</li>
+          <li>Catálogo/ album de fotos</li>
+          <li>Blog</li>
         </ol>
         <HR />
         <h3 style={{margin:'0.5em'}}>399€</h3>

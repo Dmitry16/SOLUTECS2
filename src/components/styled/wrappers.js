@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { media } from './medias'
 import { css } from 'styled-components'
-import { mediaQ } from './medias'
 import { flex } from './flexes'
 
 // background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.07)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.13)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0.17))), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0.19)));
@@ -10,25 +9,20 @@ import { flex } from './flexes'
 // background-size: 1px, 2px, 3px, 6px;
 
 export const Container_main = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 !important;
   background: ${ props => props.theme.bodyBG };
-  ${mediaQ.giant`padding: 0`};
-  ${mediaQ.desktop`padding: 0`};
-  ${mediaQ.tablet`padding: 0 5px`};
-  ${mediaQ.phone`padding: 0 5px`};
 `
 export const WrapperMax1100 = styled.div`
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  border: 1px solid steelblue;
+  padding: 6% 0;
 `
 export const Section = styled.section`
   width: 100%;
-  margin: 5% 0;
+  margin: 5% auto;
   background: ${props => props.dark ? 'rgba(0,0,50,.2)' : 'none'};
   text-align: center;
 `
@@ -68,8 +62,9 @@ export const WrapperHeaderTop = styled.div`
     > img { margin: 0.5em 0 0; }
     > div > div { margin: 0.5em 0; width: 100%; }
   `};
-  ${ media.handheld`height: auto;
+  ${ media.handheld`
     ${ flex.column }
+    height: auto;
     > a { margin: auto; }
     > a > img { margin: 0 0 0 3.5% }
   `};

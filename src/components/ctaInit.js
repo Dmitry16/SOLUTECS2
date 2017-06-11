@@ -31,7 +31,7 @@ export default class CtaInit extends React.Component {
       text-align: center;
       border: none;
       padding: 0;
-      width: 30em;
+      width: 100%;
       ${ media.handheld`
         top: 15vh;
       `};

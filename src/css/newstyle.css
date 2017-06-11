@@ -9,12 +9,16 @@ p {
   font-weight:300
 }
 html {
+  width: 100%;
   background: mediumseagreen;
+  margin: 0;
   padding: 0;
 }
 body {
+  width: 100%;
   background: rgb(40, 26, 58) !important;
   margin: 0;
+  padding: 0;
 }
 img {
   border: 0;
@@ -41,7 +45,6 @@ h1.site-title {
 .icons-wrapper {
   display:flex;flex-wrap:wrap;justify-content:center;justify-content-margin:7% 0 0 0;padding:7% 0 5%
 }
-
 .icon, .header-logo-title,
 .all_pics_section {
   display: flex;
@@ -151,11 +154,9 @@ textarea {
 	width: 100%;
 	height: 100%;
 }
-
 .pieza-image, .pieza-image img {
 	height: inherit !important;
 }
-
 @media only screen and (max-width: 1000px) {
   .pieza {
     width: 45%;
@@ -163,6 +164,9 @@ textarea {
   }
 }
 @media only screen and (max-width: 500px) {
+  html, body {
+    width: 100%;
+  }
   .pieza {
     width: 100%;
     height: 23em;
