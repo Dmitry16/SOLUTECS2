@@ -7,7 +7,7 @@ export const media = {
     }
   `,
   handheld: (...args) => css`
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       ${ css(...args) }
     }
   `,

@@ -29,7 +29,7 @@ export default class MainNav extends React.Component {
         margin: 0; padding: 0;
         > span { display: none }
         > div { ${ flex.row }
-          > li { width: 12%; padding: 0.2em 0;
+          > li { width: 14%; padding: 0.2em 0;
               > a { color: #fff; }
             &:hover { background: ${ props => props.theme.navHoverBG };
               > a { color: ${ props => props.theme.navHoverTextColor }; }
@@ -40,7 +40,7 @@ export default class MainNav extends React.Component {
       ${ media.tablet`
         > ul {
           font-size: 0.8rem;
-          > div > li { width: 15%; padding: 0.2em; }
+          > div > li { width: 14%; padding: 0.2em; }
         }`};
       ${ media.handheld`
         margin: 0;

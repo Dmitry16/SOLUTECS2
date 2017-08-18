@@ -27,12 +27,13 @@ export default class Testimonios extends React.Component {
         ${flex.column}
       `}
     `
-    const Folio = styled.div`
+    const Folio = styled.a`
+      position: relative;
       ${flex.column}
       width: 33.3%;
       height: auto;
       padding: 5% 0;
-      border: 1px solid steelblue;
+      border: 1px solid #aaa;
       ${ media.tablet`
 
       `}
@@ -41,6 +42,12 @@ export default class Testimonios extends React.Component {
         width: 95%;
       `}
     `
+    const Img = styled.img`
+      width: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      z-index: 0;
+    `
 
     return (
       <WrapperMax1100 id='portfolio'>
@@ -48,14 +55,38 @@ export default class Testimonios extends React.Component {
         <HR style={{margin:'1% auto 5%'}}/>
         <WrapperPortfolio>
           <Folio>
-            <H3>Folio1</H3>
-            <P>blabla</P>
+            <Img src='http://solutecs.biz/wp-content/uploads/2017/06/columpiu_sm.jpg'></Img>
+            <H3 style={{zIndex:1}}>Folio1</H3>
+            <P style={{zIndex:1}}>blabla</P>
           </Folio>
           <Folio>
+            <Img src='http://solutecs.biz/wp-content/uploads/2017/06/impexa_sm.jpg'></Img>
             <H3>Folio2</H3>
             <P>blabla</P>
           </Folio>
           <Folio>
+            <Img src='http://solutecs.biz/wp-content/uploads/2017/06/nolimits_sm.jpg'></Img>
+            <H3>Folio3</H3>
+            <P>blabla</P>
+          </Folio>
+          <Folio>
+
+              <Img src='http://solutecs.biz/wp-content/uploads/2017/06/llop_sm.jpg'></Img>
+
+            <H3>Folio1</H3>
+            <P>blabla</P>
+          </Folio>
+          <Folio>
+
+              <Img src='http://solutecs.biz/wp-content/uploads/2017/06/receptum_sm.jpg'></Img>
+
+            <H3>Folio2</H3>
+            <P>blabla</P>
+          </Folio>
+          <Folio>
+
+              <Img src='http://solutecs.biz/wp-content/uploads/2017/06/magicpics_sm.jpg'></Img>
+
             <H3>Folio3</H3>
             <P>blabla</P>
           </Folio>
