@@ -9,8 +9,8 @@ export default class Icon extends React.Component {
     const Wrapper = styled.div`
       width: 25%;
       margin: 1%;
-      border: 1px solid #fff;
-      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #aaa;
+      background: rgba(255, 255, 200, 1);
       overflow: hidden;
       transition: all 0.5s;
       > a > p { color: ${ props => props.theme.iconColor }; }

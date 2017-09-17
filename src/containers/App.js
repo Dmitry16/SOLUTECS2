@@ -185,14 +185,14 @@ class App extends Component {
           <Container_main>
             <Route path='/' render={renderHeader}/>
 
-              <Route exact={true} path='/' render={this.renderCtaInit.bind(this)}/>
-              <Route exact={true} path='/' component={Icons}/>
-              <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
-              <Route exact={true} path='/' component={Prices}/>
-              <Route exact={true} path='/' component={Manifesto}/>
-              <Route exact={true} path='/' component={Portfolio}/>
-              <Route exact={true} path='/' component={Testimonios}/>
-              <Route exact={true} path='/' component={ContactPage}/>
+              <Route path='/' render={this.renderCtaInit.bind(this)}/>
+              <Route path='/' component={Icons}/>
+              <Route path='/' render={this.renderCTA.bind(this)}/>
+              <Route path='/' component={Prices}/>
+              <Route path='/' component={Manifesto}/>
+              <Route path='/' component={Portfolio}/>
+              <Route path='/' component={Testimonios}/>
+              <Route path='/' component={ContactPage}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/webNormal' render={renderWebNormal}/>
               <Route path='/webCompleta' render={renderWebCompleta}/>
