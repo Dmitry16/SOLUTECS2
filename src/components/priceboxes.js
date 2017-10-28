@@ -118,7 +118,7 @@ export const PriceBox3 = () => {
           <li>Blog</li>
         </ol>
         <HR />
-        <h3 style={{margin:'0.5em'}}>399€</h3>
+        <h3 style={{margin:'0.5em'}}>499€</h3>
         <Link to='/webEcommerce'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
