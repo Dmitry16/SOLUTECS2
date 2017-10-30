@@ -20,6 +20,7 @@ export default class Testimonios extends React.Component {
 
     const WrapperPortfolio = styled.div`
       ${flex.row}
+      margin: 0; padding: 0;
       ${ media.tablet`
 
       `}
@@ -30,9 +31,10 @@ export default class Testimonios extends React.Component {
     const Folio = styled.a`
       position: relative;
       ${flex.column}
-      width: 33.3%;
+      width: 33%;
       height: auto;
       padding: 5% 0;
+      margin: 0.1%;
       border: 1px solid #aaa;
       ${ media.tablet`
 

@@ -178,6 +178,7 @@ class App extends Component {
   // <Route path='/' render={this.renderMainNav.bind(this)}/>
   // <Route exact={true} path='/' render={renderSlider}/>
   // <Route exact={true} path='/' render={renderFrontPosts}/>
+  // <Route exact={true} path='/' component={Testimonios}/>
 
     return (
       <Router>
@@ -191,7 +192,6 @@ class App extends Component {
               <Route exact={true} path='/' component={Prices}/>
               <Route exact={true} path='/' component={Manifesto}/>
               <Route exact={true} path='/' component={Portfolio}/>
-              <Route exact={true} path='/' component={Testimonios}/>
               <Route exact={true} path='/' component={ContactPage}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/webNormal' render={renderWebNormal}/>
