@@ -36,13 +36,12 @@ export default class Manifesto extends React.Component {
       background: rgba(0,0,50,.5);
     `
     return (
-      <Section style={{padding:'5%'}}>
-        <WrapperMax1100 id='about'>
+      <Section style={{padding:'3%', margin:'0', background:'#555'}}>
           <a href="#manifesto">
             <div className="icon">
               <H1 style={{color:'rgb(220,220,220)'}}>Quien somos</H1>
               <HR style={{color:'rgb(220,220,220)'}}/>
-              <H3 style={{color:'rgb(220,220,220)',margin:'5% 0 0'}}>SOLUTECS- ¡TU ALIADO EN LA JUNGLA DIGITAL!</H3>
+              <H3 style={{color:'rgb(220,220,220)',margin:'5% 0 0'}}>SOLUTECS- TU GUIA EN LA JUNGLA DIGITAL.</H3>
                   <P style={{color:'rgb(170,170,170)',margin:'5% 0 0'}}>SoluTecs es una agéncia de marketing online. Estamos ubicados en Barcelona, somos proveedores de servicios de marketing online (marketing digital en internet). También realizamos servicios de Tour Virtual 360º, foto y video grabación, diseño grafico para imprenta, tarjetas, logotipos, etc.¡Nuestros precios son mas que razonables! En general, somos muy flexibles a la hora de hacer un presupuesto. ¡Incluso tenemos servicios de marketing online gratis que puedes probar sin compromiso alguno por tu parte!
                   </P>
               <H3 style={{color:'rgb(220,220,220)',margin:'2% 0 0'}}>¿Por qué trabajar con nosotros? ¿Que nos diferencia de las otras agencias del sector?</H3>
@@ -62,7 +61,6 @@ export default class Manifesto extends React.Component {
               </ul>
             </div>
           </a>
-        </WrapperMax1100>
       </Section>
     )
   }
