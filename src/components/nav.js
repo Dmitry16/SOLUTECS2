@@ -29,10 +29,12 @@ export default class MainNav extends React.Component {
         margin: 0; padding: 0;
         > span { display: none }
         > div { ${ flex.row }
-          > li { width: 14%; padding: 0.2em 0;
+          > li { width: 12%; padding: 0.2em 0;
+            > span { padding: 0.3em 0.5em;
               > a { color: #fff; }
-            &:hover { background: ${ props => props.theme.navHoverBG };
+              &:hover { border-bottom: 2px solid ${ props => props.theme.navHoverBG };
               > a { color: ${ props => props.theme.navHoverTextColor }; }
+              }
             }
           }
         }
@@ -40,7 +42,6 @@ export default class MainNav extends React.Component {
       ${ media.tablet`
         > ul {
           font-size: 0.8rem;
-          > div > li { width: 14%; padding: 0.2em; }
         }`};
       ${ media.handheld`
         margin: 0;
@@ -74,25 +75,28 @@ export default class MainNav extends React.Component {
           <span className='icon-bars'></span>
           <div id='top' className='list'>
               <li>
-                <a href='/#home'>Inicio</a>
+                <span><a href='/#home'>Inicio</a></span>
               </li>
               <li>
-                <a href='/#services'>Servicios</a>
+                <span><a href='/#services'>Servicios</a></span>
               </li>
               <li>
-              <a href='/#prices'>Tarifas</a>
+                <span><a href='/#prices'>Tarifas</a></span>
               </li>
               <li>
-                <a href='/#portfolio'>Portfolio</a>
+                <span><a href='/#portfolio'>Portfolio</a></span>
               </li>
               <li>
-                <a href='/#about'>Quien Somos</a>
+                <span><a href='/#testimonios'>Testimonios</a></span>
               </li>
               <li>
-                <Link to='/blog'>Blog</Link>
+                <span><a href='/#about'>Quien Somos</a></span>
               </li>
               <li>
-                <a href='/#contact'>Contacto</a>
+                <span><Link to='/blog'>Blog</Link></span>
+              </li>
+              <li>
+                <span><a href='/#contact'>Contacto</a></span>
               </li>
           </div>
         </ul>

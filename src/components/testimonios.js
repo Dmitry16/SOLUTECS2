@@ -18,13 +18,15 @@ export default class Testimonios extends React.Component {
 
   render() {
     return (
-      <WrapperMax1100>
-        <H1>Testimonios</H1>
-        <HR style={{margin:'1% auto 5%'}}/>
-        <H3>Testimonio1</H3>
-        <H3>Testimonio2</H3>
-        <H3>Testimonio3</H3>
-      </WrapperMax1100>
+      <Section id='testimonios'>
+        <WrapperMax1100>
+          <H1>Testimonios</H1>
+          <HR style={{margin:'1% auto 5%'}}/>
+          <H3>Testimonio1</H3>
+          <H3>Testimonio2</H3>
+          <H3>Testimonio3</H3>
+        </WrapperMax1100>
+      </Section>
     )
   }
 }

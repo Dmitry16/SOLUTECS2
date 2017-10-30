@@ -178,6 +178,7 @@ class App extends Component {
   // <Route path='/' render={this.renderMainNav.bind(this)}/>
   // <Route exact={true} path='/' render={renderSlider}/>
   // <Route exact={true} path='/' render={renderFrontPosts}/>
+  // <Route exact={true} path='/' component={Testimonios}/>
 
     return (
       <Router>
@@ -185,14 +186,13 @@ class App extends Component {
           <Container_main>
             <Route path='/' render={renderHeader}/>
 
-              <Route path='/' render={this.renderCtaInit.bind(this)}/>
-              <Route path='/' component={Icons}/>
-              <Route path='/' render={this.renderCTA.bind(this)}/>
-              <Route path='/' component={Prices}/>
-              <Route path='/' component={Manifesto}/>
-              <Route path='/' component={Portfolio}/>
-              <Route path='/' component={Testimonios}/>
-              <Route path='/' component={ContactPage}/>
+              <Route exact={true} path='/' render={this.renderCtaInit.bind(this)}/>
+              <Route exact={true} path='/' component={Icons}/>
+              <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
+              <Route exact={true} path='/' component={Prices}/>
+              <Route exact={true} path='/' component={Manifesto}/>
+              <Route exact={true} path='/' component={Portfolio}/>
+              <Route exact={true} path='/' component={ContactPage}/>
               <Route path='/piezaPage' render={renderPiezaPage}/>
               <Route path='/webNormal' render={renderWebNormal}/>
               <Route path='/webCompleta' render={renderWebCompleta}/>
