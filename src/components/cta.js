@@ -78,23 +78,23 @@ export default class CTA extends React.Component {
     return (
       <Section dark style={{margin: '0 0 3em',padding:'5% 0'}}>
         <WrapperCTA>
-          <TitleCTA>Que vas a hacer ahora?</TitleCTA>
+          <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA>
-            <Link to="/contact">
+            <a href='/#contact'>
               <ButtonCTA style={{border:'1px solid #fff'}}>
                 Recibir mas informacion
               </ButtonCTA>
-            </Link>
-            <Link to="/contact">
+            </a>
+            <a href='/#contact'>
               <ButtonCTA primary style={{border:'1px solid #fff'}} >
                 Contactar con nosotros
               </ButtonCTA>
-            </Link>
-            <Link to="/trabajos">
+            </a>
+            <a href='/#prices'>
               <ButtonCTA  style={{border:'1px solid #fff'}} onClick={this.showPics.bind(this)}>
-                Ver nuestros precios
+                Ver nuestras tarifas
               </ButtonCTA>
-            </Link>
+            </a>
           </BoxCTA>
         </WrapperCTA>
       </Section>
