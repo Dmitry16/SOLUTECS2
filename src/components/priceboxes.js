@@ -13,13 +13,13 @@ const WrapperPriceBox = styled.div`
   ${ flex.column }
   width: ${props => props.main ? '33%' : '23%'};
   height: ${props => props.main ? 'auto' : 'auto'};
-  margin: 1% 0.1%;
+  margin: 1% 0.3%;
   padding: 1%;
   border: 1px solid #999;
   border-radius: 5px;
   background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgb(235,235,235)'};
   > ol {
-    font-size: ${ props => props.main ? '1em' : '0.8em'};
+    font-size: ${ props => props.main ? '1em' : '0.9em'};
     list-style: circle;
     color: ${ props => props.theme.primaryTextColor };
     text-align: left;
@@ -82,15 +82,15 @@ export const PriceBox2 = () => {
     return (
       <WrapperPriceBox>
         <h3>Completo</h3>
-        <h4>(Aplicación WEB Autogestionable)</h4>
+        <h4>Aplicación WEB Autogestionable</h4>
         <HR />
         <ol>
           <li>Diseño personalizado</li>
-          <li>Hosting (alojamiento web)</li>
-          <li>SEO (posicionamiento web) avanzado</li>
-          <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
           <li>Página de gestión/ administración de contenido</li>
-          <li>Catálogo/ album de fotos</li>
+          <li>Hosting (alojamiento web)</li>
+          <li>SEO (posicionamiento web) basico</li>
+          <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
+          <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
           <li>Enlaces a redes sociales</li>
           <li>Blog</li>
         </ol>
@@ -104,15 +104,15 @@ export const PriceBox3 = () => {
     return (
       <WrapperPriceBox>
         <h3>Avanzado</h3>
-        <h4>(Aplicación WEB con Tienda Online Autogestionable)</h4>
+        <h4>Aplicación WEB con Tienda Online Autogestionable</h4>
         <HR />
         <ol>
           <li>Diseño original</li>
           <li>Página de gestión/ administración de contenido y tienda</li>
           <li>Hosting (alojamiento web)</li>
-          <li>SEO (posicionamiento web) avanzado</li>
+          <li>SEO (posicionamiento web) <u>avanzado</u></li>
           <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
-          <li>Catálogo/ album de fotos</li>
+          <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
           <li>Enlaces a redes sociales</li>
           <li>Blog</li>
         </ol>
@@ -126,17 +126,18 @@ export const PriceBox4 = () => {
     return (
       <WrapperPriceBox>
         <h3>Premium</h3>
-        <h4>(Tienda Online Autogestionable)</h4>
+        <h4>Tienda Online Autogestionable</h4>
         <HR />
         <h4>Incluye:</h4>
         <ol>
           <li>Diseño original</li>
-          <li>Página de gestión/ administración de contenido y tienda <b>desarrollado a medida</b></li>
-          <li>Aplicaciones WEB y <b>Móviles (Android, iOS)</b></li>
+          <li><u>Intranet Corporativa desarrollada a medida</u></li>
+          <li>Sistema de gestión/ administración de contenido y tienda <u>desarrollado a medida</u></li>
+          <li><u>Aplicaciones WEB y Móviles (Android, iOS)</u></li>
           <li>Hosting (alojamiento web)</li>
-          <li>SEO (posicionamiento web) avanzado</li>
+          <li>SEO/SEM (posicionamiento web/ publicidad AdWords) completo</li>
           <li>Activación de servicios de Google</li>
-          <li>Catálogo/ album de fotos</li>
+          <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
           <li>Enlaces a redes sociales</li>
           <li>Blog</li>
         </ol>
