@@ -11,15 +11,15 @@ import { H1, h3, P, HR } from './styled/typographies'
 
 const WrapperPriceBox = styled.div`
   ${ flex.column }
-  width: ${props => props.main ? '33%' : '30%'};
+  width: ${props => props.main ? '33%' : '23%'};
   height: ${props => props.main ? 'auto' : 'auto'};
-  margin: 3% 1%;
-  padding: 1% 0.2% 3%;
+  margin: 1% 0.1%;
+  padding: 1%;
   border: 1px solid #999;
   border-radius: 5px;
   background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgb(235,235,235)'};
   > ol {
-    font-size: ${ props => props.main ? '1.2em' : '1em'};
+    font-size: ${ props => props.main ? '1em' : '0.8em'};
     list-style: circle;
     color: ${ props => props.theme.primaryTextColor };
     text-align: left;
@@ -63,41 +63,39 @@ const WrapperPriceBox = styled.div`
 export const PriceBox1 = () => {
     return (
       <WrapperPriceBox>
-        <h3>Sitio Web Normal</h3>
+        <h3>Basico</h3>
         <HR />
-        <h4>Incluye:</h4>
         <ol>
-          <li>Hosting (alojamiento web)</li>
+          <li>Diseño personalizado</li>
           <li>SEO (posicionamiento web) basico</li>
-          <li>Activación de servicios de Google</li>
-          <li>Sistema de gestión/ administración de contenido</li>
-          <li>Diseño plantillas</li>
-          <li>Catálogo/ album de fotos</li>
-          <li>Blog</li>
+          <li>Activación de servicios de Google (Analytics, Maps)</li>
+          <li>Un idioma</li>
+          <li>Enlaces a redes sociales</li>
         </ol>
         <HR />
-        <h3 style={{margin:'0.5em'}}>199€</h3>
+        <h3 style={{margin:'0.5em'}}>299€</h3>
         <Link to='/webNormal'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
 }
 export const PriceBox2 = () => {
     return (
-      <WrapperPriceBox main>
-        <h3>Sitio Web Completo</h3>
+      <WrapperPriceBox>
+        <h3>Completo</h3>
+        <h4>(Aplicación WEB Autogestionable)</h4>
         <HR />
-        <h4>Incluye:</h4>
         <ol>
+          <li>Diseño personalizado</li>
           <li>Hosting (alojamiento web)</li>
           <li>SEO (posicionamiento web) avanzado</li>
-          <li>Activación de servicios de Google</li>
-          <li>Sistema de gestión/ administración de contenido</li>
-          <li>Diseño personalizado</li>
+          <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
+          <li>Página de gestión/ administración de contenido</li>
           <li>Catálogo/ album de fotos</li>
+          <li>Enlaces a redes sociales</li>
           <li>Blog</li>
         </ol>
         <HR />
-        <h3 style={{margin:'0.5em'}}>299€</h3>
+        <h3 style={{margin:'0.5em'}}>499€</h3>
         <Link to='/webCompleta'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
@@ -105,20 +103,45 @@ export const PriceBox2 = () => {
 export const PriceBox3 = () => {
     return (
       <WrapperPriceBox>
-        <h3>E-commerce (Tienda Online)</h3>
+        <h3>Avanzado</h3>
+        <h4>(Aplicación WEB con Tienda Online Autogestionable)</h4>
         <HR />
-        <h4>Incluye:</h4>
         <ol>
+          <li>Diseño original</li>
+          <li>Página de gestión/ administración de contenido y tienda</li>
           <li>Hosting (alojamiento web)</li>
           <li>SEO (posicionamiento web) avanzado</li>
-          <li>Activación de servicios de Google</li>
-          <li>Sistema de gestión/ administración de contenido y tienda</li>
-          <li>Diseño personalizado</li>
+          <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
           <li>Catálogo/ album de fotos</li>
+          <li>Enlaces a redes sociales</li>
           <li>Blog</li>
         </ol>
         <HR />
-        <h3 style={{margin:'0.5em'}}>499€</h3>
+        <h3 style={{margin:'0.5em'}}>desde 899€</h3>
+        <Link to='/webEcommerce'><Button small>Más información</Button></Link>
+      </WrapperPriceBox>
+    )
+}
+export const PriceBox4 = () => {
+    return (
+      <WrapperPriceBox>
+        <h3>Premium</h3>
+        <h4>(Tienda Online Autogestionable)</h4>
+        <HR />
+        <h4>Incluye:</h4>
+        <ol>
+          <li>Diseño original</li>
+          <li>Página de gestión/ administración de contenido y tienda <b>desarrollado a medida</b></li>
+          <li>Aplicaciones WEB y <b>Móviles (Android, iOS)</b></li>
+          <li>Hosting (alojamiento web)</li>
+          <li>SEO (posicionamiento web) avanzado</li>
+          <li>Activación de servicios de Google</li>
+          <li>Catálogo/ album de fotos</li>
+          <li>Enlaces a redes sociales</li>
+          <li>Blog</li>
+        </ol>
+        <HR />
+        <h3 style={{margin:'0.5em'}}>desde 1.499€</h3>
         <Link to='/webEcommerce'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )

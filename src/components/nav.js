@@ -87,9 +87,6 @@ export default class MainNav extends React.Component {
                 <span><a href='/#portfolio'>Portfolio</a></span>
               </li>
               <li>
-                <span><a href='/#testimonios'>Testimonios</a></span>
-              </li>
-              <li>
                 <span><a href='/#about'>Quien Somos</a></span>
               </li>
               <li>
