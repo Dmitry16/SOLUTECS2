@@ -17,7 +17,7 @@ const WrapperPriceBox = styled.div`
   padding: 1%;
   border: 1px solid rgba(214,80,80,0.6);
   border-radius: 5px;
-  background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgba(235,235,235,0.6)'};
+  background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgba(235,235,235,0.8)'};
   &:hover {
     background: ${ props => props.theme.iconBGHoverColor };
     box-shadow: 10px 10px 5px rgba(100,100,100,0.5);
@@ -43,7 +43,7 @@ const WrapperPriceBox = styled.div`
     font-weight: 100;
   }
   > h4 {
-    color: rgb(170,60,60);
+    color: rgba(170,60,60,0.9);
     font-weight: 100;
   }
   ${ media.tablet`
@@ -82,6 +82,7 @@ export const PriceBox1 = () => {
           <li>SEO (posicionamiento web) basico</li>
           <li>Activación de servicios de Google (Analytics, Maps)</li>
           <li>Un idioma</li>
+          <li>Formulario de contacto</li>
           <li>Enlaces a redes sociales</li>
         </ol>
         <HR />
@@ -104,6 +105,7 @@ export const PriceBox2 = () => {
           <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
           <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
           <li>Enlaces a redes sociales</li>
+          <li>Formulario de contacto</li>
           <li>Blog</li>
         </ol>
         <HR />
@@ -126,10 +128,11 @@ export const PriceBox3 = () => {
           <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
           <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
           <li>Enlaces a redes sociales</li>
+          <li>Formulario de contacto</li>
           <li>Blog</li>
         </ol>
         <HR />
-        <h3 style={{margin:'0.5em'}}>desde 899€</h3>
+        <h3 style={{margin:'0.5em'}}><i style={{fontSize:'0.6em'}}>desde</i> 899€</h3>
         <Link to='/webEcommerce'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )
@@ -153,7 +156,7 @@ export const PriceBox4 = () => {
           <li>Blog</li>
         </ol>
         <HR />
-        <h3 style={{margin:'0.5em'}}>desde 1.499€</h3>
+        <h3 style={{margin:'0.5em'}}><i style={{fontSize:'0.6em'}}>desde</i> 1.499€</h3>
         <Link to='/webEcommerce'><Button small>Más información</Button></Link>
       </WrapperPriceBox>
     )

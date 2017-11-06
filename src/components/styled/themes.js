@@ -26,7 +26,7 @@ export const greenTheme = {
   buttonHoverBorder: '1px solid coral',
   buttonHoverColor: 'coral',
   iconColor: 'rgb(214,80,80)',
-  iconHoverColor: 'rgb(255,50,50)',
+  iconHoverColor: 'rgb(214,80,80)',
   iconBGHoverColor: 'rgba(255, 255, 255, .7)',
   footerBG: 'rgb(0, 0, 70)',
   layer: 'rgba(0, 0, 20, 0.7)',

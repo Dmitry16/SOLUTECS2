@@ -9,14 +9,14 @@ export default class Icon extends React.Component {
     const Wrapper = styled.div`
       width: 25%;
       margin: 1%;
-      border: 1px solid rgba(214,80,80,0.6);
+      border: 1px solid rgba(100,100,150,0.3);
       background: rgba(235,235,235,0.6);
       overflow: hidden;
       transition: all 0.5s;
-      > a > p { color: ${ props => props.theme.iconColor }; }
+      > a > p { color: rgba(100,100,150,0.9); }
       &:hover { background: ${ props => props.theme.iconBGHoverColor };
                 box-shadow: 5px 5px 10px 0px #aaa;
-                border: 1px solid rgba(214,80,80,0.9);                
+                border: 1px solid rgba(214,80,80,0.9);
                 > a > p { color:  ${ props => props.theme.iconHoverColor }; }
               }
       > a { border: none; }
