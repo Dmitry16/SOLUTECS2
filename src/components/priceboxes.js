@@ -21,7 +21,7 @@ const WrapperPriceBox = styled.div`
   &:hover {
     background: ${ props => props.theme.iconBGHoverColor };
     box-shadow: 10px 10px 5px rgba(100,100,100,0.5);
-    border: 1px solid rgba(214,80,80,0.6);    
+    border: 1px solid rgba(214,80,80,0.6);
     z-Index: 8;
     > ol { font-size: 1em; }
     > h3 { font-size: 1.5em; }
@@ -140,7 +140,6 @@ export const PriceBox4 = () => {
         <h3>Premium</h3>
         <h4>Aplicacón Web Autogestionable con Intranet Corporativa, Tienda Online, Aplicaciónes Móviles, etc.</h4>
         <HR />
-        <h4>Incluye:</h4>
         <ol>
           <li>Diseño original</li>
           <li><u>Intranet Corporativa desarrollada a medida</u></li>
