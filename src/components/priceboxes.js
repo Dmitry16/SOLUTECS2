@@ -15,12 +15,13 @@ const WrapperPriceBox = styled.div`
   height: ${props => props.main ? 'auto' : 'auto'};
   margin: 1% -0.8%;
   padding: 1%;
-  border: 1px solid #a77;
+  border: 1px solid rgba(214,80,80,0.6);
   border-radius: 5px;
   background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgba(235,235,235,0.6)'};
   &:hover {
-    background: rgba(235,235,255,0.9);
+    background: ${ props => props.theme.iconBGHoverColor };
     box-shadow: 10px 10px 5px rgba(100,100,100,0.5);
+    border: 1px solid rgba(214,80,80,0.6);    
     z-Index: 8;
     > ol { font-size: 1em; }
     > h3 { font-size: 1.5em; }

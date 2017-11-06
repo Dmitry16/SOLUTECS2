@@ -18,7 +18,7 @@ export const WrapperMax1100 = styled.div`
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  padding: 6% 0;
+  padding: 3% 0;
 `
 export const Section = styled.section`
   width: 100%;

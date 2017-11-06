@@ -27,8 +27,8 @@ export const Prices = () => {
   `
   return (
     <Section id='prices'>
-      <H1>Nuestras Tarifas</H1>
-      <HR />
+    <H1 style={{color:'rgb(100,100,150)'}}>Tarifas Desarrollo Web</H1>
+    <HR style={{color:'rgb(214,80,80)'}} />
       <PriceBoxWrapper>
         <PriceBox1 />
         <PriceBox2 />

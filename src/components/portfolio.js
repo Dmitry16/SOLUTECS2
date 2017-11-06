@@ -20,7 +20,7 @@ export default class Testimonios extends React.Component {
 
     const WrapperPortfolio = styled.div`
       ${flex.row}
-      margin: 0; padding: 0;
+      margin: 5% auto 0; padding: 0;
       ${ media.tablet`
 
       `}
@@ -53,8 +53,8 @@ export default class Testimonios extends React.Component {
 
     return (
       <WrapperMax1100 id='portfolio'>
-        <H1>Portfolio</H1>
-        <HR style={{margin:'1% auto 5%'}}/>
+      <H1 style={{color:'rgb(100,100,150)',margin:'5% auto 0'}}>Portfolio</H1>
+      <HR style={{color:'rgb(214,80,80)'}} />
         <WrapperPortfolio>
           <Folio>
             <Img src='http://solutecs.biz/wp-content/uploads/2017/06/columpiu_sm.jpg'></Img>
