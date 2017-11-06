@@ -16,8 +16,8 @@ export const Prices = () => {
     ${ flex.row }
     max-width: 2000px;
     z-Index: 3;
-    margin: 3em auto 0;
-    padding: 0;
+    margin: 5 auto 0%;
+    padding: 5% 0 0;
     ${ media.tablet`
       width: 100%;
     `}

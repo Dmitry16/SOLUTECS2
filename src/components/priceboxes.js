@@ -13,17 +13,28 @@ const WrapperPriceBox = styled.div`
   ${ flex.column }
   width: ${props => props.main ? '33%' : '23%'};
   height: ${props => props.main ? 'auto' : 'auto'};
-  margin: 1% 0.3%;
+  margin: 1% -0.8%;
   padding: 1%;
-  border: 1px solid #999;
+  border: 1px solid #a77;
   border-radius: 5px;
-  background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgb(235,235,235)'};
+  background: ${ props => props.main ? props.theme.iconBGHoverColor : 'rgba(235,235,235,0.6)'};
+  &:hover {
+    background: rgba(235,235,255,0.9);
+    box-shadow: 10px 10px 5px rgba(100,100,100,0.5);
+    z-Index: 8;
+    > ol { font-size: 1em; }
+    > h3 { font-size: 1.5em; }
+    > h4 { font-size: 1.2em; }
+  }
   > ol {
     font-size: ${ props => props.main ? '1em' : '0.9em'};
     list-style: circle;
     color: ${ props => props.theme.primaryTextColor };
     text-align: left;
     margin: 1em 1em 1em 2em;
+    &:hover {
+      font-size: 1em;
+    }
   }
   > h3 {
     color: ${ props => props.main ? props.theme.iconColor : 'rgb(170,60,60)'};
@@ -126,7 +137,7 @@ export const PriceBox4 = () => {
     return (
       <WrapperPriceBox>
         <h3>Premium</h3>
-        <h4>Tienda Online Autogestionable</h4>
+        <h4>Aplicacón Web Autogestionable con Intranet Corporativa, Tienda Online, Aplicaciónes Móviles, etc.</h4>
         <HR />
         <h4>Incluye:</h4>
         <ol>

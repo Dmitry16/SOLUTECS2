@@ -93,7 +93,7 @@ export class HeaderScrolled extends React.Component {
       height: 100%;
       padding: 0; margin: 0.5em 0;
       vertical-align: top;
-      z-index: 3;
+      z-index: 9;
       ${ media.tablet`
         margin: 0.5em 0; width: 100%;
       `};

@@ -19,7 +19,7 @@ export default class MainNav extends React.Component {
     const Wrapper = styled.div`
       width: 100%;
       background: ${ props => props.theme.navBG };
-      z-index: 3;
+      z-index: 9;
       margin: 0 !important;
       > ul {
         font-size: 0.9rem;
