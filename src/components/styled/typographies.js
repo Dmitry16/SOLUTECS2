@@ -20,7 +20,7 @@ export const H2 = styled.h2`
   ${ media.handheld`font-size: 26px;`};
 `
 export const H3 = styled.h3`
-  margin-top: 0;
+  margin: 1em 5%;
   padding-top: 0;
   font-size:  ${ props => props.theme.h3FontSize };
   font-weight: ${ props => props.theme.h3FontWeight };

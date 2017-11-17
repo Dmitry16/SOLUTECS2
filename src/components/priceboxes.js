@@ -76,6 +76,7 @@ export const PriceBox1 = () => {
     return (
       <WrapperPriceBox>
         <h3>Basico</h3>
+        <h4>Sitio Web con funcionalidad basica</h4>        
         <HR />
         <ol>
           <li>Diseño personalizado</li>
@@ -100,7 +101,6 @@ export const PriceBox2 = () => {
         <ol>
           <li>Diseño personalizado</li>
           <li>Página de gestión/ administración de contenido</li>
-          <li>Hosting (alojamiento web)</li>
           <li>SEO (posicionamiento web) basico</li>
           <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
           <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
@@ -121,9 +121,10 @@ export const PriceBox3 = () => {
         <h4>Aplicación WEB con Tienda Online Autogestionable</h4>
         <HR />
         <ol>
-          <li>Diseño original</li>
-          <li>Página de gestión/ administración de contenido y tienda</li>
+          <li>Diseño <u>original</u></li>
+          <li>Página de gestión/ administración de contenido</li>
           <li>Hosting (alojamiento web)</li>
+          <li>Tienda Online</li>
           <li>SEO (posicionamiento web) <u>avanzado</u></li>
           <li>Activación de servicios de Google (Map, Places, Analytics, Calendario, etc.)</li>
           <li>Catálogo/ Album de Foto/ Video/ PowerPoint/ Excell, Google SpreadSheets, etc.</li>
