@@ -28,9 +28,9 @@ export const Prices = () => {
   return (
     <Section id='prices'>
     <H1 style={{color:'rgb(100,100,150)'}}>Desarrollo Web</H1>
-    <H3>Todas paginas web las desarrollamos empleando <Link to='/desarrolloWeb'>las ultimas tecnologías</Link>. Que permiten
-    tener maximas velocidades de carga de pagina. También permiten poder añadir cualquier funcionalidad desde la opción Basico a Premium según necesidad
-    en cualquier momento.</H3>
+    <H3>Todas paginas web las desarrollamos empleando <Link to='/tecnologiasWeb'>las ultimas tecnologías</Link>. Que permiten
+    tener maximas velocidades de carga de pagina. También poder añadir cualquier funcionalidad al sitio web empezando desde
+    la opción Basica a Premium según necesidad del cliente y en cualquier momento.</H3>
     <HR style={{color:'rgb(214,80,80)'}} />
       <PriceBoxWrapper>
         <PriceBox1 />

@@ -29,7 +29,7 @@ import { WebCompleta } from '../components/webCompleta'
 import { WebEcommerce } from '../components/webEcommerce'
 import Testimonios from '../components/testimonios'
 import Portfolio from '../components/portfolio'
-import DesarrolloWeb from '../components/desarrolloWeb'
+import TecnologiasWeb from '../components/tecnologiasWeb'
 
 // css
 import style from '../css/newstyle.css'
@@ -202,7 +202,7 @@ class App extends Component {
               <Route path='/blog' render={renderBlog}/>
               <Route path='/post' render={renderPostPage}/>
               <Route path='/trabajos' render={renderAllPics}/>
-              <Route path='/desarrolloWeb' component={DesarrolloWeb}/>              
+              <Route path='/tecnologiasWeb' component={TecnologiasWeb}/>
               <Route path='/terms' component={Terms}/>
               <Route path='/privacy' component={Privacy}/>
 

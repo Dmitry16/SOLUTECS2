@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { H1, H3, P, HR } from './styled/typographies'
 
-export default class DesarrolloWeb extends React.Component {
+export default class TecnologiasWeb extends React.Component {
 
   render() {
 
@@ -40,18 +40,17 @@ export default class DesarrolloWeb extends React.Component {
             <div className="icon">
               <H1 style={{color:'rgb(220,220,220)'}}>Tecnologías Web</H1>
               <HR style={{color:'rgb(220,220,220)'}}/>
-                  <P style={{color:'rgb(170,170,170)',margin:'5% 0 0'}}>En SoluTecs usamos las ultimas tecnologías web.
-                  Esto nos permite desarrollar sitios web rapidos, eficaces y facilmente escalables(?) a la hora de ampliar funcionalidad.
+                  <P style={{color:'rgb(170,170,170)',margin:'5% 0 0'}}>En SoluTecs siempre empleamos las ultimas tecnologías web.
+                  Esto nos permite desarrollar sitios web rapidos, eficaces y facilmente escalables(?) a la hora de ampliar
+                  funcionalidad de una pagina web.
                   </P>
-              <H3 style={{color:'rgb(220,220,220)',margin:'2% 0 0'}}>Tecnologías Web empleadas</H3>
-              <HR style={{color:'rgb(220,220,220)'}}/>
               <ul style={{color:'rgb(170,170,170)',margin:'2% 0 0',textAlign:'left'}}>
                 <li>HTML Dinamico</li>
                 <li>XML</li>
                 <li>Java Script</li>
                 <li>ReactJS</li>
+                <li>WordPress</li>
                 <li>PHP</li>
-                <li>WordPress</li>                                
               </ul>
             </div>
       </Section>
