@@ -90,9 +90,6 @@ export default class MainNav extends React.Component {
                 <span><a href='/#about'>Quien Somos</a></span>
               </li>
               <li>
-                <span><Link to='/blog'>Blog</Link></span>
-              </li>
-              <li>
                 <span><a href='/#contact'>Contacto</a></span>
               </li>
           </div>
